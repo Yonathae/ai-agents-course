@@ -1,25 +1,31 @@
 # AI Agents course
 
-Material for the course *Agentic AI Systems*, Tel Aviv University, 2026.
+Material for the course *Agentic AI Systems*, Tel Aviv University, 2026: lecture slides, notebooks and code.
 
-## Lectures
+The course is organized in modules: how AI systems are evaluated (benchmarks), what turns a language model
+into an agent (the harness), AI safety, and post-training. Material is added here as the course progresses.
 
-| # | Lecture | Slides |
+## Course outline
+
+| Module | Lecture | Material |
 |---|---|---|
-| 1 | A Historical Overview of AI | [PDF](lectures/Lecture1_A_Historical_Overview_of_AI.pdf) |
-| 2 | Foundations and Practice of AI Evaluation | [PDF](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
-| 3 | The Evolution of AI Benchmarking | [PDF](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
-| 4 | Foundations of Agent Harnesses | [PDF](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · code: [`harness-design-sql-agent/`](harness-design-sql-agent/) |
+| 1. Benchmarks | 1. A Historical Overview of AI | [slides](lectures/Lecture1_A_Historical_Overview_of_AI.pdf) |
+| | 2. Foundations and Practice of AI Evaluation | [slides](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
+| | 3. The Evolution of AI Benchmarking | [slides](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
+| 2. Harness design | 4. Foundations of Agent Harnesses | [slides](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · [notebook and code](harness-design-sql-agent/) |
+| 3. AI safety | upcoming | |
+| 4. Post-training | upcoming | |
 
-## Code
+## Repository layout
+
+```
+lectures/                   lecture slides (PDF)
+harness-design-sql-agent/   lecture 4: an SQL agent built from scratch, a benchmark and a paired A/B test
+```
 
 Each code folder is a self-contained project with its own README, requirements and notebook.
 
-| Folder | Topic |
-|---|---|
-| [`harness-design-sql-agent/`](harness-design-sql-agent/) | Harness design: an SQL agent built from scratch, a benchmark and a paired A/B test |
-
-## Getting started
+## Running the notebooks
 
 ```sh
 git clone https://github.com/Yonathae/ai-agents-course.git
@@ -27,8 +33,6 @@ cd ai-agents-course/<folder>
 ```
 
 Then follow the README in that folder.
-
-## Model access
 
 The notebooks call language models through [OpenRouter](https://openrouter.ai), which serves many models
 behind one API. Each notebook can also replay recorded results, so you can run it without an API key.
