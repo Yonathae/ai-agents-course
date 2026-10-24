@@ -2,7 +2,18 @@
 
 Material for the course *Agentic AI Systems*, Tel Aviv University, 2026.
 
-Each folder is a self-contained project with its own README, requirements and notebook.
+## Lectures
+
+| # | Lecture | Slides |
+|---|---|---|
+| 1 | A Historical Overview of AI | [PDF](lectures/Lecture1_A_Historical_Overview_of_AI.pdf) |
+| 2 | Foundations and Practice of AI Evaluation | [PDF](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
+| 3 | The Evolution of AI Benchmarking | [PDF](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
+| 4 | Foundations of Agent Harnesses | [PDF](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · code: [`harness-design-sql-agent/`](harness-design-sql-agent/) |
+
+## Code
+
+Each code folder is a self-contained project with its own README, requirements and notebook.
 
 | Folder | Topic |
 |---|---|
