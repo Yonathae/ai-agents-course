@@ -26,5 +26,3 @@ To run live, create an OpenRouter API key, add a small amount of credit, and set
 ```sh
 export OPENROUTER_API_KEY=sk-or-...        # Windows (PowerShell): $env:OPENROUTER_API_KEY="sk-or-..."
 ```
-
-Never put the key in a notebook or commit it.
