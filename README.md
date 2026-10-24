@@ -1,6 +1,6 @@
 # AI Agents course — code
 
-Code for the course *Agentic AI Systems* (Tel Aviv University).
+Code for the course *Agentic AI Systems*, Tel Aviv University.
 
 ## Lecture 2: an SQL agent
 
