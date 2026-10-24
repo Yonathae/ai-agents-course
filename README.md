@@ -1,6 +1,6 @@
-# AI Agents course — code
+# AI Agents course
 
-Code for the course *Agentic AI Systems*, Tel Aviv University, 2026.
+Material for the course *Agentic AI Systems*, Tel Aviv University, 2026.
 
 Each folder is a self-contained project with its own README, requirements and notebook.
 
