@@ -2,9 +2,9 @@
 
 Code for the course *Agentic AI Systems*, Tel Aviv University, 2026.
 
-## Lecture 2: an SQL agent
+## Harness design: an SQL agent
 
-[`lecture-2/sql-agent.ipynb`](lecture-2/sql-agent.ipynb) builds an agent from scratch in plain Python and evaluates it:
+[`harness-design-sql-agent/sql-agent.ipynb`](harness-design-sql-agent/sql-agent.ipynb) builds an agent from scratch in plain Python and evaluates it:
 
 1. query a small shop database with SQL by hand;
 2. build an agent (a language model + tools + a loop) that answers questions by querying the database;
@@ -14,7 +14,7 @@ Code for the course *Agentic AI Systems*, Tel Aviv University, 2026.
 
 ```sh
 git clone https://github.com/Yonathae/ai-agents-course.git
-cd ai-agents-course/lecture-2
+cd ai-agents-course/harness-design-sql-agent
 python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 jupyter lab sql-agent.ipynb
