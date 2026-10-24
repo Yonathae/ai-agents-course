@@ -2,27 +2,29 @@
 
 Code for the course *Agentic AI Systems*, Tel Aviv University, 2026.
 
-## Harness design: an SQL agent
+Each folder is a self-contained project with its own README, requirements and notebook.
 
-[`harness-design-sql-agent/sql-agent.ipynb`](harness-design-sql-agent/sql-agent.ipynb) builds an agent from scratch in plain Python and evaluates it:
+| Folder | Topic |
+|---|---|
+| [`harness-design-sql-agent/`](harness-design-sql-agent/) | Harness design: an SQL agent built from scratch, a benchmark and a paired A/B test |
 
-1. query a small shop database with SQL by hand;
-2. build an agent (a language model + tools + a loop) that answers questions by querying the database;
-3. build a 20-task benchmark and compare the agent with a one-shot baseline in a paired A/B test.
-
-## Quick start
+## Getting started
 
 ```sh
 git clone https://github.com/Yonathae/ai-agents-course.git
-cd ai-agents-course/harness-design-sql-agent
-python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter lab sql-agent.ipynb
+cd ai-agents-course/<folder>
 ```
 
-Run the cells from the top.
+Then follow the README in that folder.
 
-- **No API key needed:** with `LIVE = False` (the default) the notebook replays recorded model results.
-- **Run live with your own credits:** create an [OpenRouter](https://openrouter.ai) API key, set
-  `export OPENROUTER_API_KEY=sk-or-...` in the terminal before starting Jupyter, and set `LIVE = True`
-  in the first cell. The whole notebook costs about one cent.
+## Model access
+
+The notebooks call language models through [OpenRouter](https://openrouter.ai), which serves many models
+behind one API. Each notebook can also replay recorded results, so you can run it without an API key.
+To run live, create an OpenRouter API key, add a small amount of credit, and set it in your terminal:
+
+```sh
+export OPENROUTER_API_KEY=sk-or-...        # Windows (PowerShell): $env:OPENROUTER_API_KEY="sk-or-..."
+```
+
+Never put the key in a notebook or commit it.
