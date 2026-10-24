@@ -1,0 +1,222 @@
+[
+ {
+  "kind": "filter",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 6.417283333998057,
+  "t_B": 3.582363207999151,
+  "cost_A": 2.5146e-05,
+  "cost_B": 0.000147975,
+  "sql_A": "SELECT COUNT(*) FROM orders WHERE order_date >= '2026-01-01';",
+  "sql_B": "SELECT COUNT(*) AS order_count FROM orders WHERE order_date >= '2026-01-01';"
+ },
+ {
+  "kind": "aggregation",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 3.788302625005599,
+  "t_B": 2.747019166999962,
+  "cost_A": 4.811e-05,
+  "cost_B": 0.0001893,
+  "sql_A": "SELECT round(avg(amount), 2)\nFROM orders\nWHERE order_date BETWEEN '2025-01-01' AND '2025-12-31';",
+  "sql_B": "SELECT round(avg(amount),2) AS avg_amount FROM orders WHERE order_date BETWEEN '2025-01-01' AND '2025-12-31';"
+ },
+ {
+  "kind": "join + group",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 3.07168974999513,
+  "t_B": 2.5861614590103272,
+  "cost_A": 6.379e-05,
+  "cost_B": 0.000189225,
+  "sql_A": "SELECT c.name, ROUND(SUM(o.amount), 2) AS total_amount\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nWHERE strftime('%Y', o.order_date) = '2025'\nGROUP BY c.customer_id, c.name;",
+  "sql_B": "SELECT c.name, ROUND(SUM(o.amount), 2) AS total_amount\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nWHERE strftime('%Y', o.order_date) = '2025'\nGROUP BY c.customer_id, c.name\nORDER BY total_amount DESC;"
+ },
+ {
+  "kind": "join + order",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 5.4354004170018015,
+  "t_B": 2.713849334002589,
+  "cost_A": 3.5784e-05,
+  "cost_B": 0.00018509999999999997,
+  "sql_A": "SELECT c.name\nFROM customers c\nJOIN (\n    SELECT customer_id, SUM(amount) AS total\n    FROM orders\n    GROUP BY customer_id\n) o ON c.customer_id = o.customer_id\nORDER BY o.total DESC\nLIMIT 1;",
+  "sql_B": "SELECT c.name FROM customers c JOIN (SELECT customer_id, SUM(amount) AS total FROM orders GROUP BY customer_id) o ON c.customer_id = o.customer_id ORDER BY o.total DESC LIMIT 1;"
+ },
+ {
+  "kind": "nested",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 7.0851827089936705,
+  "t_B": 2.3208592500013765,
+  "cost_A": 5.051e-05,
+  "cost_B": 0.00015659999999999998,
+  "sql_A": "SELECT order_id\nFROM orders\nWHERE amount > (SELECT AVG(amount) FROM orders);",
+  "sql_B": "SELECT order_id FROM orders WHERE amount > (SELECT AVG(amount) FROM orders);"
+ },
+ {
+  "kind": "negation",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 12.26217358300346,
+  "t_B": 2.205566333999741,
+  "cost_A": 6.3972e-05,
+  "cost_B": 0.00015277500000000001,
+  "sql_A": "SELECT name\nFROM customers c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.customer_id\n);",
+  "sql_B": "SELECT DISTINCT c.name FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.order_id IS NULL;"
+ },
+ {
+  "kind": "negation + join",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 10.312989958008984,
+  "t_B": 3.752409249995253,
+  "cost_A": 0.00012112,
+  "cost_B": 0.000275175,
+  "sql_A": "SELECT DISTINCT c.name\nFROM customers c\nJOIN orders o2025 ON c.customer_id = o2025.customer_id\nWHERE strftime('%Y', o2025.order_date) = '2025'\n  AND NOT EXISTS (\n      SELECT 1\n      FROM orders o2026\n      WHERE o2026.customer_id = c.customer_id\n        AND strftime('%Y', o2026.order_date) = '2026'\n  );",
+  "sql_B": "SELECT DISTINCT c.name FROM customers c\nWHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id AND strftime('%Y', o.order_date) = '2025')\nAND NOT EXISTS (SELECT 1 FROM orders o2 WHERE o2.customer_id = c.customer_id AND strftime('%Y', o2.order_date) = '2026');"
+ },
+ {
+  "kind": "group + having",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 13.25464162499702,
+  "t_B": 2.3190635000064503,
+  "cost_A": 6.309e-05,
+  "cost_B": 0.00016724999999999997,
+  "sql_A": "SELECT c.name\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nGROUP BY c.customer_id, c.name\nHAVING COUNT(*) >= 4;",
+  "sql_B": "SELECT c.name FROM customers c JOIN (SELECT customer_id FROM orders GROUP BY customer_id HAVING COUNT(*) >= 4) o ON c.customer_id = o.customer_id;"
+ },
+ {
+  "kind": "ties",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 13.608576874990831,
+  "t_B": 5.571476291006547,
+  "cost_A": 8.7912e-05,
+  "cost_B": 0.00035542500000000003,
+  "sql_A": "WITH order_counts AS (\n  SELECT customer_id, COUNT(*) AS cnt\n  FROM orders\n  WHERE order_date LIKE '2026-%'\n  GROUP BY customer_id\n), max_cnt AS (\n  SELECT MAX(cnt) AS max_cnt FROM order_counts\n)\nSELECT c.name\nFROM customers c\nJOIN order_counts oc ON c.customer_id = oc.customer_id\nJOIN max_cnt mc ON oc.cnt = mc.max_cnt;",
+  "sql_B": "SELECT name FROM customers WHERE customer_id IN (\n  SELECT customer_id FROM orders WHERE order_date LIKE '2026-%' GROUP BY customer_id HAVING COUNT(*) = (\n    SELECT MAX(cnt) FROM (\n      SELECT customer_id, COUNT(*) AS cnt FROM orders WHERE order_date LIKE '2026-%' GROUP BY customer_id\n    )\n  )\n);"
+ },
+ {
+  "kind": "date difference",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 13.644048499991186,
+  "t_B": 4.2339501659880625,
+  "cost_A": 7.043e-05,
+  "cost_B": 0.000230475,
+  "sql_A": "SELECT CAST(julianday(MAX(order_date)) - julianday(MIN(order_date)) AS INTEGER)\nFROM orders\nJOIN customers ON orders.customer_id = customers.customer_id\nWHERE customers.name = 'Alice Cohen';",
+  "sql_B": "SELECT julianday(max(order_date)) - julianday(min(order_date)) AS days FROM orders JOIN customers ON orders.customer_id = customers.customer_id WHERE customers.name = 'Alice Cohen';"
+ },
+ {
+  "kind": "month",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 18.231211167003494,
+  "t_B": 4.938817957998253,
+  "cost_A": 0.00010557,
+  "cost_B": 0.0002157,
+  "sql_A": "SELECT CAST(strftime('%m', order_date) AS INTEGER) AS month\nFROM orders\nWHERE order_date LIKE '2025-%'\nGROUP BY CAST(strftime('%m', order_date) AS INTEGER)\nORDER BY SUM(amount) DESC\nLIMIT 1;",
+  "sql_B": "SELECT CAST(strftime('%m', order_date) AS INTEGER) AS month FROM orders WHERE strftime('%Y', order_date) = '2025' GROUP BY month ORDER BY SUM(amount) DESC LIMIT 1;"
+ },
+ {
+  "kind": "window function",
+  "y_A": 1,
+  "y_B": 1,
+  "t_A": 20.720490625011735,
+  "t_B": 4.2589729169994825,
+  "cost_A": 9.6485e-05,
+  "cost_B": 0.000369075,
+  "sql_A": "SELECT ROUND(AVG(julianday(order_date) - julianday(prev_date)), 1)\nFROM (\n    SELECT order_date,\n           LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date) AS prev_date\n    FROM orders\n) t\nWHERE prev_date IS NOT NULL;",
+  "sql_B": "WITH diffs AS (\n  SELECT customer_id,\n         julianday(order_date) - julianday(LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date)) AS diff\n  FROM orders\n)\nSELECT ROUND(AVG(diff), 1) AS avg_days\nFROM diffs\nWHERE diff IS NOT NULL;"
+ },
+ {
+  "kind": "status: sum",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 6.270316292007919,
+  "t_B": 4.186600499990163,
+  "cost_A": 4.2606e-05,
+  "cost_B": 0.000296775,
+  "sql_A": "SELECT ROUND(SUM(amount), 2) FROM orders WHERE status = 'returned';",
+  "sql_B": "SELECT ROUND(SUM(amount),2) AS total FROM orders WHERE status='R';"
+ },
+ {
+  "kind": "status: count",
+  "y_A": 0,
+  "y_B": 0,
+  "t_A": 4.294456208997872,
+  "t_B": 2.3579981660004705,
+  "cost_A": 2.8674e-05,
+  "cost_B": 0.00016905000000000002,
+  "sql_A": "SELECT COUNT(*) FROM orders WHERE status <> 'cancelled';",
+  "sql_B": "SELECT COUNT(*) AS total_not_cancelled FROM orders WHERE status <> 'cancelled';"
+ },
+ {
+  "kind": "status: join",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 4.463129999989178,
+  "t_B": 3.832167499989737,
+  "cost_A": 0.00010786,
+  "cost_B": 0.0003633,
+  "sql_A": "SELECT DISTINCT c.name\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nWHERE o.status = 'returned';",
+  "sql_B": "SELECT DISTINCT c.name FROM customers c JOIN orders o ON c.customer_id=o.customer_id WHERE o.status='R';"
+ },
+ {
+  "kind": "status: ratio",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 11.316656041002716,
+  "t_B": 3.075459708998096,
+  "cost_A": 0.000122175,
+  "cost_B": 0.00023144999999999996,
+  "sql_A": "SELECT ROUND(100.0 * SUM(CASE WHEN status = 'returned' THEN 1 ELSE 0 END) / COUNT(*), 1)\nFROM orders;",
+  "sql_B": "SELECT ROUND(100.0 * SUM(CASE WHEN status='R' THEN 1 ELSE 0 END) / COUNT(*), 1) AS returned_percentage FROM orders;"
+ },
+ {
+  "kind": "status: revenue",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 7.513810917007504,
+  "t_B": 5.5954880000062985,
+  "cost_A": 4.5684e-05,
+  "cost_B": 0.00048510000000000003,
+  "sql_A": "SELECT round(SUM(amount), 2)\nFROM orders\nWHERE status = 'shipped'\n  AND strftime('%Y', order_date) = '2025';",
+  "sql_B": "SELECT ROUND(SUM(amount),2) AS total_shipped_2025 FROM orders WHERE status='S' AND strftime('%Y', order_date)='2025';"
+ },
+ {
+  "kind": "status: top customer",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 2.923766332998639,
+  "t_B": 4.388147541991202,
+  "cost_A": 6.194e-05,
+  "cost_B": 0.00035932499999999997,
+  "sql_A": "SELECT c.name\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nWHERE o.status = 'cancelled'\nGROUP BY c.customer_id, c.name\nORDER BY SUM(o.amount) DESC\nLIMIT 1;",
+  "sql_B": "SELECT c.name FROM customers c JOIN (SELECT customer_id, SUM(amount) AS total_cancelled FROM orders WHERE status='C' GROUP BY customer_id ORDER BY total_cancelled DESC LIMIT 1) t ON c.customer_id = t.customer_id;"
+ },
+ {
+  "kind": "status: count + date",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 3.068140957999276,
+  "t_B": 5.536256542007322,
+  "cost_A": 1.9494e-05,
+  "cost_B": 0.0002526,
+  "sql_A": "SELECT COUNT(*) FROM orders\nWHERE status = 'shipped'\n  AND strftime('%Y', order_date) = '2026';",
+  "sql_B": "SELECT COUNT(*) FROM orders WHERE status='S' AND strftime('%Y', order_date)='2026';"
+ },
+ {
+  "kind": "status: average",
+  "y_A": 0,
+  "y_B": 1,
+  "t_A": 7.879570165998302,
+  "t_B": 3.545705791999353,
+  "cost_A": 3.232e-05,
+  "cost_B": 0.00024915,
+  "sql_A": "SELECT ROUND(AVG(amount), 2) FROM orders WHERE status = 'shipped';",
+  "sql_B": "SELECT ROUND(AVG(amount), 2) AS avg_shipped_amount FROM orders WHERE status = 'S';"
+ }
+]

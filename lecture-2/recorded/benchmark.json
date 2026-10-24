@@ -1,0 +1,271 @@
+[
+ {
+  "kind": "filter",
+  "sql": "SELECT COUNT(*) FROM orders WHERE order_date >= '2026-01-01'",
+  "question": "How many orders were placed on or after January\u202f1,\u202f2026?",
+  "result": [
+   [
+    11
+   ]
+  ]
+ },
+ {
+  "kind": "aggregation",
+  "sql": "SELECT ROUND(AVG(amount), 2) FROM orders WHERE order_date BETWEEN '2025-01-01' AND '2025-12-31'",
+  "question": "What is the average amount of orders placed between January\u202f1,\u202f2025 and December\u202f31,\u202f2025, rounded to two decimal places?",
+  "result": [
+   [
+    135.03
+   ]
+  ]
+ },
+ {
+  "kind": "join + group",
+  "sql": "SELECT c.name, ROUND(SUM(o.amount), 2) FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.order_date LIKE '2025%' GROUP BY c.customer_id /* only customers who ordered in 2025 */",
+  "question": "Which customers placed orders in 2025, and what is the total amount of those orders, rounded to two decimal places?",
+  "result": [
+   [
+    "Alice Cohen",
+    220.0
+   ],
+   [
+    "Ben Levi",
+    175.4
+   ],
+   [
+    "Carmen Diaz",
+    290.0
+   ],
+   [
+    "David Mizrahi",
+    355.0
+   ],
+   [
+    "Eva Novak",
+    470.0
+   ],
+   [
+    "Farid Haddad",
+    245.0
+   ]
+  ]
+ },
+ {
+  "kind": "join + order",
+  "sql": "SELECT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id GROUP BY c.customer_id ORDER BY SUM(o.amount) DESC LIMIT 1",
+  "question": "Which customer has the highest total order amount across all orders?",
+  "result": [
+   [
+    "Alice Cohen"
+   ]
+  ]
+ },
+ {
+  "kind": "nested",
+  "sql": "SELECT order_id FROM orders WHERE amount > (SELECT AVG(amount) FROM orders)",
+  "question": "Which order IDs have an amount above the average amount of all orders?",
+  "result": [
+   [
+    103
+   ],
+   [
+    105
+   ],
+   [
+    108
+   ],
+   [
+    111
+   ],
+   [
+    114
+   ],
+   [
+    116
+   ],
+   [
+    120
+   ],
+   [
+    123
+   ]
+  ]
+ },
+ {
+  "kind": "negation",
+  "sql": "SELECT name FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM orders)",
+  "question": "Which customers have never placed an order?",
+  "result": [
+   [
+    "Hiro Tanaka"
+   ]
+  ]
+ },
+ {
+  "kind": "negation + join",
+  "sql": "SELECT DISTINCT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.order_date LIKE '2025%' AND c.customer_id NOT IN (SELECT customer_id FROM orders WHERE order_date LIKE '2026%')",
+  "question": "Which customers placed orders in 2025 but did not place any orders in 2026?",
+  "result": [
+   [
+    "David Mizrahi"
+   ],
+   [
+    "Eva Novak"
+   ],
+   [
+    "Farid Haddad"
+   ]
+  ]
+ },
+ {
+  "kind": "group + having",
+  "sql": "SELECT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id GROUP BY c.customer_id HAVING COUNT(*) >= 4",
+  "question": "Which customers have placed four or more orders?",
+  "result": [
+   [
+    "Alice Cohen"
+   ],
+   [
+    "Ben Levi"
+   ],
+   [
+    "Carmen Diaz"
+   ]
+  ]
+ },
+ {
+  "kind": "ties",
+  "sql": "SELECT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.order_date LIKE '2026%' GROUP BY c.customer_id HAVING COUNT(*) = (SELECT MAX(n) FROM (SELECT COUNT(*) AS n FROM orders WHERE order_date LIKE '2026%' GROUP BY customer_id))",
+  "question": "Which customer(s) placed the most orders in 2026?",
+  "result": [
+   [
+    "Alice Cohen"
+   ],
+   [
+    "Ben Levi"
+   ],
+   [
+    "Grace Kim"
+   ]
+  ]
+ },
+ {
+  "kind": "date difference",
+  "sql": "SELECT CAST(julianday(MAX(o.order_date)) - julianday(MIN(o.order_date)) AS INTEGER) FROM orders o JOIN customers c ON o.customer_id = c.customer_id WHERE c.name = 'Alice Cohen'",
+  "question": "How many days are between Alice Cohen\u2019s earliest and latest orders?",
+  "result": [
+   [
+    596
+   ]
+  ]
+ },
+ {
+  "kind": "month",
+  "sql": "SELECT CAST(strftime('%m', order_date) AS INTEGER) FROM orders WHERE order_date LIKE '2025%' GROUP BY 1 ORDER BY SUM(amount) DESC LIMIT 1",
+  "question": "What month number in 2025 had the highest total order amount?",
+  "result": [
+   [
+    10
+   ]
+  ]
+ },
+ {
+  "kind": "window function",
+  "sql": "SELECT ROUND(AVG(gap), 1) FROM (SELECT julianday(order_date) - julianday(LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date)) AS gap FROM orders) WHERE gap IS NOT NULL /* one average over all gaps of all customers together */",
+  "question": "Taking all customers' orders together, what is the average number of days between two consecutive orders of the same customer, rounded to one decimal place?",
+  "result": [
+   [
+    132.6
+   ]
+  ]
+ },
+ {
+  "kind": "status: sum",
+  "sql": "SELECT ROUND(SUM(amount), 2) FROM orders WHERE status = 'R' /* R = returned */",
+  "question": "What is the total amount of all returned orders, rounded to two decimal places?",
+  "result": [
+   [
+    208.0
+   ]
+  ]
+ },
+ {
+  "kind": "status: count",
+  "sql": "SELECT COUNT(*) FROM orders WHERE status != 'C' /* C = cancelled */",
+  "question": "What is the total number of orders that are not cancelled?",
+  "result": [
+   [
+    22
+   ]
+  ]
+ },
+ {
+  "kind": "status: join",
+  "sql": "SELECT DISTINCT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.status = 'R' /* R = returned */",
+  "question": "Which customers have placed at least one order that was returned?",
+  "result": [
+   [
+    "Alice Cohen"
+   ],
+   [
+    "Ben Levi"
+   ],
+   [
+    "David Mizrahi"
+   ],
+   [
+    "Grace Kim"
+   ]
+  ]
+ },
+ {
+  "kind": "status: ratio",
+  "sql": "SELECT ROUND(100.0 * SUM(status = 'R') / COUNT(*), 1) FROM orders /* R = returned; percentage of all orders */",
+  "question": "What is the percentage of all orders that were returned, rounded to one decimal place?",
+  "result": [
+   [
+    16.7
+   ]
+  ]
+ },
+ {
+  "kind": "status: revenue",
+  "sql": "SELECT ROUND(SUM(amount), 2) FROM orders WHERE order_date LIKE '2025%' AND status = 'S' /* S = shipped */",
+  "question": "What is the total amount of shipped orders placed in 2025, rounded to two decimal places?",
+  "result": [
+   [
+    1585.5
+   ]
+  ]
+ },
+ {
+  "kind": "status: top customer",
+  "sql": "SELECT c.name FROM customers c JOIN orders o ON o.customer_id = c.customer_id WHERE o.status = 'C' /* C = cancelled */ GROUP BY c.customer_id ORDER BY SUM(o.amount) DESC LIMIT 1",
+  "question": "Which customer has the highest total amount of cancelled orders?",
+  "result": [
+   [
+    "Ben Levi"
+   ]
+  ]
+ },
+ {
+  "kind": "status: count + date",
+  "sql": "SELECT COUNT(*) FROM orders WHERE order_date LIKE '2026%' AND status = 'S' /* S = shipped */",
+  "question": "How many orders were shipped during the year\u202f2026?",
+  "result": [
+   [
+    8
+   ]
+  ]
+ },
+ {
+  "kind": "status: average",
+  "sql": "SELECT ROUND(AVG(amount), 2) FROM orders WHERE status = 'S' /* S = shipped */",
+  "question": "What is the average amount of all orders that have been shipped, rounded to two decimal places?",
+  "result": [
+   [
+    149.75
+   ]
+  ]
+ }
+]

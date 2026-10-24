@@ -1,0 +1,78 @@
+{
+ "question": "What was the total value of returned orders?",
+ "answer": "total_returned\n208.0",
+ "final_sql": "SELECT SUM(amount) AS total_returned FROM orders WHERE status='R';",
+ "status": "ok",
+ "trace": [
+  [
+   "USER",
+   "What was the total value of returned orders?"
+  ],
+  [
+   "MODEL",
+   "list_tables()"
+  ],
+  [
+   "TOOL",
+   "customers, orders"
+  ],
+  [
+   "MODEL",
+   "describe_table('customers')"
+  ],
+  [
+   "TOOL",
+   "customer_id INTEGER, name TEXT"
+  ],
+  [
+   "MODEL",
+   "describe_table('orders')"
+  ],
+  [
+   "TOOL",
+   "order_id INTEGER, customer_id INTEGER, amount REAL, order_date TEXT, status TEXT"
+  ],
+  [
+   "MODEL",
+   "execute_sql(\n    SELECT SUM(amount) AS total_returned FROM orders WHERE status='returned';)"
+  ],
+  [
+   "TOOL",
+   "total_returned\nNone"
+  ],
+  [
+   "MODEL",
+   "execute_sql(\n    SELECT DISTINCT status FROM orders;)"
+  ],
+  [
+   "TOOL",
+   "status\nS\nR\nC"
+  ],
+  [
+   "MODEL",
+   "execute_sql(\n    SELECT SUM(amount) AS total_returned FROM orders WHERE status='R';)"
+  ],
+  [
+   "TOOL",
+   "total_returned\n208.0"
+  ],
+  [
+   "MODEL",
+   "submit_answer(\n    SELECT SUM(amount) AS total_returned FROM orders WHERE status='R';)"
+  ],
+  [
+   "TOOL",
+   "total_returned\n208.0"
+  ]
+ ],
+ "metrics": {
+  "model_calls": 7,
+  "tool_calls": 7,
+  "t_llm": 4.7018097509862855,
+  "t_tools": 0.007521791034378111,
+  "t_total": 4.710391833999893,
+  "tokens_in": 3341,
+  "tokens_out": 313,
+  "cost": 0.000315675
+ }
+}
