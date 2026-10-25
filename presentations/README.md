@@ -9,8 +9,6 @@ Upload your presentation to the folder of its module, as a PDF:
 | [`ai-safety/`](ai-safety/) | AI Safety |
 | [`post-training/`](post-training/) | Post-Training |
 
-**File name:** `lastname-short-title.pdf`, for example `cohen-swe-bench-verified.pdf`.
-
 ## How to submit
 
 1. Open your module's folder on GitHub and click **Add file → Upload files**.
