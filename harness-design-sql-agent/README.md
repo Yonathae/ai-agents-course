@@ -8,7 +8,15 @@
 
 ## Quick start
 
-From the repository root (Python 3.9 or newer):
+From the repository root, with [uv](https://docs.astral.sh/uv/) (recommended):
+
+```sh
+cd harness-design-sql-agent
+uv run --with-requirements requirements.txt jupyter lab sql-agent.ipynb
+```
+
+uv creates an isolated environment with the packages from `requirements.txt` (cached after the first run)
+and starts Jupyter in it. Without uv, use pip (Python 3.9 or newer):
 
 ```sh
 cd harness-design-sql-agent
