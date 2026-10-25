@@ -9,7 +9,7 @@ Upload your presentation to the folder of its module, as a PDF:
 | [`ai-safety/`](ai-safety/) | AI Safety |
 | [`post-training/`](post-training/) | Post-Training |
 
-**File name:** the title of the paper or talk, for example `swe-bench-verified.pdf`. No need to add your name.
+**File name:** the title of the paper or talk, for example `swe-bench-verified.pdf`. 
 
 ## How to submit
 
