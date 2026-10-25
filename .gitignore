@@ -1,4 +1,18 @@
-.venv/
+# Only student material is published; everything else in this folder stays private.
+/*
+!/.gitignore
+!/README.md
+!/lectures/
+!/harness-design-sql-agent/
+
+/harness-design-sql-agent/*
+!/harness-design-sql-agent/README.md
+!/harness-design-sql-agent/sql-agent.ipynb
+!/harness-design-sql-agent/requirements.txt
+!/harness-design-sql-agent/sql_agent/
+!/harness-design-sql-agent/recorded/
+/harness-design-sql-agent/recorded/demo_executed.ipynb
+
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
