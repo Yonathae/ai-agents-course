@@ -1,0 +1,143 @@
+{
+ "run_id": "plan_execute_k2__matsci-MatSci6__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "matsci/MatSci6",
+ "harness": "plan_execute_k2",
+ "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T + c3*epsilon**3",
+ "best_params": {
+  "c0": -443975.80490606325,
+  "c1": 100.56901477502024,
+  "c2": 2.3637203031543748e-07,
+  "c3": 1412430.739584476
+ },
+ "best_train_r2": 0.9999999999999839,
+ "evaluations": 6,
+ "model_calls": 10,
+ "input_tokens": 11414,
+ "output_tokens": 693,
+ "cached_input_tokens": 8192,
+ "cost": 0.0007567499999999999,
+ "tokens_by_role": {
+  "orchestrator": 6002,
+  "worker": 6105
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999999999847,
+   "mse": 1.9053096945842313e-05,
+   "nmse": 1.7249703551178338e-14,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999999989979,
+   "mse": 0.0002753429666242234,
+   "nmse": 2.4928149805096536e-13,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2161,
+   "cost": 0.000133575,
+   "role": "worker",
+   "best_expression": "c0*epsilon**c1*exp(c2*T)",
+   "train_r2": -0.5368776436559215,
+   "train_mse": 1697552578.3151026,
+   "train_nmse": 1.5368776436559215,
+   "train_dist_r2": -0.6309858399212376,
+   "train_dist_mse": 2022264217.1576378,
+   "train_dist_nmse": 1.8308550230589735,
+   "ood_r2": -81.85368719206745,
+   "ood_mse": 22765744879.892048,
+   "ood_nmse": 20.610945895889525
+  },
+  {
+   "index": 2,
+   "tokens": 3179,
+   "cost": 0.00019485,
+   "role": "worker",
+   "best_expression": "(c0 + c1*T)*epsilon**c2",
+   "train_r2": -0.32839336106225514,
+   "train_mse": 1467272026.7591796,
+   "train_nmse": 1.328393361062255,
+   "train_dist_r2": -0.4148979643748527,
+   "train_dist_mse": 1754336214.4840097,
+   "train_dist_nmse": 1.5882866557055535,
+   "ood_r2": -75.73345750840262,
+   "ood_mse": 21084086618.121944,
+   "ood_nmse": 19.08845815689473
+  },
+  {
+   "index": 3,
+   "tokens": 5549,
+   "cost": 0.00034582499999999996,
+   "role": "worker",
+   "best_expression": "(c0 + c1*T)*epsilon**c2",
+   "train_r2": -0.32839336106225514,
+   "train_mse": 1467272026.7591796,
+   "train_nmse": 1.328393361062255,
+   "train_dist_r2": -0.4148979643748527,
+   "train_dist_mse": 1754336214.4840097,
+   "train_dist_nmse": 1.5882866557055535,
+   "ood_r2": -75.73345750840262,
+   "ood_mse": 21084086618.121944,
+   "ood_nmse": 19.08845815689473
+  },
+  {
+   "index": 4,
+   "tokens": 6575,
+   "cost": 0.000408825,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T",
+   "train_r2": 0.9839018446678156,
+   "train_mse": 17781158.573730145,
+   "train_nmse": 0.016098155332184415,
+   "train_dist_r2": 0.9863057464620473,
+   "train_dist_mse": 16979545.887304332,
+   "train_dist_nmse": 0.015372416034105298,
+   "ood_r2": -0.6017697288053694,
+   "ood_mse": 440118988.5223138,
+   "ood_nmse": 0.3984613158078247
+  },
+  {
+   "index": 5,
+   "tokens": 9194,
+   "cost": 0.00056865,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T",
+   "train_r2": 0.9839018446678156,
+   "train_mse": 17781158.573730145,
+   "train_nmse": 0.016098155332184415,
+   "train_dist_r2": 0.9863057464620473,
+   "train_dist_mse": 16979545.887304332,
+   "train_dist_nmse": 0.015372416034105298,
+   "ood_r2": -0.6017697288053694,
+   "ood_mse": 440118988.5223138,
+   "ood_nmse": 0.3984613158078247
+  },
+  {
+   "index": 6,
+   "tokens": 10215,
+   "cost": 0.0006285749999999999,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T + c3*epsilon**3",
+   "train_r2": 0.9999999999999839,
+   "train_mse": 1.784042187079059e-05,
+   "train_nmse": 1.615180930290969e-14,
+   "train_dist_r2": 0.9999999999999847,
+   "train_dist_mse": 1.9053096945842313e-05,
+   "train_dist_nmse": 1.7249703551178338e-14,
+   "ood_r2": 0.9999999999989979,
+   "ood_mse": 0.0002753429666242234,
+   "ood_nmse": 2.4928149805096536e-13
+  }
+ ],
+ "target_var": 1104546341.292966,
+ "baseline_mse": {
+  "train": 1104546341.292966,
+  "train_dist": 1253000160.6118295,
+  "ood": 16054700702.55505
+ }
+}

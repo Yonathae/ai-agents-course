@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG19__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG19",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*P + c2*P**2 + c3*t",
+ "best_params": {
+  "c0": 0.09719613982436497,
+  "c1": 0.418340118320235,
+  "c2": -0.004965011744471126,
+  "c3": -0.0007083541924444639
+ },
+ "best_train_r2": 0.9999150130708884,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7483,
+ "output_tokens": 678,
+ "cached_input_tokens": 3840,
+ "cost": 0.0006206249999999999,
+ "tokens_by_role": {
+  "agent": 8161
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9998993896368326,
+   "mse": 0.0006834226717691998,
+   "nmse": 9.750343202797358e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": -0.28026282238649003,
+   "mse": 9.104844386005635e-05,
+   "nmse": 1.2989817464176585e-05,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2308,
+   "cost": 0.0001596,
+   "role": "agent",
+   "best_expression": "c0 + c1*P + c2*t",
+   "train_r2": 0.41986938264529805,
+   "train_mse": 4.06626113810966,
+   "train_nmse": 0.580130617354702,
+   "train_dist_r2": 0.40791119106553053,
+   "train_dist_mse": 4.0219208338708805,
+   "train_dist_nmse": 0.5738046173271443,
+   "ood_r2": -24707.15205466375,
+   "ood_mse": 1.757169509180405,
+   "ood_nmse": 0.2506941383089784
+  },
+  {
+   "index": 2,
+   "tokens": 5087,
+   "cost": 0.00040334999999999997,
+   "role": "agent",
+   "best_expression": "c0 + c1*P + c2*P**2 + c3*t",
+   "train_r2": 0.9999150130708884,
+   "train_mse": 0.0005956917920823725,
+   "train_nmse": 8.498692911162359e-05,
+   "train_dist_r2": 0.9998993896368326,
+   "train_dist_mse": 0.0006834226717691998,
+   "train_dist_nmse": 9.750343202797358e-05,
+   "ood_r2": -0.28026282238649003,
+   "ood_mse": 9.104844386005635e-05,
+   "ood_nmse": 1.2989817464176585e-05
+  }
+ ],
+ "target_var": 7.0092165737625205,
+ "baseline_mse": {
+  "train": 7.0092165737625205,
+  "train_dist": 6.79306284037672,
+  "ood": 2.4637813434510534
+ }
+}

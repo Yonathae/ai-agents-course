@@ -1,0 +1,61 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci20__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "matsci/MatSci20",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T",
+ "best_params": {
+  "c0": 1300.5552565913906,
+  "c1": 0.05942806650093041,
+  "c2": -0.006012569365907716
+ },
+ "best_train_r2": 0.9999611226268229,
+ "evaluations": 1,
+ "model_calls": 4,
+ "input_tokens": 4476,
+ "output_tokens": 331,
+ "cached_input_tokens": 1536,
+ "cost": 0.00037739999999999996,
+ "tokens_by_role": {
+  "agent": 4807
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999617654594786,
+   "mse": 0.5423500337059275,
+   "nmse": 3.930423173379851e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9707173495600612,
+   "mse": 18.702426774325893,
+   "nmse": 0.0013553691716392138,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2264,
+   "cost": 0.00018015,
+   "role": "agent",
+   "best_expression": "c0*epsilon**2 + c1*epsilon*T + c2*T",
+   "train_r2": 0.9999611226268229,
+   "train_mse": 0.5364599108771767,
+   "train_nmse": 3.887737317712091e-05,
+   "train_dist_r2": 0.9999617654594786,
+   "train_dist_mse": 0.5423500337059275,
+   "train_dist_nmse": 3.930423173379851e-05,
+   "ood_r2": 0.9707173495600612,
+   "ood_mse": 18.702426774325893,
+   "ood_nmse": 0.0013553691716392138
+  }
+ ],
+ "target_var": 13798.769490755614,
+ "baseline_mse": {
+  "train": 13798.769490755614,
+  "train_dist": 14234.080748439152,
+  "ood": 93038.19465217798
+ }
+}

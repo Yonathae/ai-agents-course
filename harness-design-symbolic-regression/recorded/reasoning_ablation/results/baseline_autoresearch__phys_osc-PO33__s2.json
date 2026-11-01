@@ -1,0 +1,79 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO33__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "phys_osc/PO33",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*x**3 + c2*v + c3*v**3 + c4*x*v**2",
+ "best_params": {
+  "c0": -5.24314613389158,
+  "c1": 0.24299147673197247,
+  "c2": -2.3114651362913703,
+  "c3": 0.44314868465797697,
+  "c4": 0.03710342468419943
+ },
+ "best_train_r2": 0.999989115403914,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 9835,
+ "output_tokens": 682,
+ "cached_input_tokens": 3072,
+ "cost": 0.000827025,
+ "tokens_by_role": {
+  "agent": 10517
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999933339385845,
+   "mse": 2.0635758876317272e-06,
+   "nmse": 1.0213622665385353e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.7639955400884302,
+   "mse": 1.99882586082626e-12,
+   "nmse": 9.893143857056375e-12,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 3081,
+   "cost": 0.000239475,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*v",
+   "train_r2": 0.9888993784369764,
+   "train_mse": 0.0022427864965888756,
+   "train_nmse": 0.011100621563023615,
+   "train_dist_r2": 0.9916701231830574,
+   "train_dist_mse": 0.002578634050148297,
+   "train_dist_nmse": 0.012762891511857647,
+   "ood_r2": 0.8098084689046635,
+   "ood_mse": 1.6108159608761004e-12,
+   "ood_nmse": 7.972697542347302e-12
+  },
+  {
+   "index": 2,
+   "tokens": 6609,
+   "cost": 0.00052485,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*v + c3*v**3 + c4*x*v**2",
+   "train_r2": 0.999989115403914,
+   "train_mse": 2.1991403800231585e-06,
+   "train_nmse": 1.0884596086042847e-05,
+   "train_dist_r2": 0.9999933339385845,
+   "train_dist_mse": 2.0635758876317272e-06,
+   "train_dist_nmse": 1.0213622665385353e-05,
+   "ood_r2": 0.7639955400884302,
+   "ood_mse": 1.99882586082626e-12,
+   "ood_nmse": 9.893143857056375e-12
+  }
+ ],
+ "target_var": 0.20204152387823404,
+ "baseline_mse": {
+  "train": 0.20204152387823404,
+  "train_dist": 0.3099168082916083,
+  "ood": 2.0372019305603887e-06
+ }
+}

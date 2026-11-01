@@ -1,0 +1,77 @@
+{
+ "run_id": "baseline_autoresearch_no_reasoning__matsci-MatSci16__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "matsci/MatSci16",
+ "harness": "baseline_autoresearch_no_reasoning",
+ "best_expression": "c0*epsilon + c1*T + c2*epsilon*T",
+ "best_params": {
+  "c0": 1816.8096127801007,
+  "c1": 4.84898983307263e-05,
+  "c2": -5.413431237277672
+ },
+ "best_train_r2": 0.9999999389276993,
+ "evaluations": 2,
+ "model_calls": 3,
+ "input_tokens": 3221,
+ "output_tokens": 233,
+ "cached_input_tokens": 1536,
+ "cost": 0.00025387500000000003,
+ "tokens_by_role": {
+  "agent": 3454
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999061828091,
+   "mse": 0.003053812440097884,
+   "nmse": 8.905883592889179e-08,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999968142445,
+   "mse": 7.216290902256233e-06,
+   "nmse": 2.1044988193793351e-10,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1055,
+   "cost": 6.3825e-05,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*T",
+   "train_r2": 0.8986641336442955,
+   "train_mse": 3474.789739585559,
+   "train_nmse": 0.10133586635570446,
+   "train_dist_r2": 0.8962826536656825,
+   "train_dist_mse": 3376.0691357865285,
+   "train_dist_nmse": 0.09845686110276326,
+   "ood_r2": -13.395808539418226,
+   "ood_mse": 32609.012800616467,
+   "ood_nmse": 0.9509820192886987
+  },
+  {
+   "index": 2,
+   "tokens": 2186,
+   "cost": 0.00013402500000000002,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*T + c2*epsilon*T",
+   "train_r2": 0.9999999389276993,
+   "train_mse": 0.0020941588717642307,
+   "train_nmse": 6.107230061696446e-08,
+   "train_dist_r2": 0.9999999061828091,
+   "train_dist_mse": 0.003053812440097884,
+   "train_dist_nmse": 8.905883592889179e-08,
+   "ood_r2": 0.9999999968142445,
+   "ood_mse": 7.216290902256233e-06,
+   "ood_nmse": 2.1044988193793351e-10
+  }
+ ],
+ "target_var": 34289.831079042764,
+ "baseline_mse": {
+  "train": 34289.831079042764,
+  "train_dist": 32596.35551067351,
+  "ood": 267301.4733901023
+ }
+}

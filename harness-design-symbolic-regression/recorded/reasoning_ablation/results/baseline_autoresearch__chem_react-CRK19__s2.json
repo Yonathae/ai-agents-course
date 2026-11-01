@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK19__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "chem_react/CRK19",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*t + c2*A + c3*t*A",
+ "best_params": {
+  "c0": 0.3865903983837761,
+  "c1": 0.004500976301640321,
+  "c2": -0.31732699645028556,
+  "c3": -0.0019289225110128148
+ },
+ "best_train_r2": 0.9991187142002829,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 6951,
+ "output_tokens": 617,
+ "cached_input_tokens": 2560,
+ "cost": 0.00052335,
+ "tokens_by_role": {
+  "agent": 7568
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9991573513452735,
+   "mse": 9.700559883153246e-08,
+   "nmse": 0.0008623240808887559,
+   "valid": true
+  },
+  "ood": {
+   "r2": -8.68574265881664,
+   "mse": 3.027581998995413e-07,
+   "nmse": 0.002691346577977532,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2026,
+   "cost": 8.3775e-05,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*A",
+   "train_r2": 0.9887058105153245,
+   "train_mse": 1.2705195628406437e-06,
+   "train_nmse": 0.011294189484675482,
+   "train_dist_r2": 0.9888655881527731,
+   "train_dist_mse": 1.2817919815320644e-06,
+   "train_dist_nmse": 0.011394394815136395,
+   "ood_r2": -421.9373403609311,
+   "ood_mse": 1.322023022379364e-05,
+   "ood_nmse": 0.11752025670877977
+  },
+  {
+   "index": 2,
+   "tokens": 4617,
+   "cost": 0.00028740000000000005,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*A + c3*t*A",
+   "train_r2": 0.9991187142002829,
+   "train_mse": 9.913866333777271e-08,
+   "train_nmse": 0.0008812857997171144,
+   "train_dist_r2": 0.9991573513452735,
+   "train_dist_mse": 9.700559883153246e-08,
+   "train_dist_nmse": 0.0008623240808887559,
+   "ood_r2": -8.68574265881664,
+   "ood_mse": 3.027581998995413e-07,
+   "ood_nmse": 0.002691346577977532
+  }
+ ],
+ "target_var": 0.00011249320409973181,
+ "baseline_mse": {
+  "train": 0.00011249320409973181,
+  "train_dist": 0.0001151199172014345,
+  "ood": 2.7412854015959423e-05
+ }
+}

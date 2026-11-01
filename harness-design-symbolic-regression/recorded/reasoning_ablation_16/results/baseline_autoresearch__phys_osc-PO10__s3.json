@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO10__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "phys_osc/PO10",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*x**3 + c2*sin(t) + c3*t",
+ "best_params": {
+  "c0": -4.960423651452345,
+  "c1": -1.8480096150035776,
+  "c2": 0.7922819155061418,
+  "c3": -0.0005680326617773236
+ },
+ "best_train_r2": 0.993575879740816,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7992,
+ "output_tokens": 742,
+ "cached_input_tokens": 2816,
+ "cost": 0.0007164,
+ "tokens_by_role": {
+  "agent": 8734
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9939474115378899,
+   "mse": 0.10869066333245057,
+   "nmse": 0.005744868914373068,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9804038550022182,
+   "mse": 0.534141956610006,
+   "nmse": 0.028232190588490785,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2505,
+   "cost": 0.00021157499999999998,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*sin(t)",
+   "train_r2": 0.9935685621556934,
+   "train_mse": 0.12168027780933192,
+   "train_nmse": 0.006431437844306598,
+   "train_dist_r2": 0.9939601265508492,
+   "train_dist_mse": 0.10846233074359583,
+   "train_dist_nmse": 0.005732800345172808,
+   "ood_r2": 0.9803681825133294,
+   "ood_mse": 0.535114299538391,
+   "ood_nmse": 0.028283583987814366
+  },
+  {
+   "index": 2,
+   "tokens": 5421,
+   "cost": 0.00045434999999999996,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*sin(t) + c3*t",
+   "train_r2": 0.993575879740816,
+   "train_mse": 0.12154183197308799,
+   "train_nmse": 0.0064241202591840425,
+   "train_dist_r2": 0.9939474115378899,
+   "train_dist_mse": 0.10869066333245057,
+   "train_dist_nmse": 0.005744868914373068,
+   "ood_r2": 0.9804038550022182,
+   "ood_mse": 0.534141956610006,
+   "ood_nmse": 0.028232190588490785
+  }
+ ],
+ "target_var": 18.919607209925672,
+ "baseline_mse": {
+  "train": 18.919607209925672,
+  "train_dist": 17.982563230723926,
+  "ood": 27.258678397214695
+ }
+}

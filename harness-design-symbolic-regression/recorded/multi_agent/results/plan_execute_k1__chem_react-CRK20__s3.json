@@ -1,0 +1,144 @@
+{
+ "run_id": "plan_execute_k1__chem_react-CRK20__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "chem_react/CRK20",
+ "harness": "plan_execute_k1",
+ "best_expression": "c0*(c1 - A)*exp(-c2*t)+c3*t + c4",
+ "best_params": {
+  "c0": -0.5846127868005283,
+  "c1": 0.9888951550131903,
+  "c2": 0.20109663259076105,
+  "c3": -0.0006335674775899678,
+  "c4": 0.036203331259713104
+ },
+ "best_train_r2": 0.9983896338292184,
+ "evaluations": 6,
+ "model_calls": 13,
+ "input_tokens": 16099,
+ "output_tokens": 884,
+ "cached_input_tokens": 9984,
+ "cost": 0.001098225,
+ "tokens_by_role": {
+  "orchestrator": 10887,
+  "worker": 6096
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9983608652412983,
+   "mse": 3.548995705972776e-06,
+   "nmse": 0.0016342699077781812,
+   "valid": true
+  },
+  "ood": {
+   "r2": -160.7869876536255,
+   "mse": 9.868639078579339e-06,
+   "nmse": 0.004544389797289242,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2158,
+   "cost": 0.000167925,
+   "role": "worker",
+   "best_expression": "-c0*(A - c1)*exp(-c2*t)",
+   "train_r2": 0.9748278139168913,
+   "train_mse": 5.4664153022528734e-05,
+   "train_nmse": 0.025172186083108693,
+   "train_dist_r2": 0.9742162587584058,
+   "train_dist_mse": 5.582603044963011e-05,
+   "train_dist_nmse": 0.02570721668696175,
+   "ood_r2": -135.0900979276439,
+   "ood_mse": 8.301187123229932e-06,
+   "ood_nmse": 0.0038225969931434097
+  },
+  {
+   "index": 2,
+   "tokens": 4418,
+   "cost": 0.00030615,
+   "role": "worker",
+   "best_expression": "-c0*(A - c1)*exp(-c2*t)",
+   "train_r2": 0.9748278139168913,
+   "train_mse": 5.4664153022528734e-05,
+   "train_nmse": 0.025172186083108693,
+   "train_dist_r2": 0.9742162587584058,
+   "train_dist_mse": 5.582603044963011e-05,
+   "train_dist_nmse": 0.02570721668696175,
+   "ood_r2": -135.0900979276439,
+   "ood_mse": 8.301187123229932e-06,
+   "ood_nmse": 0.0038225969931434097
+  },
+  {
+   "index": 3,
+   "tokens": 6813,
+   "cost": 0.00044715,
+   "role": "worker",
+   "best_expression": "-c0*(A - c1)*exp(-c2*t)",
+   "train_r2": 0.9748278139168913,
+   "train_mse": 5.4664153022528734e-05,
+   "train_nmse": 0.025172186083108693,
+   "train_dist_r2": 0.9742162587584058,
+   "train_dist_mse": 5.582603044963011e-05,
+   "train_dist_nmse": 0.02570721668696175,
+   "ood_r2": -135.0900979276439,
+   "ood_mse": 8.301187123229932e-06,
+   "ood_nmse": 0.0038225969931434097
+  },
+  {
+   "index": 4,
+   "tokens": 9387,
+   "cost": 0.000608775,
+   "role": "worker",
+   "best_expression": "c0*(c1 - A)*exp(-c2*t)+c3*t",
+   "train_r2": 0.9884619418469967,
+   "train_mse": 2.505615421625395e-05,
+   "train_nmse": 0.011538058153003395,
+   "train_dist_r2": 0.9887006694553808,
+   "train_dist_mse": 2.4464904651879807e-05,
+   "train_dist_nmse": 0.011265794828080952,
+   "ood_r2": -1203.520396078963,
+   "ood_mse": 7.347301055595333e-05,
+   "ood_nmse": 0.033833439128535335
+  },
+  {
+   "index": 5,
+   "tokens": 12083,
+   "cost": 0.000779025,
+   "role": "worker",
+   "best_expression": "c0*(c1 - A)*exp(-c2*t)+c3*t + c4",
+   "train_r2": 0.9983896338292184,
+   "train_mse": 3.497086128764132e-06,
+   "train_nmse": 0.0016103661707815985,
+   "train_dist_r2": 0.9983608652412983,
+   "train_dist_mse": 3.548995705972776e-06,
+   "train_dist_nmse": 0.0016342699077781812,
+   "ood_r2": -160.7869876536255,
+   "ood_mse": 9.868639078579339e-06,
+   "ood_nmse": 0.004544389797289242
+  },
+  {
+   "index": 6,
+   "tokens": 14959,
+   "cost": 0.00096435,
+   "role": "worker",
+   "best_expression": "c0*(c1 - A)*exp(-c2*t)+c3*t + c4",
+   "train_r2": 0.9983896338292184,
+   "train_mse": 3.497086128764132e-06,
+   "train_nmse": 0.0016103661707815985,
+   "train_dist_r2": 0.9983608652412983,
+   "train_dist_mse": 3.548995705972776e-06,
+   "train_dist_nmse": 0.0016342699077781812,
+   "ood_r2": -160.7869876536255,
+   "ood_mse": 9.868639078579339e-06,
+   "ood_nmse": 0.004544389797289242
+  }
+ ],
+ "target_var": 0.0021716092850278925,
+ "baseline_mse": {
+  "train": 0.0021716092850278925,
+  "train_dist": 0.0021685716142663936,
+  "ood": 0.0019805989419618224
+ }
+}

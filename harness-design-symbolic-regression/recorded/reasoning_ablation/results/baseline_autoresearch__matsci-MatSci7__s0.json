@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci7__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "matsci/MatSci7",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+ "best_params": {
+  "c0": 1600.0037106122443,
+  "c1": 2608.3619763122706,
+  "c2": 1095.9286450362804,
+  "c3": -5.83333220003702
+ },
+ "best_train_r2": 0.9993968063562565,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7181,
+ "output_tokens": 505,
+ "cached_input_tokens": 768,
+ "cost": 0.0006612749999999999,
+ "tokens_by_role": {
+  "agent": 7686
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9993970012126364,
+   "mse": 1.5396031002274693,
+   "nmse": 0.0006111958658173855,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.8668346691309651,
+   "mse": 29.614854868602674,
+   "nmse": 0.011756586395414222,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2238,
+   "cost": 0.0001746,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*epsilon**2 + c2*T",
+   "train_r2": 0.9993968063269937,
+   "train_mse": 1.5194455671852543,
+   "train_nmse": 0.0006031936730063559,
+   "train_dist_r2": 0.9993970026069436,
+   "train_dist_mse": 1.5395995402207436,
+   "train_dist_nmse": 0.0006111944525561412,
+   "ood_r2": 0.8668345681818239,
+   "ood_mse": 29.614877318846638,
+   "ood_nmse": 0.01175659530777371
+  },
+  {
+   "index": 2,
+   "tokens": 4793,
+   "cost": 0.00040469999999999997,
+   "role": "agent",
+   "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+   "train_r2": 0.9993968063562565,
+   "train_mse": 1.519445493472102,
+   "train_nmse": 0.0006031936437435062,
+   "train_dist_r2": 0.9993970012126364,
+   "train_dist_mse": 1.5396031002274693,
+   "train_dist_nmse": 0.0006111958658173855,
+   "ood_r2": 0.8668346691309651,
+   "ood_mse": 29.614854868602674,
+   "ood_nmse": 0.011756586395414222
+  }
+ ],
+ "target_var": 2519.0011685836166,
+ "baseline_mse": {
+  "train": 2519.0011685836166,
+  "train_dist": 2553.3720102808497,
+  "ood": 23364.32666916644
+ }
+}

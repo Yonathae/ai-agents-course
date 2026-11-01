@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK24__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "chem_react/CRK24",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*t + c2*A + c3*A**2",
+ "best_params": {
+  "c0": 0.2979340548657847,
+  "c1": 3.3105672284215014e-07,
+  "c2": 0.16302507262842791,
+  "c3": -0.2294901499333836
+ },
+ "best_train_r2": 0.999999761868489,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7607,
+ "output_tokens": 557,
+ "cached_input_tokens": 4608,
+ "cost": 0.0005648249999999999,
+ "tokens_by_role": {
+  "agent": 8164
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999998006734973,
+   "mse": 3.7724130925621277e-10,
+   "nmse": 3.4148365019336377e-07,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9991864956388474,
+   "mse": 4.7815896881131677e-11,
+   "nmse": 4.328356042563865e-08,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2374,
+   "cost": 0.000150675,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*A",
+   "train_r2": 0.9961632609750593,
+   "train_mse": 4.23849414817807e-06,
+   "train_nmse": 0.003836739024940765,
+   "train_dist_r2": 0.9967086163082373,
+   "train_dist_mse": 6.229206230843191e-06,
+   "train_dist_nmse": 0.005638757021890349,
+   "ood_r2": -17.736809326310333,
+   "ood_mse": 1.1013061335761123e-06,
+   "ood_nmse": 0.0009969163748673356
+  },
+  {
+   "index": 2,
+   "tokens": 5116,
+   "cost": 0.00033884999999999997,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*A + c3*A**2",
+   "train_r2": 0.999999761868489,
+   "train_mse": 2.630668933031024e-10,
+   "train_nmse": 2.38131510961222e-07,
+   "train_dist_r2": 0.9999998006734973,
+   "train_dist_mse": 3.7724130925621277e-10,
+   "train_dist_nmse": 3.4148365019336377e-07,
+   "ood_r2": 0.9991864956388474,
+   "ood_mse": 4.7815896881131677e-11,
+   "ood_nmse": 4.328356042563865e-08
+  }
+ ],
+ "target_var": 0.001104712653278133,
+ "baseline_mse": {
+  "train": 0.001104712653278133,
+  "train_dist": 0.0019090124675340753,
+  "ood": 8.850174916410369e-05
+ }
+}

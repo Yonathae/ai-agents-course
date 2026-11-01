@@ -1,0 +1,142 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG7__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG7",
+ "harness": "baseline_autoresearch",
+ "best_expression": "(c0 + c1*t)*P*(15-P) + c2*t + c3*exp(-t)",
+ "best_params": {
+  "c0": 0.0002740565868755634,
+  "c1": 0.02010338273032425,
+  "c2": -0.12526757795971452,
+  "c3": 2.448643130093224
+ },
+ "best_train_r2": 0.9937020451163734,
+ "evaluations": 6,
+ "model_calls": 14,
+ "input_tokens": 22952,
+ "output_tokens": 1805,
+ "cached_input_tokens": 9728,
+ "cost": 0.0018980999999999998,
+ "tokens_by_role": {
+  "agent": 24757
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9950964387373987,
+   "mse": 0.004530010363059949,
+   "nmse": 0.006843817634481904,
+   "valid": true
+  },
+  "ood": {
+   "r2": -56.688033811609685,
+   "mse": 0.003017649072342655,
+   "nmse": 0.004558982933987454,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2448,
+   "cost": 0.000216225,
+   "role": "agent",
+   "best_expression": "c0 * P * (15 - P)",
+   "train_r2": 0.7502810583697204,
+   "train_mse": 0.16529215912153195,
+   "train_nmse": 0.24971894163027958,
+   "train_dist_r2": 0.7966596999865021,
+   "train_dist_mse": 0.18784993537538,
+   "train_dist_nmse": 0.2837986223700164,
+   "ood_r2": -2281.79947411151,
+   "ood_mse": 0.11941276656946061,
+   "ood_nmse": 0.18040559118684082
+  },
+  {
+   "index": 2,
+   "tokens": 5234,
+   "cost": 0.00045352500000000003,
+   "role": "agent",
+   "best_expression": "(c0 + c1*t)*P*(15-P)",
+   "train_r2": 0.8873648726177226,
+   "train_mse": 0.07455463040328672,
+   "train_nmse": 0.11263512738227745,
+   "train_dist_r2": 0.9109377281803579,
+   "train_dist_mse": 0.0822775514966474,
+   "train_dist_nmse": 0.12430270854267723,
+   "ood_r2": -846.6082805531292,
+   "ood_mse": 0.04433821318774693,
+   "ood_nmse": 0.06698497817359295
+  },
+  {
+   "index": 3,
+   "tokens": 8378,
+   "cost": 0.00070965,
+   "role": "agent",
+   "best_expression": "(c0 + c1*t)*P*(15-P) + c2*t",
+   "train_r2": 0.9864868588530856,
+   "train_mse": 0.008944520836526951,
+   "train_nmse": 0.013513141146914385,
+   "train_dist_r2": 0.9902926977391562,
+   "train_dist_mse": 0.00896780472069605,
+   "train_dist_nmse": 0.013548317811933774,
+   "ood_r2": -82.07951860457432,
+   "ood_mse": 0.004345872370455341,
+   "ood_nmse": 0.006565626915263709
+  },
+  {
+   "index": 4,
+   "tokens": 11828,
+   "cost": 0.0009763500000000001,
+   "role": "agent",
+   "best_expression": "(c0 + c1*t)*P*(15-P) + c2*t + c3*exp(-t)",
+   "train_r2": 0.9937020451163734,
+   "train_mse": 0.004168696831599929,
+   "train_nmse": 0.006297954883626581,
+   "train_dist_r2": 0.9950964387373987,
+   "train_dist_mse": 0.004530010363059949,
+   "train_dist_nmse": 0.006843817634481904,
+   "ood_r2": -56.688033811609685,
+   "ood_mse": 0.003017649072342655,
+   "ood_nmse": 0.004558982933987454
+  },
+  {
+   "index": 5,
+   "tokens": 15764,
+   "cost": 0.00126915,
+   "role": "agent",
+   "best_expression": "(c0 + c1*t)*P*(15-P) + c2*t + c3*exp(-t)",
+   "train_r2": 0.9937020451163734,
+   "train_mse": 0.004168696831599929,
+   "train_nmse": 0.006297954883626581,
+   "train_dist_r2": 0.9950964387373987,
+   "train_dist_mse": 0.004530010363059949,
+   "train_dist_nmse": 0.006843817634481904,
+   "ood_r2": -56.688033811609685,
+   "ood_mse": 0.003017649072342655,
+   "ood_nmse": 0.004558982933987454
+  },
+  {
+   "index": 6,
+   "tokens": 20124,
+   "cost": 0.0015589499999999997,
+   "role": "agent",
+   "best_expression": "(c0 + c1*t)*P*(15-P) + c2*t + c3*exp(-t)",
+   "train_r2": 0.9937020451163734,
+   "train_mse": 0.004168696831599929,
+   "train_nmse": 0.006297954883626581,
+   "train_dist_r2": 0.9950964387373987,
+   "train_dist_mse": 0.004530010363059949,
+   "train_dist_nmse": 0.006843817634481904,
+   "ood_r2": -56.688033811609685,
+   "ood_mse": 0.003017649072342655,
+   "ood_nmse": 0.004558982933987454
+  }
+ ],
+ "target_var": 0.6619127809946216,
+ "baseline_mse": {
+  "train": 0.6619127809946216,
+  "train_dist": 0.9296244869531485,
+  "ood": 0.061071832409642327
+ }
+}

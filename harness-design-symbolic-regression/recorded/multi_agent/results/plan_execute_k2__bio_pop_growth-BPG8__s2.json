@@ -1,0 +1,143 @@
+{
+ "run_id": "plan_execute_k2__bio_pop_growth-BPG8__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG8",
+ "harness": "plan_execute_k2",
+ "best_expression": "c0*P*(1 - c1*P) + c2*t + c3",
+ "best_params": {
+  "c0": 2.05049897248705,
+  "c1": 0.012580698460935702,
+  "c2": 0.00022938310428817174,
+  "c3": 1.3057323988353442
+ },
+ "best_train_r2": 0.9999710577320777,
+ "evaluations": 6,
+ "model_calls": 10,
+ "input_tokens": 11269,
+ "output_tokens": 803,
+ "cached_input_tokens": 6656,
+ "cost": 0.0008364749999999999,
+ "tokens_by_role": {
+  "orchestrator": 5970,
+  "worker": 6102
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999650322417625,
+   "mse": 0.0012898790440849135,
+   "nmse": 3.167007653786057e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9932057835337111,
+   "mse": 2.0927073154285226e-05,
+   "nmse": 5.138171765398418e-07,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2087,
+   "cost": 0.00013575,
+   "role": "worker",
+   "best_expression": "c0*P + c1*t",
+   "train_r2": -0.002426747439371768,
+   "train_mse": 40.82747489436896,
+   "train_nmse": 1.0024267474393718,
+   "train_dist_r2": -0.023247926293412657,
+   "train_dist_mse": 37.74522942148235,
+   "train_dist_nmse": 0.9267491476811366,
+   "ood_r2": -890.9666168358947,
+   "ood_mse": 2.747373554304904,
+   "ood_nmse": 0.06745557356089774
+  },
+  {
+   "index": 2,
+   "tokens": 3082,
+   "cost": 0.00019282499999999998,
+   "role": "worker",
+   "best_expression": "c0*exp(-c1*t)*P",
+   "train_r2": 0.9493486824402432,
+   "train_mse": 2.062959115287128,
+   "train_nmse": 0.050651317559756784,
+   "train_dist_r2": 0.9360171578643736,
+   "train_dist_mse": 2.360177815552399,
+   "train_dist_nmse": 0.05794885373498975,
+   "ood_r2": -0.07706588518672342,
+   "ood_mse": 0.003317503450636904,
+   "ood_nmse": 8.145382985954672e-05
+  },
+  {
+   "index": 3,
+   "tokens": 5424,
+   "cost": 0.000376575,
+   "role": "worker",
+   "best_expression": "c0*exp(-c1*t)*P",
+   "train_r2": 0.9493486824402432,
+   "train_mse": 2.062959115287128,
+   "train_nmse": 0.050651317559756784,
+   "train_dist_r2": 0.9360171578643736,
+   "train_dist_mse": 2.360177815552399,
+   "train_dist_nmse": 0.05794885373498975,
+   "ood_r2": -0.07706588518672342,
+   "ood_mse": 0.003317503450636904,
+   "ood_nmse": 8.145382985954672e-05
+  },
+  {
+   "index": 4,
+   "tokens": 6438,
+   "cost": 0.00043799999999999997,
+   "role": "worker",
+   "best_expression": "c0*P*(1 - c1*P) + c2*t",
+   "train_r2": 0.9993779325986352,
+   "train_mse": 0.02533595724246684,
+   "train_nmse": 0.0006220674013648568,
+   "train_dist_r2": 0.9989367354486167,
+   "train_dist_mse": 0.03922134938799244,
+   "train_dist_nmse": 0.0009629919508593245,
+   "ood_r2": 0.8549059756965844,
+   "ood_mse": 0.0004469085252012488,
+   "ood_nmse": 1.0972832889604026e-05
+  },
+  {
+   "index": 5,
+   "tokens": 9083,
+   "cost": 0.0006237749999999999,
+   "role": "worker",
+   "best_expression": "c0*P*(1 - c1*P) + c2*t + c3",
+   "train_r2": 0.9999710577320777,
+   "train_mse": 0.0011787791177773931,
+   "train_nmse": 2.894226792228141e-05,
+   "train_dist_r2": 0.9999650322417625,
+   "train_dist_mse": 0.0012898790440849135,
+   "train_dist_nmse": 3.167007653786057e-05,
+   "ood_r2": 0.9932057835337111,
+   "ood_mse": 2.0927073154285226e-05,
+   "ood_nmse": 5.138171765398418e-07
+  },
+  {
+   "index": 6,
+   "tokens": 10156,
+   "cost": 0.0007006499999999999,
+   "role": "worker",
+   "best_expression": "c0*P*(1 - c1*P) + c2*t + c3",
+   "train_r2": 0.9999710577320777,
+   "train_mse": 0.0011787791177773931,
+   "train_nmse": 2.894226792228141e-05,
+   "train_dist_r2": 0.9999650322417625,
+   "train_dist_mse": 0.0012898790440849135,
+   "train_dist_nmse": 3.167007653786057e-05,
+   "ood_r2": 0.9932057835337111,
+   "ood_mse": 2.0927073154285226e-05,
+   "ood_nmse": 5.138171765398418e-07
+  }
+ ],
+ "target_var": 40.728636779355554,
+ "baseline_mse": {
+  "train": 40.728636779355554,
+  "train_dist": 36.89467310785896,
+  "ood": 2.2371106862168184
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "run_id": "plan_execute_k2_diverse__matsci-MatSci13__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "matsci/MatSci13",
+ "harness": "plan_execute_k2_diverse",
+ "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+ "best_params": {
+  "c0": 120.58155990411981,
+  "c1": -111.3073248416008,
+  "c2": -1.1074393933272828,
+  "c3": 4.626284436992966,
+  "c4": -1.300918645683742,
+  "c5": 0.0026709245736762643,
+  "c6": 13.173598776573654,
+  "c7": -1.062686952929155e-07
+ },
+ "best_train_r2": 0.9999999517884574,
+ "evaluations": 5,
+ "model_calls": 10,
+ "input_tokens": 12105,
+ "output_tokens": 853,
+ "cached_input_tokens": 6656,
+ "cost": 0.000772875,
+ "tokens_by_role": {
+  "orchestrator": 7864,
+  "worker": 5094
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999404012911,
+   "mse": 0.0001358435858370498,
+   "nmse": 6.109660204745992e-08,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999996468257,
+   "mse": 9.720953302432445e-09,
+   "nmse": 4.372066680815432e-12,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2173,
+   "cost": 0.0001785,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999517884574,
+   "train_mse": 0.00010719464936467953,
+   "train_nmse": 4.8211542661328956e-08,
+   "train_dist_r2": 0.9999999404012911,
+   "train_dist_mse": 0.0001358435858370498,
+   "train_dist_nmse": 6.109660204745992e-08,
+   "ood_r2": 0.9999999996468257,
+   "ood_mse": 9.720953302432445e-09,
+   "ood_nmse": 4.372066680815432e-12
+  },
+  {
+   "index": 2,
+   "tokens": 3180,
+   "cost": 0.000240975,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999517884574,
+   "train_mse": 0.00010719464936467953,
+   "train_nmse": 4.8211542661328956e-08,
+   "train_dist_r2": 0.9999999404012911,
+   "train_dist_mse": 0.0001358435858370498,
+   "train_dist_nmse": 6.109660204745992e-08,
+   "ood_r2": 0.9999999996468257,
+   "ood_mse": 9.720953302432445e-09,
+   "ood_nmse": 4.372066680815432e-12
+  },
+  {
+   "index": 3,
+   "tokens": 5698,
+   "cost": 0.0004215,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999517884574,
+   "train_mse": 0.00010719464936467953,
+   "train_nmse": 4.8211542661328956e-08,
+   "train_dist_r2": 0.9999999404012911,
+   "train_dist_mse": 0.0001358435858370498,
+   "train_dist_nmse": 6.109660204745992e-08,
+   "ood_r2": 0.9999999996468257,
+   "ood_mse": 9.720953302432445e-09,
+   "ood_nmse": 4.372066680815432e-12
+  },
+  {
+   "index": 4,
+   "tokens": 6723,
+   "cost": 0.0004869,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999517884574,
+   "train_mse": 0.00010719464936467953,
+   "train_nmse": 4.8211542661328956e-08,
+   "train_dist_r2": 0.9999999404012911,
+   "train_dist_mse": 0.0001358435858370498,
+   "train_dist_nmse": 6.109660204745992e-08,
+   "ood_r2": 0.9999999996468257,
+   "ood_mse": 9.720953302432445e-09,
+   "ood_nmse": 4.372066680815432e-12
+  },
+  {
+   "index": 5,
+   "tokens": 9467,
+   "cost": 0.000648,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2 + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999517884574,
+   "train_mse": 0.00010719464936467953,
+   "train_nmse": 4.8211542661328956e-08,
+   "train_dist_r2": 0.9999999404012911,
+   "train_dist_mse": 0.0001358435858370498,
+   "train_dist_nmse": 6.109660204745992e-08,
+   "ood_r2": 0.9999999996468257,
+   "ood_mse": 9.720953302432445e-09,
+   "ood_nmse": 4.372066680815432e-12
+  }
+ ],
+ "target_var": 2223.4229283573954,
+ "baseline_mse": {
+  "train": 2223.4229283573954,
+  "train_dist": 2279.311539282593,
+  "ood": 8286.83462868122
+ }
+}

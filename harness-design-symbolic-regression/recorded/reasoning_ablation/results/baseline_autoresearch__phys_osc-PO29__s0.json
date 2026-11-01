@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO29__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "phys_osc/PO29",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*v + c2*x**3 + c3*x*v",
+ "best_params": {
+  "c0": -1.6812762685696692,
+  "c1": -0.378197163300283,
+  "c2": -1.374609670185568,
+  "c3": -0.007944679382604725
+ },
+ "best_train_r2": 0.9972034233563446,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 8862,
+ "output_tokens": 554,
+ "cached_input_tokens": 2048,
+ "cost": 0.0007540500000000001,
+ "tokens_by_role": {
+  "agent": 9416
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9972466113708183,
+   "mse": 0.0005586415210762983,
+   "nmse": 0.0027102255823734578,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.7847582087471512,
+   "mse": 9.933868711316552e-08,
+   "nmse": 4.819374159922544e-07,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2777,
+   "cost": 0.000210375,
+   "role": "agent",
+   "best_expression": "c0*x + c1*v + c2*x**3",
+   "train_r2": 0.9972001388546832,
+   "train_mse": 0.0005771175282215718,
+   "train_nmse": 0.0027998611453168643,
+   "train_dist_r2": 0.9973089330172903,
+   "train_dist_mse": 0.0005459969350516036,
+   "train_dist_nmse": 0.002648880911005987,
+   "ood_r2": 0.784665828839135,
+   "ood_mse": 9.938132241518811e-08,
+   "ood_nmse": 4.821442593468823e-07
+  },
+  {
+   "index": 2,
+   "tokens": 5925,
+   "cost": 0.0004930500000000001,
+   "role": "agent",
+   "best_expression": "c0*x + c1*v + c2*x**3 + c3*x*v",
+   "train_r2": 0.9972034233563446,
+   "train_mse": 0.0005764405148334293,
+   "train_nmse": 0.0027965766436553728,
+   "train_dist_r2": 0.9972466113708183,
+   "train_dist_mse": 0.0005586415210762983,
+   "train_dist_nmse": 0.0027102255823734578,
+   "ood_r2": 0.7847582087471512,
+   "ood_mse": 9.933868711316552e-08,
+   "ood_nmse": 4.819374159922544e-07
+  }
+ ],
+ "target_var": 0.20612362480435029,
+ "baseline_mse": {
+  "train": 0.20612362480435029,
+  "train_dist": 0.20359531199769781,
+  "ood": 8.384314013852789e-06
+ }
+}

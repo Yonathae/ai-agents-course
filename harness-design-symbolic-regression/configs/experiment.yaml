@@ -1,0 +1,32 @@
+# The controlled comparison. Every harness gets the same model, tasks, evaluator and budget.
+out_dir: runs
+seeds: [0, 1, 2]
+
+budget:
+  max_evaluations: 16            # equation evaluations per run; curves for 1,2,4,8,16 come from
+                                 # the best-so-far after each evaluation (anytime evaluation)
+  max_model_calls: 80            # safety stop, not a comparison budget
+  max_tokens: null               # optional token budget (input + output, all roles)
+
+harnesses:
+  baseline_autoresearch:         # H1: one agent, the full history
+    reasoning: true              # true: each round = reasoning, then tool call; false: tool call only
+  baseline_autoresearch_no_reasoning:   # ablation: H1 without the reasoning step
+    reasoning: false
+  plan_execute:                  # H2: orchestrator plans k directions; k workers, one equation each
+    workers: 3
+  plan_execute_k1:               # multi_agent.ipynb: k workers per round (speedup question)
+    workers: 1
+  plan_execute_k2:
+    workers: 2
+  plan_execute_k4:
+    workers: 4
+  plan_execute_k2_diverse:       # ablation: the orchestrator is told to give workers different directions
+    workers: 2
+    diverse: true
+  plan_execute_k4_diverse:
+    workers: 4
+    diverse: true
+  context_managed:               # H3: curator -> meta-reasoner -> fresh executor (one equation) -> history
+    selected_steps: 5            # the curator selects at most this many earlier steps
+    best_equations: 3            # the template always shows the best equations so far

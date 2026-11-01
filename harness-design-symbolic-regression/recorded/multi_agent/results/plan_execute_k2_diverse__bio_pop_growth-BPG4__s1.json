@@ -1,0 +1,145 @@
+{
+ "run_id": "plan_execute_k2_diverse__bio_pop_growth-BPG4__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG4",
+ "harness": "plan_execute_k2_diverse",
+ "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+ "best_params": {
+  "c0": -0.09816202974139328,
+  "c1": 0.3439386155756163,
+  "c2": 0.01507336897671778,
+  "c3": -0.0035303508379459733,
+  "c4": -0.00016263529290473072,
+  "c5": 8.863003823043476e-06
+ },
+ "best_train_r2": 0.9999968911812611,
+ "evaluations": 6,
+ "model_calls": 10,
+ "input_tokens": 11055,
+ "output_tokens": 1100,
+ "cached_input_tokens": 8192,
+ "cost": 0.0008519250000000001,
+ "tokens_by_role": {
+  "orchestrator": 5994,
+  "worker": 6161
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999967780411345,
+   "mse": 2.169303037629291e-05,
+   "nmse": 3.113946025767671e-06,
+   "valid": true
+  },
+  "ood": {
+   "r2": -2.3343435232764915,
+   "mse": 3.4302578603820996e-06,
+   "nmse": 4.923995240134137e-07,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2185,
+   "cost": 0.000153975,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  },
+  {
+   "index": 2,
+   "tokens": 3224,
+   "cost": 0.00022875,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  },
+  {
+   "index": 3,
+   "tokens": 5674,
+   "cost": 0.000409125,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  },
+  {
+   "index": 4,
+   "tokens": 6669,
+   "cost": 0.0004707,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  },
+  {
+   "index": 5,
+   "tokens": 9322,
+   "cost": 0.0006658500000000001,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  },
+  {
+   "index": 6,
+   "tokens": 10335,
+   "cost": 0.0007323750000000001,
+   "role": "worker",
+   "best_expression": "c0 + c1*P + c2*t + c3*P**2 + c4*t*P + c5*t**2",
+   "train_r2": 0.9999968911812611,
+   "train_mse": 2.1657311584251838e-05,
+   "train_nmse": 3.1088187388652808e-06,
+   "train_dist_r2": 0.9999967780411345,
+   "train_dist_mse": 2.169303037629291e-05,
+   "train_dist_nmse": 3.113946025767671e-06,
+   "ood_r2": -2.3343435232764915,
+   "ood_mse": 3.4302578603820996e-06,
+   "ood_nmse": 4.923995240134137e-07
+  }
+ ],
+ "target_var": 6.966411812145973,
+ "baseline_mse": {
+  "train": 6.966411812145973,
+  "train_dist": 6.734988613680036,
+  "ood": 3.2795246750307223
+ }
+}

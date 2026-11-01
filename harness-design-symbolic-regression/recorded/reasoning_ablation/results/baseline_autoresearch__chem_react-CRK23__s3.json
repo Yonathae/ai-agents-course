@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK23__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "chem_react/CRK23",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*A + c2*exp(-c3*t)",
+ "best_params": {
+  "c0": 1.322237180678882,
+  "c1": -0.4106923037598796,
+  "c2": -0.7324605894696854,
+  "c3": 0.452305266973339
+ },
+ "best_train_r2": 0.9901759194694844,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7772,
+ "output_tokens": 641,
+ "cached_input_tokens": 4352,
+ "cost": 0.000612,
+ "tokens_by_role": {
+  "agent": 8413
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9926636276685019,
+   "mse": 6.791746705240286e-05,
+   "nmse": 0.008023620536008724,
+   "valid": true
+  },
+  "ood": {
+   "r2": -120.0456743796193,
+   "mse": 3.0072453061133953e-06,
+   "nmse": 0.00035526936209694256,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2446,
+   "cost": 0.00016485,
+   "role": "agent",
+   "best_expression": "c0 + c1*(A - c2)",
+   "train_r2": 0.8793801836626493,
+   "train_mse": 0.0010210094514307667,
+   "train_nmse": 0.12061981633735071,
+   "train_dist_r2": 0.8794839153525518,
+   "train_dist_mse": 0.00111569408400736,
+   "train_dist_nmse": 0.13180565107703301,
+   "ood_r2": -2519.022016412604,
+   "ood_mse": 6.26071474176957e-05,
+   "ood_nmse": 0.007396271026037573
+  },
+  {
+   "index": 2,
+   "tokens": 5234,
+   "cost": 0.00035130000000000003,
+   "role": "agent",
+   "best_expression": "c0 + c1*A + c2*exp(-c3*t)",
+   "train_r2": 0.9901759194694844,
+   "train_mse": 8.315780423027752e-05,
+   "train_nmse": 0.009824080530515632,
+   "train_dist_r2": 0.9926636276685019,
+   "train_dist_mse": 6.791746705240286e-05,
+   "train_dist_nmse": 0.008023620536008724,
+   "ood_r2": -120.0456743796193,
+   "ood_mse": 3.0072453061133953e-06,
+   "ood_nmse": 0.00035526936209694256
+  }
+ ],
+ "target_var": 0.008464690814776216,
+ "baseline_mse": {
+  "train": 0.008464690814776216,
+  "train_dist": 0.009264678031185098,
+  "ood": 0.0016406915315566794
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG14__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG14",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*P + c2*P**2 + c3*t",
+ "best_params": {
+  "c0": -0.0667082389835413,
+  "c1": 0.2726494146688785,
+  "c2": -0.003110845904944811,
+  "c3": -0.028327519547489403
+ },
+ "best_train_r2": 0.9992116053335727,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 10467,
+ "output_tokens": 734,
+ "cached_input_tokens": 2560,
+ "cost": 0.0009092249999999999,
+ "tokens_by_role": {
+  "agent": 11201
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9992707523379301,
+   "mse": 0.00248526699651869,
+   "nmse": 0.0007871058508241163,
+   "valid": true
+  },
+  "ood": {
+   "r2": -1760.1438430053854,
+   "mse": 0.03133511733475537,
+   "nmse": 0.00992410643403507,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2310,
+   "cost": 0.000220275,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*P",
+   "train_r2": 0.21783355185115283,
+   "train_mse": 2.469670956369186,
+   "train_nmse": 0.7821664481488472,
+   "train_dist_r2": 0.2278883867817001,
+   "train_dist_mse": 2.6313468109223277,
+   "train_dist_nmse": 0.8333706090032038,
+   "ood_r2": -44283.43424656506,
+   "ood_mse": 0.7879299290234819,
+   "ood_nmse": 0.2495443177906255
+  },
+  {
+   "index": 2,
+   "tokens": 4955,
+   "cost": 0.00043777499999999995,
+   "role": "agent",
+   "best_expression": "c0 + c1*P + c2*P**2",
+   "train_r2": 0.991950327077162,
+   "train_mse": 0.025416640502612158,
+   "train_nmse": 0.008049672922837927,
+   "train_dist_r2": 0.9921701105953644,
+   "train_dist_mse": 0.02668416607397583,
+   "train_dist_nmse": 0.008451109386077914,
+   "ood_r2": -4409.038269635249,
+   "ood_mse": 0.07846551954209656,
+   "ood_nmse": 0.02485071809429381
+  },
+  {
+   "index": 3,
+   "tokens": 7944,
+   "cost": 0.0006674249999999999,
+   "role": "agent",
+   "best_expression": "c0 + c1*P + c2*P**2 + c3*t",
+   "train_r2": 0.9992116053335727,
+   "train_mse": 0.002489336399483836,
+   "train_nmse": 0.0007883946664273149,
+   "train_dist_r2": 0.9992707523379301,
+   "train_dist_mse": 0.00248526699651869,
+   "train_dist_nmse": 0.0007871058508241163,
+   "ood_r2": -1760.1438430053854,
+   "ood_mse": 0.03133511733475537,
+   "ood_nmse": 0.00992410643403507
+  }
+ ],
+ "target_var": 3.1574749367147548,
+ "baseline_mse": {
+  "train": 3.1574749367147548,
+  "train_dist": 3.4209243480311646,
+  "ood": 2.406643329271252
+ }
+}

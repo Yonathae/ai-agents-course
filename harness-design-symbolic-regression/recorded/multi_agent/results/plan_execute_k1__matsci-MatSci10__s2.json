@@ -1,0 +1,80 @@
+{
+ "run_id": "plan_execute_k1__matsci-MatSci10__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "matsci/MatSci10",
+ "harness": "plan_execute_k1",
+ "best_expression": "c0*epsilon**2 + c1*T + c2*exp(c3*epsilon) + c4*sqrt(T)",
+ "best_params": {
+  "c0": -448394.62030271697,
+  "c1": -872.9258258430889,
+  "c2": 301351.27426461113,
+  "c3": 1.6312790262271166,
+  "c4": -3803.7135673810426
+ },
+ "best_train_r2": 0.9999584798226187,
+ "evaluations": 2,
+ "model_calls": 5,
+ "input_tokens": 5624,
+ "output_tokens": 376,
+ "cached_input_tokens": 3840,
+ "cost": 0.0003906,
+ "tokens_by_role": {
+  "orchestrator": 3960,
+  "worker": 2040
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999573530193478,
+   "mse": 3628.7792492053363,
+   "nmse": 4.188545620635342e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9862470685434128,
+   "mse": 252298.50571748114,
+   "nmse": 0.002912174394315158,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2139,
+   "cost": 0.000138825,
+   "role": "worker",
+   "best_expression": "c0*epsilon + c1*T + c2*epsilon*T + c3*epsilon**2 + c4*T**2",
+   "train_r2": 0.988554412172051,
+   "train_mse": 991597.4509242275,
+   "train_nmse": 0.011445587827948973,
+   "train_dist_r2": 0.988440391426476,
+   "train_dist_mse": 983592.9080802253,
+   "train_dist_nmse": 0.011353194792793212,
+   "ood_r2": -0.31386257599613643,
+   "ood_mse": 24102902.40217669,
+   "ood_nmse": 0.27820955579854173
+  },
+  {
+   "index": 2,
+   "tokens": 4497,
+   "cost": 0.0002925,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*T + c2*exp(c3*epsilon) + c4*sqrt(T)",
+   "train_r2": 0.9999584798226187,
+   "train_mse": 3597.1330325829235,
+   "train_nmse": 4.152017738132566e-05,
+   "train_dist_r2": 0.9999573530193478,
+   "train_dist_mse": 3628.7792492053363,
+   "train_dist_nmse": 4.188545620635342e-05,
+   "ood_r2": 0.9862470685434128,
+   "ood_mse": 252298.50571748114,
+   "ood_nmse": 0.002912174394315158
+  }
+ ],
+ "target_var": 86635781.9126464,
+ "baseline_mse": {
+  "train": 86635781.9126464,
+  "train_dist": 85221062.28030698,
+  "ood": 1146716819.682241
+ }
+}

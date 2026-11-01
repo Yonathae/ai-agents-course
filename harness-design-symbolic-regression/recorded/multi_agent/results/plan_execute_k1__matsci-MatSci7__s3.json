@@ -1,0 +1,96 @@
+{
+ "run_id": "plan_execute_k1__matsci-MatSci7__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "matsci/MatSci7",
+ "harness": "plan_execute_k1",
+ "best_expression": "c0*epsilon + c1*T + c2*epsilon*T + c3*epsilon**2 + c4",
+ "best_params": {
+  "c0": 206.43783676813823,
+  "c1": -2.82771286135676,
+  "c2": 3.2934595855275246,
+  "c3": -550.8011395975944,
+  "c4": 779.4696311984882
+ },
+ "best_train_r2": 0.9993968063732397,
+ "evaluations": 3,
+ "model_calls": 7,
+ "input_tokens": 7865,
+ "output_tokens": 576,
+ "cached_input_tokens": 4096,
+ "cost": 0.000609075,
+ "tokens_by_role": {
+  "orchestrator": 5433,
+  "worker": 3008
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9993970021790334,
+   "mse": 1.5396006327800646,
+   "nmse": 0.0006111948862833402,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.8668345889430865,
+   "mse": 29.614872701715623,
+   "nmse": 0.011756593474852362,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2093,
+   "cost": 0.000164175,
+   "role": "worker",
+   "best_expression": "c0*epsilon + c1*T + c2",
+   "train_r2": 0.7740128995360963,
+   "train_mse": 569.2617701533966,
+   "train_nmse": 0.2259871004639037,
+   "train_dist_r2": 0.7768947210674861,
+   "train_dist_mse": 569.6422386244138,
+   "train_dist_nmse": 0.2261381398821312,
+   "ood_r2": -19.709375140717764,
+   "ood_mse": 4605.591674720325,
+   "ood_nmse": 1.8283404280078026
+  },
+  {
+   "index": 2,
+   "tokens": 4376,
+   "cost": 0.000318525,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*epsilon + c2*T + c3*epsilon*T + c4",
+   "train_r2": 0.9993968063618331,
+   "train_mse": 1.5194454794245487,
+   "train_nmse": 0.00060319363816687,
+   "train_dist_r2": 0.9993970023797781,
+   "train_dist_mse": 1.5396001202296556,
+   "train_dist_nmse": 0.0006111946828096716,
+   "ood_r2": 0.8668345757087279,
+   "ood_mse": 29.61487564492618,
+   "ood_nmse": 0.01175659464325617
+  },
+  {
+   "index": 3,
+   "tokens": 6842,
+   "cost": 0.00051405,
+   "role": "worker",
+   "best_expression": "c0*epsilon + c1*T + c2*epsilon*T + c3*epsilon**2 + c4",
+   "train_r2": 0.9993968063732397,
+   "train_mse": 1.5194454506913049,
+   "train_nmse": 0.000603193626760268,
+   "train_dist_r2": 0.9993970021790334,
+   "train_dist_mse": 1.5396006327800646,
+   "train_dist_nmse": 0.0006111948862833402,
+   "ood_r2": 0.8668345889430865,
+   "ood_mse": 29.614872701715623,
+   "ood_nmse": 0.011756593474852362
+  }
+ ],
+ "target_var": 2519.0011685836166,
+ "baseline_mse": {
+  "train": 2519.0011685836166,
+  "train_dist": 2553.3720102808497,
+  "ood": 23364.32666916644
+ }
+}

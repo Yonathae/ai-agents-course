@@ -1,0 +1,30 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK34__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "chem_react/CRK34",
+ "harness": "baseline_autoresearch",
+ "best_expression": null,
+ "best_params": {},
+ "best_train_r2": null,
+ "evaluations": 0,
+ "model_calls": 3,
+ "input_tokens": 2940,
+ "output_tokens": 225,
+ "cached_input_tokens": 0,
+ "cost": 0.000133575,
+ "tokens_by_role": {
+  "agent": 3165
+ },
+ "scores": {
+  "train_dist": null,
+  "ood": null
+ },
+ "curve": [],
+ "target_var": 0.008271704861976058,
+ "baseline_mse": {
+  "train": 0.008271704861976058,
+  "train_dist": 0.00799480729373618,
+  "ood": 0.0006593169497162252
+ }
+}

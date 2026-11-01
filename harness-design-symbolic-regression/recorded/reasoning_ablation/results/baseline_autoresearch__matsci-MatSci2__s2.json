@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci2__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "matsci/MatSci2",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*epsilon + c1*T + c2*epsilon*T + c3",
+ "best_params": {
+  "c0": 742625.7163991656,
+  "c1": -1474.6786263198865,
+  "c2": -5.381404368420709,
+  "c3": 402486.89054834394
+ },
+ "best_train_r2": 0.9998730693675043,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7237,
+ "output_tokens": 482,
+ "cached_input_tokens": 768,
+ "cost": 0.000658575,
+ "tokens_by_role": {
+  "agent": 7719
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9998703944091635,
+   "mse": 16.46947829283206,
+   "nmse": 0.00011695159626480786,
+   "valid": true
+  },
+  "ood": {
+   "r2": -0.1287882429693421,
+   "mse": 364.8467434911996,
+   "nmse": 0.002590817285443918,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2224,
+   "cost": 0.00020055,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*T + c2",
+   "train_r2": 0.9753321968802902,
+   "train_mse": 3473.7948090253276,
+   "train_nmse": 0.024667803119709793,
+   "train_dist_r2": 0.9748300783346793,
+   "train_dist_mse": 3198.4382450151707,
+   "train_dist_nmse": 0.02271246554735959,
+   "ood_r2": -77.872930549279,
+   "ood_mse": 25493.295168289213,
+   "ood_nmse": 0.18103072307268858
+  },
+  {
+   "index": 2,
+   "tokens": 4836,
+   "cost": 0.00041085000000000004,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*T + c2*epsilon*T + c3",
+   "train_r2": 0.9998730693675043,
+   "train_mse": 17.87475642359559,
+   "train_nmse": 0.00012693063249574597,
+   "train_dist_r2": 0.9998703944091635,
+   "train_dist_mse": 16.46947829283206,
+   "train_dist_nmse": 0.00011695159626480786,
+   "ood_r2": -0.1287882429693421,
+   "ood_mse": 364.8467434911996,
+   "ood_nmse": 0.002590817285443918
+  }
+ ],
+ "target_var": 140823.03122687625,
+ "baseline_mse": {
+  "train": 140823.03122687625,
+  "train_dist": 127079.88475273641,
+  "ood": 302771.18746303656
+ }
+}

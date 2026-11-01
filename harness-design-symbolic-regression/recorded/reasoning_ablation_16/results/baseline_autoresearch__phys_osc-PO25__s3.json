@@ -1,0 +1,77 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO25__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "phys_osc/PO25",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*v + c1*sin(t) + c2*cos(t)",
+ "best_params": {
+  "c0": -0.8117902882318901,
+  "c1": 0.9392299689884647,
+  "c2": -0.00183267522650854
+ },
+ "best_train_r2": 0.9996016812873955,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7752,
+ "output_tokens": 628,
+ "cached_input_tokens": 5632,
+ "cost": 0.0005586,
+ "tokens_by_role": {
+  "agent": 8380
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9995768245645273,
+   "mse": 0.00010445914431005343,
+   "nmse": 0.00039704595520030536,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9994789740884384,
+   "mse": 8.836699862161514e-05,
+   "nmse": 0.00033588021046546617,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2489,
+   "cost": 0.000172575,
+   "role": "agent",
+   "best_expression": "c0*v + c1*sin(t)",
+   "train_r2": 0.9996014727666218,
+   "train_mse": 0.00010484885499447346,
+   "train_nmse": 0.00039852723337819316,
+   "train_dist_r2": 0.9995762989095984,
+   "train_dist_mse": 0.00010458890010275853,
+   "train_dist_nmse": 0.0003975391529284473,
+   "ood_r2": 0.9994799329558095,
+   "ood_mse": 8.820437286773453e-05,
+   "ood_nmse": 0.0003352620750382982
+  },
+  {
+   "index": 2,
+   "tokens": 5280,
+   "cost": 0.00035925000000000003,
+   "role": "agent",
+   "best_expression": "c0*v + c1*sin(t) + c2*cos(t)",
+   "train_r2": 0.9996016812873955,
+   "train_mse": 0.00010479399509399657,
+   "train_nmse": 0.0003983187126045365,
+   "train_dist_r2": 0.9995768245645273,
+   "train_dist_mse": 0.00010445914431005343,
+   "train_dist_nmse": 0.00039704595520030536,
+   "ood_r2": 0.9994789740884384,
+   "ood_mse": 8.836699862161514e-05,
+   "ood_nmse": 0.00033588021046546617
+  }
+ ],
+ "target_var": 0.26309081591664857,
+ "baseline_mse": {
+  "train": 0.26309081591664857,
+  "train_dist": 0.24949567044214324,
+  "ood": 0.24814324475311952
+ }
+}

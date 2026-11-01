@@ -1,0 +1,79 @@
+{
+ "run_id": "plan_execute_k1__chem_react-CRK11__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "chem_react/CRK11",
+ "harness": "plan_execute_k1",
+ "best_expression": "c0 + c1*(A-0.71) + c2*exp(-c3*t)",
+ "best_params": {
+  "c0": 0.0022657800756750966,
+  "c1": -1.0432470254189743,
+  "c2": -0.07712676689972493,
+  "c3": 2.585813772822339
+ },
+ "best_train_r2": 0.9999967658544955,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 6872,
+ "output_tokens": 470,
+ "cached_input_tokens": 3072,
+ "cost": 0.0004623,
+ "tokens_by_role": {
+  "orchestrator": 5133,
+  "worker": 2209
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999971029152077,
+   "mse": 1.7906596561626207e-09,
+   "nmse": 1.8644505338294476e-06,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9994014024747113,
+   "mse": 4.046236032340505e-11,
+   "nmse": 4.21297643275439e-08,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2301,
+   "cost": 0.00018314999999999998,
+   "role": "worker",
+   "best_expression": "c0 + c1*A + c2*t",
+   "train_r2": 0.9968092552901036,
+   "train_mse": 3.0644620071472833e-06,
+   "train_nmse": 0.0031907447098964135,
+   "train_dist_r2": 0.9961567278016011,
+   "train_dist_mse": 2.3754887988471424e-06,
+   "train_dist_nmse": 0.002473379764755366,
+   "ood_r2": -4.307108279237341,
+   "ood_mse": 3.587354080126752e-07,
+   "ood_nmse": 0.0003735184520804411
+  },
+  {
+   "index": 2,
+   "tokens": 4806,
+   "cost": 0.0003618,
+   "role": "worker",
+   "best_expression": "c0 + c1*(A-0.71) + c2*exp(-c3*t)",
+   "train_r2": 0.9999967658544955,
+   "train_mse": 3.106145093180778e-09,
+   "train_nmse": 3.2341455045361684e-06,
+   "train_dist_r2": 0.9999971029152077,
+   "train_dist_mse": 1.7906596561626207e-09,
+   "train_dist_nmse": 1.8644505338294476e-06,
+   "ood_r2": 0.9994014024747113,
+   "ood_mse": 4.046236032340505e-11,
+   "ood_nmse": 4.21297643275439e-08
+  }
+ ],
+ "target_var": 0.0009604221853420452,
+ "baseline_mse": {
+  "train": 0.0009604221853420452,
+  "train_dist": 0.0006197617650257389,
+  "ood": 2.9058101799228114e-05
+ }
+}

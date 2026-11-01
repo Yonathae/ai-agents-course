@@ -1,0 +1,143 @@
+{
+ "run_id": "plan_execute_k2__matsci-MatSci6__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "matsci/MatSci6",
+ "harness": "plan_execute_k2",
+ "best_expression": "c0*epsilon**3 + c1*T**2 + c2*epsilon**2*T + c3",
+ "best_params": {
+  "c0": 2179525.1329959705,
+  "c1": 0.10056901057091938,
+  "c2": -1534.1888043435029,
+  "c3": -7495.307671493258
+ },
+ "best_train_r2": 0.9999999999999719,
+ "evaluations": 6,
+ "model_calls": 10,
+ "input_tokens": 11421,
+ "output_tokens": 721,
+ "cached_input_tokens": 7680,
+ "cost": 0.000784875,
+ "tokens_by_role": {
+  "orchestrator": 5978,
+  "worker": 6164
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999999999741,
+   "mse": 3.206657293485432e-05,
+   "nmse": 2.9031441901584367e-14,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999999983191,
+   "mse": 0.0004618487296332854,
+   "nmse": 4.181343166576895e-13,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2119,
+   "cost": 0.0001317,
+   "role": "worker",
+   "best_expression": "c0*epsilon + c1*T",
+   "train_r2": 0.7449694521409272,
+   "train_mse": 281693058.55567944,
+   "train_nmse": 0.25503054785907275,
+   "train_dist_r2": 0.7566172614821808,
+   "train_dist_mse": 301770984.8432455,
+   "train_dist_nmse": 0.27320807969903443,
+   "ood_r2": -17.49174787403937,
+   "ood_mse": 5080985877.040986,
+   "ood_nmse": 4.600065825299152
+  },
+  {
+   "index": 2,
+   "tokens": 3120,
+   "cost": 0.00018810000000000002,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*T**2",
+   "train_r2": 0.9358335331136051,
+   "train_mse": 70874836.23306382,
+   "train_nmse": 0.06416646688639498,
+   "train_dist_r2": 0.9403984386875213,
+   "train_dist_mse": 73900153.99200119,
+   "train_dist_nmse": 0.06690543549806588,
+   "ood_r2": -4.145420590530998,
+   "ood_mse": 1413809528.9860232,
+   "ood_nmse": 1.2799911385619531
+  },
+  {
+   "index": 3,
+   "tokens": 5457,
+   "cost": 0.0003366,
+   "role": "worker",
+   "best_expression": "c0*epsilon**2 + c1*T + c2*epsilon*T",
+   "train_r2": 0.9839018446678156,
+   "train_mse": 17781158.573730145,
+   "train_nmse": 0.016098155332184415,
+   "train_dist_r2": 0.9863057464553201,
+   "train_dist_mse": 16979545.895645306,
+   "train_dist_nmse": 0.01537241604165679,
+   "ood_r2": -0.6017697385650862,
+   "ood_mse": 440118991.2039955,
+   "ood_nmse": 0.39846131823568276
+  },
+  {
+   "index": 4,
+   "tokens": 6472,
+   "cost": 0.0003954,
+   "role": "worker",
+   "best_expression": "c0*epsilon**3 + c1*T**2 + c2*epsilon**2*T",
+   "train_r2": 0.9998831036500675,
+   "train_mse": 129117.43562849429,
+   "train_nmse": 0.00011689634993254452,
+   "train_dist_r2": 0.9999132234951493,
+   "train_dist_mse": 107594.4476980019,
+   "train_dist_nmse": 9.741053288181046e-05,
+   "ood_r2": 0.9947118251586596,
+   "ood_mse": 1453034.1786616913,
+   "ood_nmse": 0.001315503138565278
+  },
+  {
+   "index": 5,
+   "tokens": 9178,
+   "cost": 0.0005895750000000001,
+   "role": "worker",
+   "best_expression": "c0*epsilon**3 + c1*T**2 + c2*epsilon**2*T + c3",
+   "train_r2": 0.9999999999999719,
+   "train_mse": 3.09742524584744e-05,
+   "train_nmse": 2.804251057698167e-14,
+   "train_dist_r2": 0.9999999999999741,
+   "train_dist_mse": 3.206657293485432e-05,
+   "train_dist_nmse": 2.9031441901584367e-14,
+   "ood_r2": 0.9999999999983191,
+   "ood_mse": 0.0004618487296332854,
+   "ood_nmse": 4.181343166576895e-13
+  },
+  {
+   "index": 6,
+   "tokens": 10237,
+   "cost": 0.00066045,
+   "role": "worker",
+   "best_expression": "c0*epsilon**3 + c1*T**2 + c2*epsilon**2*T + c3",
+   "train_r2": 0.9999999999999719,
+   "train_mse": 3.09742524584744e-05,
+   "train_nmse": 2.804251057698167e-14,
+   "train_dist_r2": 0.9999999999999741,
+   "train_dist_mse": 3.206657293485432e-05,
+   "train_dist_nmse": 2.9031441901584367e-14,
+   "ood_r2": 0.9999999999983191,
+   "ood_mse": 0.0004618487296332854,
+   "ood_nmse": 4.181343166576895e-13
+  }
+ ],
+ "target_var": 1104546341.292966,
+ "baseline_mse": {
+  "train": 1104546341.292966,
+  "train_dist": 1253000160.6118295,
+  "ood": 16054700702.55505
+ }
+}

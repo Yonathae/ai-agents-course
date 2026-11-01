@@ -13,6 +13,7 @@ into an agent (the harness), AI safety, and post-training. Material is added her
 | | 2. Foundations and Practice of AI Evaluation | [slides](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
 | | 3. The Evolution of AI Benchmarking | [slides](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
 | 2. Harness design | 4. Foundations of Agent Harnesses | [slides](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · [notebook and code](harness-design-sql-agent/) |
+| | 5. Harness Design II: research harnesses | [notebooks and code](harness-design-symbolic-regression/) |
 | 3. AI safety | upcoming | |
 | 4. Post-training | upcoming | |
 
@@ -21,6 +22,8 @@ into an agent (the harness), AI safety, and post-training. Material is added her
 ```
 lectures/                   lecture slides (PDF)
 harness-design-sql-agent/   lecture 4: an SQL agent built from scratch, a benchmark and a paired A/B test
+harness-design-symbolic-regression/
+                            lecture 5: three research harnesses compared on symbolic regression (LLM-SRBench)
 presentations/              student presentations, one folder per module
 ```
 

@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci2__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "matsci/MatSci2",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+ "best_params": {
+  "c0": 7770.375269403007,
+  "c1": 18232.569847749804,
+  "c2": -2690.69871333225,
+  "c3": -28.830584036957372
+ },
+ "best_train_r2": 0.9998730675671912,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7188,
+ "output_tokens": 511,
+ "cached_input_tokens": 3072,
+ "cost": 0.0005771999999999999,
+ "tokens_by_role": {
+  "agent": 7699
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.99987040809983,
+   "mse": 16.467738567462174,
+   "nmse": 0.0001169392422815515,
+   "valid": true
+  },
+  "ood": {
+   "r2": -0.1287265361259482,
+   "mse": 364.8267986157957,
+   "nmse": 0.0025906756546664085,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2232,
+   "cost": 0.0001773,
+   "role": "agent",
+   "best_expression": "c0 + c1*epsilon + c2*T",
+   "train_r2": 0.9753321968833188,
+   "train_mse": 3473.7948085988296,
+   "train_nmse": 0.024667803116681184,
+   "train_dist_r2": 0.974830078334111,
+   "train_dist_mse": 3198.438245087386,
+   "train_dist_nmse": 0.022712465547872398,
+   "ood_r2": -77.87293032691812,
+   "ood_mse": 25493.29509641777,
+   "ood_nmse": 0.18103072256232147
+  },
+  {
+   "index": 2,
+   "tokens": 4804,
+   "cost": 0.000382125,
+   "role": "agent",
+   "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+   "train_r2": 0.9998730675671912,
+   "train_mse": 17.875009949140082,
+   "train_nmse": 0.00012693243280882178,
+   "train_dist_r2": 0.99987040809983,
+   "train_dist_mse": 16.467738567462174,
+   "train_dist_nmse": 0.0001169392422815515,
+   "ood_r2": -0.1287265361259482,
+   "ood_mse": 364.8267986157957,
+   "ood_nmse": 0.0025906756546664085
+  }
+ ],
+ "target_var": 140823.03122687625,
+ "baseline_mse": {
+  "train": 140823.03122687625,
+  "train_dist": 127079.88475273641,
+  "ood": 302771.18746303656
+ }
+}

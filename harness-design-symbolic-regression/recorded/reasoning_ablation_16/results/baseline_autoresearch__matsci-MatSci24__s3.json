@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci24__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "matsci/MatSci24",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+ "best_params": {
+  "c0": -303043.16205209354,
+  "c1": -554660.760322258,
+  "c2": -1945.7989955349915,
+  "c3": 1110.0377760928395
+ },
+ "best_train_r2": 0.9998816027026153,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7264,
+ "output_tokens": 533,
+ "cached_input_tokens": 4352,
+ "cost": 0.0005415000000000001,
+ "tokens_by_role": {
+  "agent": 7797
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9998746166342831,
+   "mse": 1.669692485921911,
+   "nmse": 0.0001240228942567688,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.952432551298499,
+   "mse": 56.261603167546546,
+   "nmse": 0.00417904908789968,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2224,
+   "cost": 0.00013515,
+   "role": "agent",
+   "best_expression": "c0 + c1*epsilon + c2*T",
+   "train_r2": 0.8674483960698142,
+   "train_mse": 1784.5125966897815,
+   "train_nmse": 0.1325516039301859,
+   "train_dist_r2": 0.8626531667109183,
+   "train_dist_mse": 1829.0063773349048,
+   "train_dist_nmse": 0.13585655229556534,
+   "ood_r2": -14.905121037677212,
+   "ood_mse": 18812.184226423622,
+   "ood_nmse": 1.3973480474545945
+  },
+  {
+   "index": 2,
+   "tokens": 4821,
+   "cost": 0.0003423,
+   "role": "agent",
+   "best_expression": "c0 + c1*epsilon + c2*epsilon**2 + c3*T",
+   "train_r2": 0.9998816027026153,
+   "train_mse": 1.5939563334768114,
+   "train_nmse": 0.00011839729738470356,
+   "train_dist_r2": 0.9998746166342831,
+   "train_dist_mse": 1.669692485921911,
+   "train_dist_nmse": 0.0001240228942567688,
+   "ood_r2": 0.952432551298499,
+   "ood_mse": 56.261603167546546,
+   "ood_nmse": 0.00417904908789968
+  }
+ ],
+ "target_var": 13462.77633599721,
+ "baseline_mse": {
+  "train": 13462.77633599721,
+  "train_dist": 13358.810376562442,
+  "ood": 118659.3169711367
+ }
+}
