@@ -1,6 +1,6 @@
 # AI Agents course
 
-Material for the course *Agentic AI Systems*, Tel Aviv University, 2026: lecture slides, notebooks and code.
+Material for the course *Agentic AI Systems*, Tel Aviv University, 2026: lecture slides, notebooks and code, and students' paper presentations.
 
 The course is organized in modules: how AI systems are evaluated (benchmarks), what turns a language model
 into an agent (the harness), AI safety, and post-training. Material is added here as the course progresses.
@@ -24,15 +24,16 @@ lectures/                   lecture slides (PDF)
 harness-design-sql-agent/   lecture 4: an SQL agent built from scratch, a benchmark and a paired A/B test
 harness-design-symbolic-regression/
                             lecture 5: three research harnesses compared on symbolic regression (LLM-SRBench)
-papers_presentations/       student presentations, one folder per module
+papers_presentations/       students' paper presentations, one folder per module
 ```
 
-Each code folder is a self-contained project with its own README, requirements and notebook.
+Each code folder is a self-contained project with its own README, dependencies and notebooks.
 
-## Student presentations
+## Paper presentations
 
 Upload your presentation as a PDF to your module's folder in [`papers_presentations/`](papers_presentations/)
-(`benchmarks/`, `harness/`, `ai-safety/` or `post-training/`), named `lastname-short-title.pdf`.
+(`benchmarks/`, `harness/`, `ai-safety/` or `post-training/`), named after the paper, for example
+`swe-bench-verified.pdf`.
 On GitHub, open the folder, click **Add file → Upload files**, then **Propose changes** and
 **Create pull request**; your file is added once it is approved. See [`papers_presentations/`](papers_presentations/README.md) for details.
 
