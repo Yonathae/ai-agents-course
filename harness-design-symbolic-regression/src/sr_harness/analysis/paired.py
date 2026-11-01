@@ -1,4 +1,4 @@
-"""Paired comparison of two harnesses on the same tasks (as in Harness Design I).
+"""Paired comparison of two harnesses on the same tasks (as in Lecture 4).
 
 For each task i, average each metric over seeds, then take the difference
 D_i = m_B(i) - m_A(i). Report mean(D) with a 95% normal confidence interval,

@@ -1,4 +1,4 @@
-# Harness design II: research harnesses for symbolic regression
+# Harness design: research harnesses for symbolic regression
 
 Three ways to organize iterative research around the same model, compared on the LSR-Synth tasks of
 [LLM-SRBench](https://github.com/deep-symbolic-mathematics/llm-srbench) (Shojaee et al., 2025). Each task gives

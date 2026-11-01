@@ -1,6 +1,6 @@
 # AI Agents course
 
-Material for the course *Agentic AI Systems*, Tel Aviv University, 2026: lecture slides, notebooks and code.
+Material for the course *Agentic AI Systems*, Tel Aviv University, 2026: lecture slides, notebooks and code, and students' paper presentations.
 
 The course is organized in modules: how AI systems are evaluated (benchmarks), what turns a language model
 into an agent (the harness), AI safety, and post-training. Material is added here as the course progresses.
@@ -13,7 +13,7 @@ into an agent (the harness), AI safety, and post-training. Material is added her
 | | 2. Foundations and Practice of AI Evaluation | [slides](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
 | | 3. The Evolution of AI Benchmarking | [slides](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
 | 2. Harness design | 4. Foundations of Agent Harnesses | [slides](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · [notebook and code](harness-design-sql-agent/) |
-| | 5. Harness Design II: research harnesses | [notebooks and code](harness-design-symbolic-regression/) |
+| | 5. Advanced Harness Architectures and Their Evaluation | [slides](lectures/Lecture5_Advanced_Harness_Architectures_and_Their_Evaluation.pdf) · [notebooks and code](harness-design-symbolic-regression/) |
 | 3. AI safety | upcoming | |
 | 4. Post-training | upcoming | |
 
@@ -24,17 +24,18 @@ lectures/                   lecture slides (PDF)
 harness-design-sql-agent/   lecture 4: an SQL agent built from scratch, a benchmark and a paired A/B test
 harness-design-symbolic-regression/
                             lecture 5: three research harnesses compared on symbolic regression (LLM-SRBench)
-presentations/              student presentations, one folder per module
+papers_presentations/       students' paper presentations, one folder per module
 ```
 
-Each code folder is a self-contained project with its own README, requirements and notebook.
+Each code folder is a self-contained project with its own README, dependencies and notebooks.
 
-## Student presentations
+## Paper presentations
 
-Upload your presentation as a PDF to your module's folder in [`presentations/`](presentations/)
-(`benchmarks/`, `harness/`, `ai-safety/` or `post-training/`), named `lastname-short-title.pdf`.
+Upload your presentation as a PDF to your module's folder in [`papers_presentations/`](papers_presentations/)
+(`benchmarks/`, `harness/`, `ai-safety/` or `post-training/`), named after the paper, for example
+`swe-bench-verified.pdf`.
 On GitHub, open the folder, click **Add file → Upload files**, then **Propose changes** and
-**Create pull request**; your file is added once it is approved. See [`presentations/`](presentations/README.md) for details.
+**Create pull request**; your file is added once it is approved. See [`papers_presentations/`](papers_presentations/README.md) for details.
 
 ## Running the notebooks
 

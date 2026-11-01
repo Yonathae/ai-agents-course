@@ -1,4 +1,4 @@
-# Student presentations
+# Paper presentations
 
 Upload your presentation to the folder of its module, as a PDF:
 
