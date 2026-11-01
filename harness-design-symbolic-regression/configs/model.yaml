@@ -1,5 +1,5 @@
 # One fixed open-weight model for every role (agent, planner, executor, curator, meta-reasoner).
-model: openai/gpt-oss-20b        # same model as Harness Design I; gpt-oss-120b is the stronger option
+model: openai/gpt-oss-20b        # same model as Lecture 4; gpt-oss-120b is the stronger option
 base_url: https://openrouter.ai/api/v1
 temperature: 1.0                 # recommended for gpt-oss; seeds give run-to-run variation
 max_tokens: 4096                 # per model call, reasoning included
