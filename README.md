@@ -13,6 +13,7 @@ into an agent (the harness), AI safety, and post-training. Material is added her
 | | 2. Foundations and Practice of AI Evaluation | [slides](lectures/Lecture2_Foundations_and_Practice_of_AI_Evaluation.pdf) |
 | | 3. The Evolution of AI Benchmarking | [slides](lectures/Lecture3_The_Evolution_of_AI_Benchmarking.pdf) |
 | 2. Harness design | 4. Foundations of Agent Harnesses | [slides](lectures/Lecture4_Foundations_of_Agent_Harnesses.pdf) · [notebook and code](harness-design-sql-agent/) |
+| | 5. Advanced Harness Architectures and Their Evaluation | [slides](lectures/Lecture5_Advanced_Harness_Architectures_and_Their_Evaluation.pdf) |
 | 3. AI safety | upcoming | |
 | 4. Post-training | upcoming | |
 
