@@ -5,7 +5,7 @@
 !/lectures/
 !/harness-design-sql-agent/
 !/harness-design-symbolic-regression/
-!/presentations/
+!/papers_presentations/
 
 /harness-design-sql-agent/*
 !/harness-design-sql-agent/README.md

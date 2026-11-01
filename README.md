@@ -24,17 +24,17 @@ lectures/                   lecture slides (PDF)
 harness-design-sql-agent/   lecture 4: an SQL agent built from scratch, a benchmark and a paired A/B test
 harness-design-symbolic-regression/
                             lecture 5: three research harnesses compared on symbolic regression (LLM-SRBench)
-presentations/              student presentations, one folder per module
+papers_presentations/       student presentations, one folder per module
 ```
 
 Each code folder is a self-contained project with its own README, requirements and notebook.
 
 ## Student presentations
 
-Upload your presentation as a PDF to your module's folder in [`presentations/`](presentations/)
+Upload your presentation as a PDF to your module's folder in [`papers_presentations/`](papers_presentations/)
 (`benchmarks/`, `harness/`, `ai-safety/` or `post-training/`), named `lastname-short-title.pdf`.
 On GitHub, open the folder, click **Add file → Upload files**, then **Propose changes** and
-**Create pull request**; your file is added once it is approved. See [`presentations/`](presentations/README.md) for details.
+**Create pull request**; your file is added once it is approved. See [`papers_presentations/`](papers_presentations/README.md) for details.
 
 ## Running the notebooks
 
