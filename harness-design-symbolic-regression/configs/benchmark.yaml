@@ -1,0 +1,22 @@
+# Which tasks, and how the shared equation evaluator behaves.
+source: llm-srbench              # llm-srbench | toy (offline, no HF token needed)
+subsets:                         # LSR-Synth only: the subsets with an OOD split beyond the training range
+  - chem_react
+  - bio_pop_growth
+  - phys_osc
+  - matsci
+n_tasks: 40                      # sampled evenly across subsets; use 4-8 while developing
+task_seed: 0                     # which tasks are sampled
+data_dir: data                   # local cache of the HF download
+
+prompt:
+  n_rows_shown: 30               # training rows shown to the model (the evaluator uses all of them)
+
+evaluator:
+  max_params: 8                  # free constants c0..c7 per expression
+  n_restarts: 4                  # least-squares starts: all-ones, then seeded random
+  fit_seed: 0
+  max_nfev: 2000                 # function evaluations per least-squares start
+  max_expression_nodes: 120
+
+scoring: {}                     # hidden scoring (R^2, MSE on train distribution and OOD); no settings

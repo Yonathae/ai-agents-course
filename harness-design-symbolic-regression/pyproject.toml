@@ -1,0 +1,31 @@
+[project]
+name = "sr-harness"
+version = "0.1.0"
+description = "Agent Harness Design II: comparing research harnesses on LLM-SRBench"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.40",       # OpenRouter speaks the OpenAI API
+    "numpy",
+    "scipy",              # constant fitting (least squares)
+    "sympy",              # canonical forms of equations (multi_agent.ipynb: same-equation overlap)
+    "pyyaml",
+    "pandas",
+    "matplotlib",
+    "h5py",               # LLM-SRBench data file
+    "huggingface_hub",    # downloads the (gated) LLM-SRBench dataset
+    "datasets",           # LLM-SRBench task metadata
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyterlab", "ipykernel"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]

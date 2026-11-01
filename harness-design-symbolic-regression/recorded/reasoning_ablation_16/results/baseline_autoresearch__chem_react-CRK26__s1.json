@@ -1,0 +1,142 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK26__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "chem_react/CRK26",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*A*(1-A)+c1*exp(-c2*t)+c3*t",
+ "best_params": {
+  "c0": 0.03926608687999631,
+  "c1": -0.4959641305568742,
+  "c2": 0.6397790721906541,
+  "c3": -0.00013771529074578352
+ },
+ "best_train_r2": 0.9925900568411129,
+ "evaluations": 6,
+ "model_calls": 15,
+ "input_tokens": 23218,
+ "output_tokens": 1469,
+ "cached_input_tokens": 6912,
+ "cost": 0.001604925,
+ "tokens_by_role": {
+  "agent": 24687
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9907483862233296,
+   "mse": 2.905709655528095e-05,
+   "nmse": 0.008562270958995468,
+   "valid": true
+  },
+  "ood": {
+   "r2": -40.75094055644626,
+   "mse": 7.810418826179768e-07,
+   "nmse": 0.00023015005014613685,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1982,
+   "cost": 7.575e-05,
+   "role": "agent",
+   "best_expression": "c0*(1-A)",
+   "train_r2": -0.022078309291704068,
+   "train_mse": 0.0034685457003607385,
+   "train_nmse": 1.022078309291704,
+   "train_dist_r2": -0.017164470576076507,
+   "train_dist_mse": 0.003194669270420757,
+   "train_dist_nmse": 0.9413749878856199,
+   "ood_r2": -996.9236918205776,
+   "ood_mse": 1.8668326715056117e-05,
+   "ood_nmse": 0.005501006316349034
+  },
+  {
+   "index": 2,
+   "tokens": 4277,
+   "cost": 0.00015345000000000002,
+   "role": "agent",
+   "best_expression": "c0*(1-A)*exp(-c1*t)",
+   "train_r2": 0.8133037648802899,
+   "train_mse": 0.0006335761337570771,
+   "train_nmse": 0.18669623511971006,
+   "train_dist_r2": 0.6148316949709522,
+   "train_dist_mse": 0.0012097211253549345,
+   "train_dist_nmse": 0.35646920332882936,
+   "ood_r2": -63.15460339668512,
+   "ood_mse": 1.2001509797800258e-06,
+   "ood_nmse": 0.0003536491631581432
+  },
+  {
+   "index": 3,
+   "tokens": 7264,
+   "cost": 0.00039037500000000004,
+   "role": "agent",
+   "best_expression": "c0*(1-A)*exp(-c1*t)+c2*t",
+   "train_r2": 0.8168281622378549,
+   "train_mse": 0.0006216156673331137,
+   "train_nmse": 0.18317183776214513,
+   "train_dist_r2": 0.6189416820678553,
+   "train_dist_mse": 0.0011968126431378299,
+   "train_dist_nmse": 0.35266545362513996,
+   "ood_r2": -1469.0560663760464,
+   "ood_mse": 2.7500586629516036e-05,
+   "ood_nmse": 0.008103613305110124
+  },
+  {
+   "index": 4,
+   "tokens": 10600,
+   "cost": 0.0006592500000000001,
+   "role": "agent",
+   "best_expression": "c0*(1-A)*exp(-c1*t)+c2*t+c3*(1-A)*t",
+   "train_r2": 0.8192990035898922,
+   "train_mse": 0.0006132305699585086,
+   "train_nmse": 0.18070099641010776,
+   "train_dist_r2": 0.6215971290912705,
+   "train_dist_mse": 0.0011884725218985082,
+   "train_dist_nmse": 0.350207865416143,
+   "ood_r2": -17.125328779074806,
+   "ood_mse": 3.3907358071464153e-07,
+   "ood_nmse": 9.991500243639914e-05
+  },
+  {
+   "index": 5,
+   "tokens": 14295,
+   "cost": 0.0009094500000000001,
+   "role": "agent",
+   "best_expression": "c0*A*(1-A)+c1*exp(-c2*t)",
+   "train_r2": 0.9920266088047143,
+   "train_mse": 2.705866223388301e-05,
+   "train_nmse": 0.007973391195285713,
+   "train_dist_r2": 0.9903041103900008,
+   "train_dist_mse": 3.045246022888841e-05,
+   "train_dist_nmse": 0.008973443556265687,
+   "ood_r2": -877.0140220701336,
+   "ood_mse": 1.6425156310802158e-05,
+   "ood_nmse": 0.004840010033672226
+  },
+  {
+   "index": 6,
+   "tokens": 18392,
+   "cost": 0.0012363,
+   "role": "agent",
+   "best_expression": "c0*A*(1-A)+c1*exp(-c2*t)+c3*t",
+   "train_r2": 0.9925900568411129,
+   "train_mse": 2.514653353859591e-05,
+   "train_nmse": 0.007409943158887077,
+   "train_dist_r2": 0.9907483862233296,
+   "train_dist_mse": 2.905709655528095e-05,
+   "train_dist_nmse": 0.008562270958995468,
+   "ood_r2": -40.75094055644626,
+   "ood_mse": 7.810418826179768e-07,
+   "ood_nmse": 0.00023015005014613685
+  }
+ ],
+ "target_var": 0.003393620301720742,
+ "baseline_mse": {
+  "train": 0.003393620301720742,
+  "train_dist": 0.0031439657913783225,
+  "ood": 0.00011249587422530695
+ }
+}

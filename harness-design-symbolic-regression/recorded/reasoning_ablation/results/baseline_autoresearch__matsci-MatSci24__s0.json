@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__matsci-MatSci24__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "matsci/MatSci24",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*epsilon + c1*epsilon**2 + c2*T + c3",
+ "best_params": {
+  "c0": -558285.1651275482,
+  "c1": -1945.7990020260124,
+  "c2": 1117.2865857098616,
+  "c3": -305022.0870773271
+ },
+ "best_train_r2": 0.9998816027021541,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7274,
+ "output_tokens": 525,
+ "cached_input_tokens": 1536,
+ "cost": 0.00064545,
+ "tokens_by_role": {
+  "agent": 7799
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9998746157545924,
+   "mse": 1.6697042004977447,
+   "nmse": 0.0001240237644023867,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9524325313659723,
+   "mse": 56.26162674324669,
+   "nmse": 0.004179050839076374,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2270,
+   "cost": 0.00021412500000000001,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*T + c2",
+   "train_r2": 0.8674483960696755,
+   "train_mse": 1784.512596691647,
+   "train_nmse": 0.13255160393032447,
+   "train_dist_r2": 0.8626531667768506,
+   "train_dist_mse": 1829.0063764569047,
+   "train_dist_nmse": 0.13585655223034848,
+   "ood_r2": -14.90512115927979,
+   "ood_mse": 18812.184370252147,
+   "ood_nmse": 1.3973480581380169
+  },
+  {
+   "index": 2,
+   "tokens": 4911,
+   "cost": 0.00043065,
+   "role": "agent",
+   "best_expression": "c0*epsilon + c1*epsilon**2 + c2*T + c3",
+   "train_r2": 0.9998816027021541,
+   "train_mse": 1.593956339686614,
+   "train_nmse": 0.00011839729784596077,
+   "train_dist_r2": 0.9998746157545924,
+   "train_dist_mse": 1.6697042004977447,
+   "train_dist_nmse": 0.0001240237644023867,
+   "ood_r2": 0.9524325313659723,
+   "ood_mse": 56.26162674324669,
+   "ood_nmse": 0.004179050839076374
+  }
+ ],
+ "target_var": 13462.77633599721,
+ "baseline_mse": {
+  "train": 13462.77633599721,
+  "train_dist": 13358.810376562442,
+  "ood": 118659.3169711367
+ }
+}

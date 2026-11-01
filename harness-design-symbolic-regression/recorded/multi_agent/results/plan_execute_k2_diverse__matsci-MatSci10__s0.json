@@ -1,0 +1,131 @@
+{
+ "run_id": "plan_execute_k2_diverse__matsci-MatSci10__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "matsci/MatSci10",
+ "harness": "plan_execute_k2_diverse",
+ "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+ "best_params": {
+  "c0": -20921.318130192885,
+  "c1": 68670.00500082085,
+  "c2": 388.15440326210955,
+  "c3": -22428.25324199505,
+  "c4": -1.6940129147944778,
+  "c5": -83.28392356512751,
+  "c6": 81022.51805766896,
+  "c7": 0.0020259839195446386
+ },
+ "best_train_r2": 0.9999999954454645,
+ "evaluations": 5,
+ "model_calls": 9,
+ "input_tokens": 11074,
+ "output_tokens": 949,
+ "cached_input_tokens": 6912,
+ "cost": 0.00085605,
+ "tokens_by_role": {
+  "orchestrator": 6793,
+  "worker": 5230
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999966644758,
+   "mse": 0.28381566356004395,
+   "nmse": 3.2759635487126e-09,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999998556824548,
+   "mse": 2.6475156311057972,
+   "nmse": 3.0559147417579136e-08,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2228,
+   "cost": 0.00015337499999999997,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999954454645,
+   "train_mse": 0.39458574487013165,
+   "train_nmse": 4.554535506679985e-09,
+   "train_dist_r2": 0.9999999966644758,
+   "train_dist_mse": 0.28381566356004395,
+   "train_dist_nmse": 3.2759635487126e-09,
+   "ood_r2": 0.9999998556824548,
+   "ood_mse": 2.6475156311057972,
+   "ood_nmse": 3.0559147417579136e-08
+  },
+  {
+   "index": 2,
+   "tokens": 3253,
+   "cost": 0.00021832499999999998,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999954454645,
+   "train_mse": 0.39458574487013165,
+   "train_nmse": 4.554535506679985e-09,
+   "train_dist_r2": 0.9999999966644758,
+   "train_dist_mse": 0.28381566356004395,
+   "train_dist_nmse": 3.2759635487126e-09,
+   "ood_r2": 0.9999998556824548,
+   "ood_mse": 2.6475156311057972,
+   "ood_nmse": 3.0559147417579136e-08
+  },
+  {
+   "index": 3,
+   "tokens": 5955,
+   "cost": 0.00042794999999999997,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999954454645,
+   "train_mse": 0.39458574487013165,
+   "train_nmse": 4.554535506679985e-09,
+   "train_dist_r2": 0.9999999966644758,
+   "train_dist_mse": 0.28381566356004395,
+   "train_dist_nmse": 3.2759635487126e-09,
+   "ood_r2": 0.9999998556824548,
+   "ood_mse": 2.6475156311057972,
+   "ood_nmse": 3.0559147417579136e-08
+  },
+  {
+   "index": 4,
+   "tokens": 7000,
+   "cost": 0.000497775,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999954454645,
+   "train_mse": 0.39458574487013165,
+   "train_nmse": 4.554535506679985e-09,
+   "train_dist_r2": 0.9999999966644758,
+   "train_dist_mse": 0.28381566356004395,
+   "train_dist_nmse": 3.2759635487126e-09,
+   "ood_r2": 0.9999998556824548,
+   "ood_mse": 2.6475156311057972,
+   "ood_nmse": 3.0559147417579136e-08
+  },
+  {
+   "index": 5,
+   "tokens": 9962,
+   "cost": 0.00071385,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*T**2 + c5*epsilon*T + c6*epsilon**3 + c7*T**3",
+   "train_r2": 0.9999999954454645,
+   "train_mse": 0.39458574487013165,
+   "train_nmse": 4.554535506679985e-09,
+   "train_dist_r2": 0.9999999966644758,
+   "train_dist_mse": 0.28381566356004395,
+   "train_dist_nmse": 3.2759635487126e-09,
+   "ood_r2": 0.9999998556824548,
+   "ood_mse": 2.6475156311057972,
+   "ood_nmse": 3.0559147417579136e-08
+  }
+ ],
+ "target_var": 86635781.9126464,
+ "baseline_mse": {
+  "train": 86635781.9126464,
+  "train_dist": 85221062.28030698,
+  "ood": 1146716819.682241
+ }
+}

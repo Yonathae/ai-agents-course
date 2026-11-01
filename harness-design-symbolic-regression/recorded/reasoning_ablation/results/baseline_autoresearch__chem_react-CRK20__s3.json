@@ -1,0 +1,110 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK20__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "chem_react/CRK20",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*A*exp(-c1*t) + c2*A + c3",
+ "best_params": {
+  "c0": -0.23031777430371192,
+  "c1": 0.37313012621130354,
+  "c2": -0.09562620693105181,
+  "c3": 0.3402120009916957
+ },
+ "best_train_r2": 0.9788763192631348,
+ "evaluations": 4,
+ "model_calls": 10,
+ "input_tokens": 13742,
+ "output_tokens": 1169,
+ "cached_input_tokens": 4608,
+ "cost": 0.0011100749999999999,
+ "tokens_by_role": {
+  "agent": 14911
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9767724803045578,
+   "mse": 5.02913913709043e-05,
+   "nmse": 0.023158581848787017,
+   "valid": true
+  },
+  "ood": {
+   "r2": -241.54682707370648,
+   "mse": 1.4794806002381038e-05,
+   "nmse": 0.006812830514394771,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2041,
+   "cost": 6.75e-05,
+   "role": "agent",
+   "best_expression": "c0*(c1 - A)",
+   "train_r2": 0.757179026191266,
+   "train_mse": 0.0005273122813225614,
+   "train_nmse": 0.242820973808734,
+   "train_dist_r2": 0.7315407824944518,
+   "train_dist_mse": 0.0005812582553679841,
+   "train_dist_nmse": 0.2676624470964713,
+   "ood_r2": -1240.8904822192085,
+   "ood_mse": 7.57525010007786e-05,
+   "ood_nmse": 0.0348831171072312
+  },
+  {
+   "index": 2,
+   "tokens": 4601,
+   "cost": 0.00026744999999999997,
+   "role": "agent",
+   "best_expression": "c0*A*exp(-c1*t) + c2*A",
+   "train_r2": 0.8955382725907934,
+   "train_mse": 0.00022685005717188567,
+   "train_nmse": 0.10446172740920656,
+   "train_dist_r2": 0.8849057809885964,
+   "train_dist_mse": 0.00024919786911070213,
+   "train_dist_nmse": 0.11475262646406552,
+   "ood_r2": -262.74958110633634,
+   "ood_mse": 1.6088125879674813e-05,
+   "ood_nmse": 0.007408388788256712
+  },
+  {
+   "index": 3,
+   "tokens": 7681,
+   "cost": 0.000536025,
+   "role": "agent",
+   "best_expression": "c0*A*exp(-c1*t) + c2*A",
+   "train_r2": 0.8955382725907934,
+   "train_mse": 0.00022685005717188567,
+   "train_nmse": 0.10446172740920656,
+   "train_dist_r2": 0.8849057809885964,
+   "train_dist_mse": 0.00024919786911070213,
+   "train_dist_nmse": 0.11475262646406552,
+   "ood_r2": -262.74958110633634,
+   "ood_mse": 1.6088125879674813e-05,
+   "ood_nmse": 0.007408388788256712
+  },
+  {
+   "index": 4,
+   "tokens": 11101,
+   "cost": 0.00080025,
+   "role": "agent",
+   "best_expression": "c0*A*exp(-c1*t) + c2*A + c3",
+   "train_r2": 0.9788763192631348,
+   "train_mse": 4.5872381222141295e-05,
+   "train_nmse": 0.021123680736865196,
+   "train_dist_r2": 0.9767724803045578,
+   "train_dist_mse": 5.02913913709043e-05,
+   "train_dist_nmse": 0.023158581848787017,
+   "ood_r2": -241.54682707370648,
+   "ood_mse": 1.4794806002381038e-05,
+   "ood_nmse": 0.006812830514394771
+  }
+ ],
+ "target_var": 0.0021716092850278925,
+ "baseline_mse": {
+  "train": 0.0021716092850278925,
+  "train_dist": 0.0021685716142663936,
+  "ood": 0.0019805989419618224
+ }
+}

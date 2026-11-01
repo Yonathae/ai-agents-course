@@ -4,6 +4,7 @@
 !/README.md
 !/lectures/
 !/harness-design-sql-agent/
+!/harness-design-symbolic-regression/
 !/presentations/
 
 /harness-design-sql-agent/*
@@ -13,6 +14,20 @@
 !/harness-design-sql-agent/sql_agent/
 !/harness-design-sql-agent/recorded/
 /harness-design-sql-agent/recorded/demo_executed.ipynb
+
+# symbolic regression: code, notebooks and the recorded runs (no data: LLM-SRBench is gated)
+/harness-design-symbolic-regression/*
+!/harness-design-symbolic-regression/.gitignore
+!/harness-design-symbolic-regression/.env.example
+!/harness-design-symbolic-regression/README.md
+!/harness-design-symbolic-regression/*.ipynb
+!/harness-design-symbolic-regression/pyproject.toml
+!/harness-design-symbolic-regression/uv.lock
+!/harness-design-symbolic-regression/configs/
+!/harness-design-symbolic-regression/src/
+!/harness-design-symbolic-regression/scripts/
+!/harness-design-symbolic-regression/tests/
+!/harness-design-symbolic-regression/recorded/
 
 __pycache__/
 .ipynb_checkpoints/

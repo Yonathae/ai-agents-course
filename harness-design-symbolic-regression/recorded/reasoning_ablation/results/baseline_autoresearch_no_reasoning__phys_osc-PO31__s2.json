@@ -1,0 +1,128 @@
+{
+ "run_id": "baseline_autoresearch_no_reasoning__phys_osc-PO31__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "phys_osc/PO31",
+ "harness": "baseline_autoresearch_no_reasoning",
+ "best_expression": "c0 + c1*x + c2*v + c3*t + c4*sin(x) + c5*cos(v)",
+ "best_params": {
+  "c0": -8.386263784117889e-05,
+  "c1": -12.161892633943406,
+  "c2": 1.8145575057489936e-06,
+  "c3": 5.64676405272199e-06,
+  "c4": 10.40233810019481,
+  "c5": -2.491237112053036e-05
+ },
+ "best_train_r2": 0.9999955498669232,
+ "evaluations": 5,
+ "model_calls": 5,
+ "input_tokens": 7301,
+ "output_tokens": 473,
+ "cached_input_tokens": 5120,
+ "cost": 0.000497475,
+ "tokens_by_role": {
+  "agent": 7774
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999926594140297,
+   "mse": 3.1965333830945326e-05,
+   "nmse": 7.242459216471579e-06,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999957859810914,
+   "mse": 2.0160496994890422e-05,
+   "nmse": 4.5678101796621726e-06,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1286,
+   "cost": 7.29e-05,
+   "role": "agent",
+   "best_expression": "c0 + c1*x + c2*v + c3*t",
+   "train_r2": 0.980865788211775,
+   "train_mse": 0.08445079897883086,
+   "train_nmse": 0.01913421178822502,
+   "train_dist_r2": 0.9804548193825622,
+   "train_dist_mse": 0.08511149188205114,
+   "train_dist_nmse": 0.01928390649911062,
+   "ood_r2": 0.9826264280074298,
+   "ood_mse": 0.08311776798817773,
+   "ood_nmse": 0.018832183890279165
+  },
+  {
+   "index": 2,
+   "tokens": 2706,
+   "cost": 0.00016350000000000002,
+   "role": "agent",
+   "best_expression": "c0 + c1*x + c2*v + c3*t + c4*x**2 + c5*v**2 + c6*x*v",
+   "train_r2": 0.9808814594071931,
+   "train_mse": 0.08438163255647413,
+   "train_nmse": 0.019118540592806973,
+   "train_dist_r2": 0.9803138674732544,
+   "train_dist_mse": 0.0857252814151139,
+   "train_dist_nmse": 0.019422974205527025,
+   "ood_r2": 0.9825027748820234,
+   "ood_mse": 0.08370934304211235,
+   "ood_nmse": 0.018966218411059162
+  },
+  {
+   "index": 3,
+   "tokens": 4256,
+   "cost": 0.0002616,
+   "role": "agent",
+   "best_expression": "c0 + c1*x + c2*v + c3*t + c4*sin(x) + c5*cos(v)",
+   "train_r2": 0.9999955498669232,
+   "train_mse": 1.9641117076706064e-05,
+   "train_nmse": 4.450133076860794e-06,
+   "train_dist_r2": 0.9999926594140297,
+   "train_dist_mse": 3.1965333830945326e-05,
+   "train_dist_nmse": 7.242459216471579e-06,
+   "ood_r2": 0.9999957859810914,
+   "ood_mse": 2.0160496994890422e-05,
+   "ood_nmse": 4.5678101796621726e-06
+  },
+  {
+   "index": 4,
+   "tokens": 5941,
+   "cost": 0.00037005,
+   "role": "agent",
+   "best_expression": "c0 + c1*x + c2*v + c3*t + c4*sin(x) + c5*cos(v)",
+   "train_r2": 0.9999955498669232,
+   "train_mse": 1.9641117076706064e-05,
+   "train_nmse": 4.450133076860794e-06,
+   "train_dist_r2": 0.9999926594140297,
+   "train_dist_mse": 3.1965333830945326e-05,
+   "train_dist_nmse": 7.242459216471579e-06,
+   "ood_r2": 0.9999957859810914,
+   "ood_mse": 2.0160496994890422e-05,
+   "ood_nmse": 4.5678101796621726e-06
+  },
+  {
+   "index": 5,
+   "tokens": 7774,
+   "cost": 0.000497475,
+   "role": "agent",
+   "best_expression": "c0 + c1*x + c2*v + c3*t + c4*sin(x) + c5*cos(v)",
+   "train_r2": 0.9999955498669232,
+   "train_mse": 1.9641117076706064e-05,
+   "train_nmse": 4.450133076860794e-06,
+   "train_dist_r2": 0.9999926594140297,
+   "train_dist_mse": 3.1965333830945326e-05,
+   "train_dist_nmse": 7.242459216471579e-06,
+   "ood_r2": 0.9999957859810914,
+   "ood_mse": 2.0160496994890422e-05,
+   "ood_nmse": 4.5678101796621726e-06
+  }
+ ],
+ "target_var": 4.4136021861533346,
+ "baseline_mse": {
+  "train": 4.4136021861533346,
+  "train_dist": 4.466141806617052,
+  "ood": 4.8965830475833805
+ }
+}

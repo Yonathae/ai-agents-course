@@ -1,0 +1,77 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK1__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "chem_react/CRK1",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*(A-0.556)+c1*exp(-c2*t)",
+ "best_params": {
+  "c0": -1.8165394413169798,
+  "c1": -0.16679075823818834,
+  "c2": 3.9752976105956326
+ },
+ "best_train_r2": 0.9998945376657309,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7925,
+ "output_tokens": 736,
+ "cached_input_tokens": 2560,
+ "cost": 0.000719175,
+ "tokens_by_role": {
+  "agent": 8661
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999067668673776,
+   "mse": 3.992584577347131e-07,
+   "nmse": 0.00010582679916636342,
+   "valid": true
+  },
+  "ood": {
+   "r2": -3.2544115576788277,
+   "mse": 4.0081817689344025e-07,
+   "nmse": 0.00010624021579654091,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2534,
+   "cost": 0.00021615000000000002,
+   "role": "agent",
+   "best_expression": "c0*(A-0.556)",
+   "train_r2": 0.9979343512423567,
+   "train_mse": 7.793184181086194e-06,
+   "train_nmse": 0.0020656487576432973,
+   "train_dist_r2": 0.9981834285516926,
+   "train_dist_mse": 7.779224985967037e-06,
+   "train_dist_nmse": 0.002061948756028352,
+   "ood_r2": -4.828614008667519,
+   "ood_mse": 5.491275136635584e-07,
+   "ood_nmse": 0.00014555084802689544
+  },
+  {
+   "index": 2,
+   "tokens": 5457,
+   "cost": 0.00047295,
+   "role": "agent",
+   "best_expression": "c0*(A-0.556)+c1*exp(-c2*t)",
+   "train_r2": 0.9998945376657309,
+   "train_mse": 3.9788342141195244e-07,
+   "train_nmse": 0.00010546233426911148,
+   "train_dist_r2": 0.9999067668673776,
+   "train_dist_mse": 3.992584577347131e-07,
+   "train_dist_nmse": 0.00010582679916636342,
+   "ood_r2": -3.2544115576788277,
+   "ood_mse": 4.0081817689344025e-07,
+   "ood_nmse": 0.00010624021579654091
+  }
+ ],
+ "target_var": 0.0037727537909094735,
+ "baseline_mse": {
+  "train": 0.0037727537909094735,
+  "train_dist": 0.004282437994289261,
+  "ood": 6.85731789414831e-05
+ }
+}

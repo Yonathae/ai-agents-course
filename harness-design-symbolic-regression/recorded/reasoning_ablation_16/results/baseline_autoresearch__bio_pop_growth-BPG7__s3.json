@@ -1,0 +1,142 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG7__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG7",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*P*(1 - P/c1) + c2*sqrt(P) + c3*t",
+ "best_params": {
+  "c0": 2.0527126822543904,
+  "c1": 19.04854627661305,
+  "c2": -1.824692909524225,
+  "c3": -0.0016107159507562736
+ },
+ "best_train_r2": 0.972073326746607,
+ "evaluations": 6,
+ "model_calls": 14,
+ "input_tokens": 22330,
+ "output_tokens": 1476,
+ "cached_input_tokens": 10496,
+ "cost": 0.0017239500000000001,
+ "tokens_by_role": {
+  "agent": 23806
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9784522117689544,
+   "mse": 0.01990628825872495,
+   "nmse": 0.030073884098162924,
+   "valid": true
+  },
+  "ood": {
+   "r2": -17.115775735661575,
+   "mse": 0.0009476324678010609,
+   "nmse": 0.001431657606576358,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2349,
+   "cost": 0.000185475,
+   "role": "agent",
+   "best_expression": "c0 + c1*P",
+   "train_r2": 0.4392430246078852,
+   "train_mse": 0.3711722090439273,
+   "train_nmse": 0.5607569753921148,
+   "train_dist_r2": 0.4452177043658283,
+   "train_dist_mse": 0.5125192515962955,
+   "train_dist_nmse": 0.7743002799041888,
+   "ood_r2": -161.2334507959718,
+   "ood_mse": 0.00848639813061002,
+   "ood_nmse": 0.012821021702977173
+  },
+  {
+   "index": 2,
+   "tokens": 5023,
+   "cost": 0.00040582499999999996,
+   "role": "agent",
+   "best_expression": "c0*P*(1 - P/c1)",
+   "train_r2": 0.9271248973549289,
+   "train_mse": 0.04823696185706757,
+   "train_nmse": 0.07287510264507119,
+   "train_dist_r2": 0.9417072553216875,
+   "train_dist_mse": 0.0538520318891417,
+   "train_dist_nmse": 0.08135819919993247,
+   "ood_r2": -10.737627488001783,
+   "ood_mse": 0.0006139928571034772,
+   "ood_nmse": 0.0009276038697739941
+  },
+  {
+   "index": 3,
+   "tokens": 8051,
+   "cost": 0.0006176999999999999,
+   "role": "agent",
+   "best_expression": "c0*P*(1 - P/c1) + c2*t",
+   "train_r2": 0.9297060140381147,
+   "train_mse": 0.04652848773522837,
+   "train_nmse": 0.07029398596188527,
+   "train_dist_r2": 0.9442498608863572,
+   "train_dist_mse": 0.05150312077326069,
+   "train_dist_nmse": 0.07780952755719515,
+   "ood_r2": -67.67068901294802,
+   "ood_mse": 0.003592149485867029,
+   "ood_nmse": 0.005426922683785158
+  },
+  {
+   "index": 4,
+   "tokens": 11406,
+   "cost": 0.0008361749999999999,
+   "role": "agent",
+   "best_expression": "c0*P*(1 - P/c1) + c2*exp(-c3*t)",
+   "train_r2": 0.9433008185117402,
+   "train_mse": 0.0375299128990128,
+   "train_nmse": 0.05669918148825978,
+   "train_dist_r2": 0.9555677075151368,
+   "train_dist_mse": 0.0410474621671527,
+   "train_dist_nmse": 0.06201340017256176,
+   "ood_r2": -10.022044069193656,
+   "ood_mse": 0.0005765608370245478,
+   "ood_nmse": 0.0008710525821214391
+  },
+  {
+   "index": 5,
+   "tokens": 15108,
+   "cost": 0.001100925,
+   "role": "agent",
+   "best_expression": "c0*P*(1 - P/c1) + c2*sqrt(P)",
+   "train_r2": 0.9713862986723616,
+   "train_mse": 0.01893977462032661,
+   "train_nmse": 0.02861370132763837,
+   "train_dist_r2": 0.977702160878651,
+   "train_dist_mse": 0.02059920063891903,
+   "train_dist_nmse": 0.031120717457616836,
+   "ood_r2": -2.3152456690950505,
+   "ood_mse": 0.00017341981268772822,
+   "ood_nmse": 0.0002619979817086163
+  },
+  {
+   "index": 6,
+   "tokens": 19272,
+   "cost": 0.0014174250000000002,
+   "role": "agent",
+   "best_expression": "c0*P*(1 - P/c1) + c2*sqrt(P) + c3*t",
+   "train_r2": 0.972073326746607,
+   "train_mse": 0.018485021957081474,
+   "train_nmse": 0.027926673253392997,
+   "train_dist_r2": 0.9784522117689544,
+   "train_dist_mse": 0.01990628825872495,
+   "train_dist_nmse": 0.030073884098162924,
+   "ood_r2": -17.115775735661575,
+   "ood_mse": 0.0009476324678010609,
+   "ood_nmse": 0.001431657606576358
+  }
+ ],
+ "target_var": 0.6619127809946216,
+ "baseline_mse": {
+  "train": 0.6619127809946216,
+  "train_dist": 0.9296244869531485,
+  "ood": 0.061071832409642327
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK1__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "chem_react/CRK1",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*A + c1*A**2 + c2*t + c3",
+ "best_params": {
+  "c0": -0.9329396569143815,
+  "c1": -0.8142993622490003,
+  "c2": -1.7031322461044126e-07,
+  "c3": 0.7710922268220866
+ },
+ "best_train_r2": 0.9999999248213756,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 11228,
+ "output_tokens": 725,
+ "cached_input_tokens": 2560,
+ "cost": 0.0009636000000000001,
+ "tokens_by_role": {
+  "agent": 11953
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999491509833,
+   "mse": 2.1775413307355367e-10,
+   "nmse": 5.771755729150327e-08,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9998648009734653,
+   "mse": 1.273742011056893e-11,
+   "nmse": 3.376159913021624e-09,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2494,
+   "cost": 0.00022867500000000002,
+   "role": "agent",
+   "best_expression": "c0*A + c1",
+   "train_r2": 0.9981975628599901,
+   "train_mse": 6.80015155284844e-06,
+   "train_nmse": 0.001802437140009916,
+   "train_dist_r2": 0.9984002921592113,
+   "train_dist_mse": 6.850535505721965e-06,
+   "train_dist_nmse": 0.0018157918288303015,
+   "ood_r2": 0.231031074991765,
+   "ood_mse": 7.24463814633086e-08,
+   "ood_nmse": 1.9202520354725935e-05
+  },
+  {
+   "index": 2,
+   "tokens": 5272,
+   "cost": 0.00043710000000000005,
+   "role": "agent",
+   "best_expression": "c0*A + c1*t + c2",
+   "train_r2": 0.9982525096459235,
+   "train_mse": 6.592850857919821e-06,
+   "train_nmse": 0.0017474903540764914,
+   "train_dist_r2": 0.9984373451862771,
+   "train_dist_mse": 6.691860858366724e-06,
+   "train_dist_nmse": 0.0017737337841899194,
+   "ood_r2": -3.1487902935648187,
+   "ood_mse": 3.9086734774835034e-07,
+   "ood_nmse": 0.00010360266516467444
+  },
+  {
+   "index": 3,
+   "tokens": 8474,
+   "cost": 0.0007314750000000001,
+   "role": "agent",
+   "best_expression": "c0*A + c1*A**2 + c2*t + c3",
+   "train_r2": 0.9999999248213756,
+   "train_mse": 2.8363044025804057e-10,
+   "train_nmse": 7.517862441526236e-08,
+   "train_dist_r2": 0.9999999491509833,
+   "train_dist_mse": 2.1775413307355367e-10,
+   "train_dist_nmse": 5.771755729150327e-08,
+   "ood_r2": 0.9998648009734653,
+   "ood_mse": 1.273742011056893e-11,
+   "ood_nmse": 3.376159913021624e-09
+  }
+ ],
+ "target_var": 0.0037727537909094735,
+ "baseline_mse": {
+  "train": 0.0037727537909094735,
+  "train_dist": 0.004282437994289261,
+  "ood": 6.85731789414831e-05
+ }
+}

@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# experiment logs and results (large; contain the gated data): publish with scripts/export_recorded.py
+runs/
+# local copy of LLM-SRBench (gated; never commit)
+data/

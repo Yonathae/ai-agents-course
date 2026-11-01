@@ -1,0 +1,94 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK30__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "chem_react/CRK30",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 - c1*A + c2*exp(-c3*t)",
+ "best_params": {
+  "c0": 0.041121590867071296,
+  "c1": 0.008747185873330468,
+  "c2": 0.06007001733913315,
+  "c3": 0.19735278217164262
+ },
+ "best_train_r2": 0.9985531379632698,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 10622,
+ "output_tokens": 1072,
+ "cached_input_tokens": 4608,
+ "cost": 0.00094545,
+ "tokens_by_role": {
+  "agent": 11694
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9984716064773538,
+   "mse": 3.164589318338889e-07,
+   "nmse": 0.0014442848971822886,
+   "valid": true
+  },
+  "ood": {
+   "r2": -3.817398822551098,
+   "mse": 3.876294435902573e-07,
+   "nmse": 0.0017690995410881614,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2453,
+   "cost": 0.00018225,
+   "role": "agent",
+   "best_expression": "c0 - c1*A",
+   "train_r2": 0.7515526557530264,
+   "train_mse": 5.443758453110819e-05,
+   "train_nmse": 0.24844734424697357,
+   "train_dist_r2": 0.7465970156115469,
+   "train_dist_mse": 5.246792568464162e-05,
+   "train_dist_nmse": 0.23945803082147551,
+   "ood_r2": -918.4691361166484,
+   "ood_mse": 7.398459682492492e-05,
+   "ood_nmse": 0.3376578287714391
+  },
+  {
+   "index": 2,
+   "tokens": 5132,
+   "cost": 0.00039180000000000004,
+   "role": "agent",
+   "best_expression": "c0 - c1*A",
+   "train_r2": 0.7515526557530264,
+   "train_mse": 5.443758453110819e-05,
+   "train_nmse": 0.24844734424697357,
+   "train_dist_r2": 0.7465970156115469,
+   "train_dist_mse": 5.246792568464162e-05,
+   "train_dist_nmse": 0.23945803082147551,
+   "ood_r2": -918.4691361166484,
+   "ood_mse": 7.398459682492492e-05,
+   "ood_nmse": 0.3376578287714391
+  },
+  {
+   "index": 3,
+   "tokens": 8208,
+   "cost": 0.0006558,
+   "role": "agent",
+   "best_expression": "c0 - c1*A + c2*exp(-c3*t)",
+   "train_r2": 0.9985531379632698,
+   "train_mse": 3.1702361185657825e-07,
+   "train_nmse": 0.0014468620367301744,
+   "train_dist_r2": 0.9984716064773538,
+   "train_dist_mse": 3.164589318338889e-07,
+   "train_dist_nmse": 0.0014442848971822886,
+   "ood_r2": -3.817398822551098,
+   "ood_mse": 3.876294435902573e-07,
+   "ood_nmse": 0.0017690995410881614
+  }
+ ],
+ "target_var": 0.00021911115490529665,
+ "baseline_mse": {
+  "train": 0.00021911115490529665,
+  "train_dist": 0.00020726798541806412,
+  "ood": 0.00014755631620833046
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO6__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "phys_osc/PO6",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*v + c2*x**3 + c3",
+ "best_params": {
+  "c0": 0.08738626593870318,
+  "c1": -0.3820518730424085,
+  "c2": -1.2758524975751675,
+  "c3": 0.00536591876861945
+ },
+ "best_train_r2": 0.9921288841181777,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 8841,
+ "output_tokens": 514,
+ "cached_input_tokens": 2048,
+ "cost": 0.000740475,
+ "tokens_by_role": {
+  "agent": 9355
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9863464878197448,
+   "mse": 0.00011733487770424694,
+   "nmse": 0.006371577850940579,
+   "valid": true
+  },
+  "ood": {
+   "r2": -397601.2668292066,
+   "mse": 6.835065794485784e-06,
+   "nmse": 0.0003711611984259212,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2806,
+   "cost": 0.000210075,
+   "role": "agent",
+   "best_expression": "c0*x + c1*v + c2",
+   "train_r2": 0.7336412747473728,
+   "train_mse": 0.004905090887081053,
+   "train_nmse": 0.2663587252526271,
+   "train_dist_r2": 0.6149886096837521,
+   "train_dist_mse": 0.0033086918443467114,
+   "train_dist_nmse": 0.1796702573310322,
+   "ood_r2": -135267079.90021497,
+   "ood_mse": 0.0023253373406398434,
+   "ood_nmse": 0.12627164390907808
+  },
+  {
+   "index": 2,
+   "tokens": 5958,
+   "cost": 0.00045465,
+   "role": "agent",
+   "best_expression": "c0*x + c1*v + c2*x**3 + c3",
+   "train_r2": 0.9921288841181777,
+   "train_mse": 0.0001449494051545234,
+   "train_nmse": 0.007871115881822285,
+   "train_dist_r2": 0.9863464878197448,
+   "train_dist_mse": 0.00011733487770424694,
+   "train_dist_nmse": 0.006371577850940579,
+   "ood_r2": -397601.2668292066,
+   "ood_mse": 6.835065794485784e-06,
+   "ood_nmse": 0.0003711611984259212
+  }
+ ],
+ "target_var": 0.018415356517526633,
+ "baseline_mse": {
+  "train": 0.018415356517526633,
+  "train_dist": 0.00871340091977214,
+  "ood": 1.5676077172636106e-06
+ }
+}

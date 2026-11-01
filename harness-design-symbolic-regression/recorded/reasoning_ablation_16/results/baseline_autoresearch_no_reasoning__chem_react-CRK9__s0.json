@@ -1,0 +1,77 @@
+{
+ "run_id": "baseline_autoresearch_no_reasoning__chem_react-CRK9__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "chem_react/CRK9",
+ "harness": "baseline_autoresearch_no_reasoning",
+ "best_expression": "c0*(c1 - A) + c2*t**2",
+ "best_params": {
+  "c0": 0.3801597138100726,
+  "c1": 2.130520145032872,
+  "c2": 5.518291151511513e-07
+ },
+ "best_train_r2": 0.9995135814083813,
+ "evaluations": 2,
+ "model_calls": 3,
+ "input_tokens": 3444,
+ "output_tokens": 366,
+ "cached_input_tokens": 0,
+ "cost": 0.0003681,
+ "tokens_by_role": {
+  "agent": 3810
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9994645205675854,
+   "mse": 2.127549054405317e-06,
+   "nmse": 0.00051991799291339,
+   "valid": true
+  },
+  "ood": {
+   "r2": -31.310660795448882,
+   "mse": 7.013973080287109e-07,
+   "nmse": 0.00017140337134415582,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1233,
+   "cost": 0.00012915,
+   "role": "agent",
+   "best_expression": "c0*(c1 - A)",
+   "train_r2": 0.9994650423108027,
+   "train_mse": 2.1890927825382973e-06,
+   "train_nmse": 0.0005349576891972674,
+   "train_dist_r2": 0.9994031512618983,
+   "train_dist_mse": 2.371379536736846e-06,
+   "train_dist_nmse": 0.0005795038599101663,
+   "ood_r2": -5.240088522851741,
+   "ood_mse": 1.3545935564417664e-07,
+   "ood_nmse": 3.310276496893608e-05
+  },
+  {
+   "index": 2,
+   "tokens": 2444,
+   "cost": 0.00023549999999999998,
+   "role": "agent",
+   "best_expression": "c0*(c1 - A) + c2*t**2",
+   "train_r2": 0.9995135814083813,
+   "train_mse": 1.990466628870476e-06,
+   "train_nmse": 0.0004864185916186475,
+   "train_dist_r2": 0.9994645205675854,
+   "train_dist_mse": 2.127549054405317e-06,
+   "train_dist_nmse": 0.00051991799291339,
+   "ood_r2": -31.310660795448882,
+   "ood_mse": 7.013973080287109e-07,
+   "ood_nmse": 0.00017140337134415582
+  }
+ ],
+ "target_var": 0.004092085835467003,
+ "baseline_mse": {
+  "train": 0.004092085835467003,
+  "train_dist": 0.003973304306492981,
+  "ood": 0.00042976632388965874
+ }
+}

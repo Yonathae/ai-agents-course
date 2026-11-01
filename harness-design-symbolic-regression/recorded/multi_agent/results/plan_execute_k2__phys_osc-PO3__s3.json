@@ -1,0 +1,78 @@
+{
+ "run_id": "plan_execute_k2__phys_osc-PO3__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "phys_osc/PO3",
+ "harness": "plan_execute_k2",
+ "best_expression": "c0*v + c1*sin(c2*t)",
+ "best_params": {
+  "c0": -1.4529587437909222,
+  "c1": 0.10625621265094269,
+  "c2": 1.000000168402861
+ },
+ "best_train_r2": 0.9999999945228906,
+ "evaluations": 2,
+ "model_calls": 5,
+ "input_tokens": 5384,
+ "output_tokens": 281,
+ "cached_input_tokens": 2560,
+ "cost": 0.00030105,
+ "tokens_by_role": {
+  "orchestrator": 3583,
+  "worker": 2082
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999943138722,
+   "mse": 1.0155521578021845e-11,
+   "nmse": 5.674232138534254e-09,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999883112977,
+   "mse": 9.869318569091165e-12,
+   "nmse": 5.514320872633916e-09,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2166,
+   "cost": 0.00012067499999999999,
+   "role": "worker",
+   "best_expression": "c0*v + c1*sin(c2*t)",
+   "train_r2": 0.9999999945228906,
+   "train_mse": 9.80271893043813e-12,
+   "train_nmse": 5.477109410164312e-09,
+   "train_dist_r2": 0.9999999943138722,
+   "train_dist_mse": 1.0155521578021845e-11,
+   "train_dist_nmse": 5.674232138534254e-09,
+   "ood_r2": 0.9999999883112977,
+   "ood_mse": 9.869318569091165e-12,
+   "ood_nmse": 5.514320872633916e-09
+  },
+  {
+   "index": 2,
+   "tokens": 3211,
+   "cost": 0.000182625,
+   "role": "worker",
+   "best_expression": "c0*v + c1*sin(c2*t)",
+   "train_r2": 0.9999999945228906,
+   "train_mse": 9.80271893043813e-12,
+   "train_nmse": 5.477109410164312e-09,
+   "train_dist_r2": 0.9999999943138722,
+   "train_dist_mse": 1.0155521578021845e-11,
+   "train_dist_nmse": 5.674232138534254e-09,
+   "ood_r2": 0.9999999883112977,
+   "ood_mse": 9.869318569091165e-12,
+   "ood_nmse": 5.514320872633916e-09
+  }
+ ],
+ "target_var": 0.0017897613862243537,
+ "baseline_mse": {
+  "train": 0.0017897613862243537,
+  "train_dist": 0.0017861819889276706,
+  "ood": 0.0015932867927749522
+ }
+}

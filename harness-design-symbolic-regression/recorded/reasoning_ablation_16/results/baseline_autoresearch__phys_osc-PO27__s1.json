@@ -1,0 +1,95 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO27__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "phys_osc/PO27",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*x**3 + c2*v + c3 + c4*sin(t)",
+ "best_params": {
+  "c0": 0.014999770405538598,
+  "c1": -0.0015045475874615744,
+  "c2": -0.966745558328275,
+  "c3": -0.01703807532553453,
+  "c4": 0.6694058075200854
+ },
+ "best_train_r2": 0.9996717457360837,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 12659,
+ "output_tokens": 835,
+ "cached_input_tokens": 2048,
+ "cost": 0.001123125,
+ "tokens_by_role": {
+  "agent": 13494
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9996804581052808,
+   "mse": 3.507380528491458e-05,
+   "nmse": 0.0003068392385422024,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9994826453287953,
+   "mse": 3.469795885547129e-05,
+   "nmse": 0.00030355118834969066,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2758,
+   "cost": 0.000217725,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*v**3",
+   "train_r2": 0.94504291313053,
+   "train_mse": 0.00628196762918512,
+   "train_nmse": 0.05495708686947001,
+   "train_dist_r2": 0.9438504739494921,
+   "train_dist_mse": 0.006163127827937086,
+   "train_dist_nmse": 0.053917430241760524,
+   "ood_r2": 0.8964086560542714,
+   "ood_mse": 0.006947667412844556,
+   "ood_nmse": 0.06078088651300696
+  },
+  {
+   "index": 2,
+   "tokens": 5870,
+   "cost": 0.00045659999999999993,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*v + c3",
+   "train_r2": 0.9609733593373526,
+   "train_mse": 0.004461009621941676,
+   "train_nmse": 0.039026640662647334,
+   "train_dist_r2": 0.9652838537891866,
+   "train_dist_mse": 0.003810540566239763,
+   "train_dist_nmse": 0.03333608532867321,
+   "ood_r2": 0.9615499737645262,
+   "ood_mse": 0.0025787675313795806,
+   "ood_nmse": 0.02256005754944969
+  },
+  {
+   "index": 3,
+   "tokens": 9465,
+   "cost": 0.000775275,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**3 + c2*v + c3 + c4*sin(t)",
+   "train_r2": 0.9996717457360837,
+   "train_mse": 3.7521687875515956e-05,
+   "train_nmse": 0.00032825426391624974,
+   "train_dist_r2": 0.9996804581052808,
+   "train_dist_mse": 3.507380528491458e-05,
+   "train_dist_nmse": 0.0003068392385422024,
+   "ood_r2": 0.9994826453287953,
+   "ood_mse": 3.469795885547129e-05,
+   "ood_nmse": 0.00030355118834969066
+  }
+ ],
+ "target_var": 0.1143067798354302,
+ "baseline_mse": {
+  "train": 0.1143067798354302,
+  "train_dist": 0.10981806220905091,
+  "ood": 0.106514499722798
+ }
+}

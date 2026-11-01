@@ -1,0 +1,143 @@
+{
+ "run_id": "baseline_autoresearch__phys_osc-PO10__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "phys_osc/PO10",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*x + c1*sin(c2*t) + c3*x*cos(c4*t)",
+ "best_params": {
+  "c0": -6.317958229205757,
+  "c1": 0.620018862000161,
+  "c2": 1.0005256225888097,
+  "c3": 0.053199508088186666,
+  "c4": 1.0242769648375334
+ },
+ "best_train_r2": 0.9870460932933175,
+ "evaluations": 6,
+ "model_calls": 14,
+ "input_tokens": 23372,
+ "output_tokens": 1629,
+ "cached_input_tokens": 6656,
+ "cost": 0.001992,
+ "tokens_by_role": {
+  "agent": 25001
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9871689077605657,
+   "mse": 0.230417107575454,
+   "nmse": 0.012178746895684586,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.973931479078904,
+   "mse": 0.7105627546795176,
+   "nmse": 0.037556950670029746,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2303,
+   "cost": 0.00018104999999999998,
+   "role": "agent",
+   "best_expression": "c0*x + c1*t + c2",
+   "train_r2": 0.9770882239600738,
+   "train_mse": 0.43348180315718987,
+   "train_nmse": 0.022911776039926193,
+   "train_dist_r2": 0.9767735600266559,
+   "train_dist_mse": 0.41709380760938086,
+   "train_dist_nmse": 0.022045584931095378,
+   "ood_r2": 0.9714779506220815,
+   "ood_mse": 0.7774398108900034,
+   "ood_nmse": 0.04109175218405909
+  },
+  {
+   "index": 2,
+   "tokens": 4966,
+   "cost": 0.00042262499999999993,
+   "role": "agent",
+   "best_expression": "c0*x + c1*x**2 + c2*t + c3",
+   "train_r2": 0.9770929033045782,
+   "train_mse": 0.43339327179716675,
+   "train_nmse": 0.022907096695421795,
+   "train_dist_r2": 0.9767761913230268,
+   "train_dist_mse": 0.41704655553702047,
+   "train_dist_nmse": 0.022043087412418796,
+   "ood_r2": 0.971516169191874,
+   "ood_mse": 0.7763980681569236,
+   "ood_nmse": 0.041036690642795526
+  },
+  {
+   "index": 3,
+   "tokens": 8143,
+   "cost": 0.0006923999999999999,
+   "role": "agent",
+   "best_expression": "c0 * x + c1 * sin(c2 * t)",
+   "train_r2": 0.9870118271715491,
+   "train_mse": 0.24573112828892038,
+   "train_nmse": 0.0129881728284509,
+   "train_dist_r2": 0.9871212501858426,
+   "train_dist_mse": 0.23127292875706731,
+   "train_dist_nmse": 0.012223981512456352,
+   "ood_r2": 0.9741620851435109,
+   "ood_mse": 0.704277009469468,
+   "ood_nmse": 0.03722471622455183
+  },
+  {
+   "index": 4,
+   "tokens": 11765,
+   "cost": 0.0009962999999999999,
+   "role": "agent",
+   "best_expression": "c0*x + c1*sin(c2*t) + c3*cos(c4*t)",
+   "train_r2": 0.9870266217402119,
+   "train_mse": 0.24545122086097995,
+   "train_nmse": 0.012973378259788101,
+   "train_dist_r2": 0.9870741531211413,
+   "train_dist_mse": 0.23211868445901795,
+   "train_dist_nmse": 0.012268684116086882,
+   "ood_r2": 0.9741167374624619,
+   "ood_mse": 0.7055130739651122,
+   "ood_nmse": 0.03729004868531221
+  },
+  {
+   "index": 5,
+   "tokens": 15772,
+   "cost": 0.0013158,
+   "role": "agent",
+   "best_expression": "c0*x + c1*sin(c2*t) + c3*x*cos(c4*t)",
+   "train_r2": 0.9870460932933175,
+   "train_mse": 0.24508282672445564,
+   "train_nmse": 0.012953906706682547,
+   "train_dist_r2": 0.9871689077605657,
+   "train_dist_mse": 0.230417107575454,
+   "train_dist_nmse": 0.012178746895684586,
+   "ood_r2": 0.973931479078904,
+   "ood_mse": 0.7105627546795176,
+   "ood_nmse": 0.037556950670029746
+  },
+  {
+   "index": 6,
+   "tokens": 20191,
+   "cost": 0.0016389,
+   "role": "agent",
+   "best_expression": "c0*x + c1*sin(c2*t) + c3*x*cos(c4*t)",
+   "train_r2": 0.9870460932933175,
+   "train_mse": 0.24508282672445564,
+   "train_nmse": 0.012953906706682547,
+   "train_dist_r2": 0.9871689077605657,
+   "train_dist_mse": 0.230417107575454,
+   "train_dist_nmse": 0.012178746895684586,
+   "ood_r2": 0.973931479078904,
+   "ood_mse": 0.7105627546795176,
+   "ood_nmse": 0.037556950670029746
+  }
+ ],
+ "target_var": 18.919607209925672,
+ "baseline_mse": {
+  "train": 18.919607209925672,
+  "train_dist": 17.982563230723926,
+  "ood": 27.258678397214695
+ }
+}

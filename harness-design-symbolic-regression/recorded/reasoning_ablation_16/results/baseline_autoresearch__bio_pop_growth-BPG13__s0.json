@@ -1,0 +1,160 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG13__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG13",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*P*(1-P/c1)+c2*exp(-c3*t)+c4*sin(c5*t)",
+ "best_params": {
+  "c0": 1.0475367155875355,
+  "c1": 20.449842362970802,
+  "c2": -1.3495811487102403,
+  "c3": -0.002300995461258195,
+  "c4": 0.1274041251273526,
+  "c5": 0.8238209857624137
+ },
+ "best_train_r2": 0.9538611379136843,
+ "evaluations": 7,
+ "model_calls": 16,
+ "input_tokens": 25939,
+ "output_tokens": 2287,
+ "cached_input_tokens": 9984,
+ "cost": 0.002171625,
+ "tokens_by_role": {
+  "agent": 28226
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9576511018816104,
+   "mse": 0.03506378268736234,
+   "nmse": 0.04345035014726636,
+   "valid": true
+  },
+  "ood": {
+   "r2": -350.8760672649308,
+   "mse": 0.013559003251702782,
+   "nmse": 0.016802050257593786,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1978,
+   "cost": 7.995e-05,
+   "role": "agent",
+   "best_expression": "c0 + c1*t + c2*P",
+   "train_r2": 0.2807648821737172,
+   "train_mse": 0.5804119825756311,
+   "train_nmse": 0.7192351178262828,
+   "train_dist_r2": 0.30653092771729895,
+   "train_dist_mse": 0.5741742980644062,
+   "train_dist_nmse": 0.7115055018137302,
+   "ood_r2": -2523.8782819804014,
+   "ood_mse": 0.09729230266106807,
+   "ood_nmse": 0.12056270867720305
+  },
+  {
+   "index": 2,
+   "tokens": 4486,
+   "cost": 0.0002724,
+   "role": "agent",
+   "best_expression": "c0 * P * (1 - P / c1)",
+   "train_r2": 0.8562536782013307,
+   "train_mse": 0.1160011316956741,
+   "train_nmse": 0.1437463217986693,
+   "train_dist_r2": 0.8605736038535671,
+   "train_dist_mse": 0.11544141813781211,
+   "train_dist_nmse": 0.1430527357618142,
+   "ood_r2": -51.555097429391786,
+   "ood_mse": 0.0020251298773387746,
+   "ood_nmse": 0.0025095011296591948
+  },
+  {
+   "index": 3,
+   "tokens": 7406,
+   "cost": 0.000492975,
+   "role": "agent",
+   "best_expression": "c0 * P * (1 - P / c1) + c2 * sin(c3 * t)",
+   "train_r2": 0.8640827137214839,
+   "train_mse": 0.10968321712882077,
+   "train_nmse": 0.13591728627851613,
+   "train_dist_r2": 0.8725519643456021,
+   "train_dist_mse": 0.10552364818617273,
+   "train_dist_nmse": 0.13076283022249877,
+   "ood_r2": -184.20628823675963,
+   "ood_mse": 0.00713663956732616,
+   "ood_nmse": 0.008843583444490126
+  },
+  {
+   "index": 4,
+   "tokens": 10683,
+   "cost": 0.00076305,
+   "role": "agent",
+   "best_expression": "c0 * P * (1 - P / c1) + c2 * t",
+   "train_r2": 0.8643048712964118,
+   "train_mse": 0.10950393928863718,
+   "train_nmse": 0.13569512870358824,
+   "train_dist_r2": 0.8683017197552936,
+   "train_dist_mse": 0.1090427398108495,
+   "train_dist_nmse": 0.13512361937796052,
+   "ood_r2": -431.0995963569117,
+   "ood_mse": 0.016650293603661458,
+   "ood_nmse": 0.020632716486536657
+  },
+  {
+   "index": 5,
+   "tokens": 14308,
+   "cost": 0.00105765,
+   "role": "agent",
+   "best_expression": "c0 * P * (1 - P / c1) + c2 * exp(-c3 * t)",
+   "train_r2": 0.9438897499931318,
+   "train_mse": 0.045280132521513854,
+   "train_nmse": 0.05611025000686824,
+   "train_dist_r2": 0.9489838902508827,
+   "train_dist_mse": 0.042240007775335715,
+   "train_dist_nmse": 0.052342987190685586,
+   "ood_r2": -135.4651177960696,
+   "ood_mse": 0.0052584735026829175,
+   "ood_nmse": 0.006516196982193949
+  },
+  {
+   "index": 6,
+   "tokens": 18521,
+   "cost": 0.0013995750000000001,
+   "role": "agent",
+   "best_expression": "c0*P*(1-P/c1)+c2*exp(-c3*t)+c4*sin(c5*t)",
+   "train_r2": 0.9538611379136843,
+   "train_mse": 0.03723337161043651,
+   "train_nmse": 0.04613886208631563,
+   "train_dist_r2": 0.9576511018816104,
+   "train_dist_mse": 0.03506378268736234,
+   "train_dist_nmse": 0.04345035014726636,
+   "ood_r2": -350.8760672649308,
+   "ood_mse": 0.013559003251702782,
+   "ood_nmse": 0.016802050257593786
+  },
+  {
+   "index": 7,
+   "tokens": 23106,
+   "cost": 0.0017580750000000002,
+   "role": "agent",
+   "best_expression": "c0*P*(1-P/c1)+c2*exp(-c3*t)+c4*sin(c5*t)",
+   "train_r2": 0.9538611379136843,
+   "train_mse": 0.03723337161043651,
+   "train_nmse": 0.04613886208631563,
+   "train_dist_r2": 0.9576511018816104,
+   "train_dist_mse": 0.03506378268736234,
+   "train_dist_nmse": 0.04345035014726636,
+   "ood_r2": -350.8760672649308,
+   "ood_mse": 0.013559003251702782,
+   "ood_nmse": 0.016802050257593786
+  }
+ ],
+ "target_var": 0.8069850431244074,
+ "baseline_mse": {
+  "train": 0.8069850431244074,
+  "train_dist": 0.8281481467841315,
+  "ood": 0.11156651894303565
+ }
+}

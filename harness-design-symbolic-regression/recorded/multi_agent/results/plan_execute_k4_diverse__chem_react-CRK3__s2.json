@@ -1,0 +1,131 @@
+{
+ "run_id": "plan_execute_k4_diverse__chem_react-CRK3__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "chem_react/CRK3",
+ "harness": "plan_execute_k4_diverse",
+ "best_expression": "c0*A + c1*t*A + c2*exp(-c3*t) + c4*log(t+1) + c5*sqrt(A) + c6*t**2 + c7*A**2",
+ "best_params": {
+  "c0": -1.1304695013095805,
+  "c1": 0.007216779924101636,
+  "c2": 0.5438535918104525,
+  "c3": -0.017547155743542278,
+  "c4": -0.002920734386453512,
+  "c5": 0.5465979750261858,
+  "c6": -0.0002636622390064518,
+  "c7": -0.512940677972958
+ },
+ "best_train_r2": 0.9999976866624164,
+ "evaluations": 5,
+ "model_calls": 8,
+ "input_tokens": 9942,
+ "output_tokens": 961,
+ "cached_input_tokens": 6144,
+ "cost": 0.0008035499999999999,
+ "tokens_by_role": {
+  "orchestrator": 5335,
+  "worker": 5568
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999975911701373,
+   "mse": 4.077930803848246e-09,
+   "nmse": 2.5208834825242303e-06,
+   "valid": true
+  },
+  "ood": {
+   "r2": -1.5233592343998645,
+   "mse": 6.12611766079072e-07,
+   "nmse": 0.00037870257162073216,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2440,
+   "cost": 0.00020324999999999998,
+   "role": "worker",
+   "best_expression": "c0*t + c1*A + c2*t**2 + c3*t*A + c4*A**2 + c5*t**3 + c6*t**2*A + c7*A**3",
+   "train_r2": 0.9999825217409449,
+   "train_mse": 2.8273869654162166e-08,
+   "train_nmse": 1.7478259055048173e-05,
+   "train_dist_r2": 0.9999846123863505,
+   "train_dist_mse": 2.6049836342348932e-08,
+   "train_dist_nmse": 1.6103412567941797e-05,
+   "ood_r2": -1.8807060681099284,
+   "ood_mse": 6.993671007605216e-07,
+   "ood_nmse": 0.0004323327337639803
+  },
+  {
+   "index": 2,
+   "tokens": 3495,
+   "cost": 0.000266625,
+   "role": "worker",
+   "best_expression": "c0*t + c1*A + c2*t**2 + c3*t*A + c4*A**2 + c5*t**3 + c6*t**2*A + c7*A**3",
+   "train_r2": 0.9999825217409449,
+   "train_mse": 2.8273869654162166e-08,
+   "train_nmse": 1.7478259055048173e-05,
+   "train_dist_r2": 0.9999846123863505,
+   "train_dist_mse": 2.6049836342348932e-08,
+   "train_dist_nmse": 1.6103412567941797e-05,
+   "ood_r2": -1.8807060681099284,
+   "ood_mse": 6.993671007605216e-07,
+   "ood_nmse": 0.0004323327337639803
+  },
+  {
+   "index": 3,
+   "tokens": 4561,
+   "cost": 0.0003315,
+   "role": "worker",
+   "best_expression": "c0*t + c1*A + c2*t**2 + c3*t*A + c4*A**2 + c5*t**3 + c6*t**2*A + c7*A**3",
+   "train_r2": 0.9999825217409449,
+   "train_mse": 2.8273869654162166e-08,
+   "train_nmse": 1.7478259055048173e-05,
+   "train_dist_r2": 0.9999846123863505,
+   "train_dist_mse": 2.6049836342348932e-08,
+   "train_dist_nmse": 1.6103412567941797e-05,
+   "ood_r2": -1.8807060681099284,
+   "ood_mse": 6.993671007605216e-07,
+   "ood_nmse": 0.0004323327337639803
+  },
+  {
+   "index": 4,
+   "tokens": 5672,
+   "cost": 0.00040919999999999997,
+   "role": "worker",
+   "best_expression": "c0*t + c1*A + c2*t**2 + c3*t*A + c4*A**2 + c5*t**3 + c6*t**2*A + c7*A**3",
+   "train_r2": 0.9999825217409449,
+   "train_mse": 2.8273869654162166e-08,
+   "train_nmse": 1.7478259055048173e-05,
+   "train_dist_r2": 0.9999846123863505,
+   "train_dist_mse": 2.6049836342348932e-08,
+   "train_dist_nmse": 1.6103412567941797e-05,
+   "ood_r2": -1.8807060681099284,
+   "ood_mse": 6.993671007605216e-07,
+   "ood_nmse": 0.0004323327337639803
+  },
+  {
+   "index": 5,
+   "tokens": 8749,
+   "cost": 0.0006480749999999999,
+   "role": "worker",
+   "best_expression": "c0*A + c1*t*A + c2*exp(-c3*t) + c4*log(t+1) + c5*sqrt(A) + c6*t**2 + c7*A**2",
+   "train_r2": 0.9999976866624164,
+   "train_mse": 3.742192234254373e-09,
+   "train_nmse": 2.3133375835754746e-06,
+   "train_dist_r2": 0.9999975911701373,
+   "train_dist_mse": 4.077930803848246e-09,
+   "train_dist_nmse": 2.5208834825242303e-06,
+   "ood_r2": -1.5233592343998645,
+   "ood_mse": 6.12611766079072e-07,
+   "ood_nmse": 0.00037870257162073216
+  }
+ ],
+ "target_var": 0.0016176593770073423,
+ "baseline_mse": {
+  "train": 0.0016176593770073423,
+  "train_dist": 0.0016931427409573039,
+  "ood": 1.0543240632417836e-05
+ }
+}

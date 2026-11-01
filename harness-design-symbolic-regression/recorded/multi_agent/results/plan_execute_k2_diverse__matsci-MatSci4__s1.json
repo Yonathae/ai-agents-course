@@ -1,0 +1,82 @@
+{
+ "run_id": "plan_execute_k2_diverse__matsci-MatSci4__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "matsci/MatSci4",
+ "harness": "plan_execute_k2_diverse",
+ "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon*T + c4*exp(-c5*epsilon) + c6*log(T)",
+ "best_params": {
+  "c0": -19.162190232618578,
+  "c1": 642.1734430428132,
+  "c2": 0.3363496046904999,
+  "c3": 0.8173477402792593,
+  "c4": 592.4710111123155,
+  "c5": 1.6492282995620446,
+  "c6": -118.57296368602
+ },
+ "best_train_r2": 0.9999999999969457,
+ "evaluations": 2,
+ "model_calls": 4,
+ "input_tokens": 4223,
+ "output_tokens": 516,
+ "cached_input_tokens": 3072,
+ "cost": 0.000356325,
+ "tokens_by_role": {
+  "orchestrator": 2534,
+  "worker": 2205
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999999999963124,
+   "mse": 1.9689951199478212e-08,
+   "nmse": 3.3615886173731205e-12,
+   "valid": true
+  },
+  "ood": {
+   "r2": 0.9999999835012453,
+   "mse": 5.065510759206857e-06,
+   "nmse": 8.648149066911906e-10,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2197,
+   "cost": 0.000162525,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon**2 + c4*epsilon*T + c5*T**2",
+   "train_r2": 0.9997986066003439,
+   "train_mse": 1.1796286406470071,
+   "train_nmse": 0.0002013933996561348,
+   "train_dist_r2": 0.9997616218911535,
+   "train_dist_mse": 1.2728214466181371,
+   "train_dist_nmse": 0.0002173038441564703,
+   "ood_r2": 0.9254317935798443,
+   "ood_mse": 22.894215869679623,
+   "ood_nmse": 0.003908640234376892
+  },
+  {
+   "index": 2,
+   "tokens": 3297,
+   "cost": 0.000257175,
+   "role": "worker",
+   "best_expression": "c0 + c1*epsilon + c2*T + c3*epsilon*T + c4*exp(-c5*epsilon) + c6*log(T)",
+   "train_r2": 0.9999999999969457,
+   "train_mse": 1.7890581371638657e-08,
+   "train_nmse": 3.0543892205625095e-12,
+   "train_dist_r2": 0.9999999999963124,
+   "train_dist_mse": 1.9689951199478212e-08,
+   "train_dist_nmse": 3.3615886173731205e-12,
+   "ood_r2": 0.9999999835012453,
+   "ood_mse": 5.065510759206857e-06,
+   "ood_nmse": 8.648149066911906e-10
+  }
+ ],
+ "target_var": 5857.335159251201,
+ "baseline_mse": {
+  "train": 5857.335159251201,
+  "train_dist": 5348.520679206339,
+  "ood": 41465.239408082365
+ }
+}

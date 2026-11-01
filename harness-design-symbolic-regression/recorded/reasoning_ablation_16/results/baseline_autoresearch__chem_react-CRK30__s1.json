@@ -1,0 +1,78 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK30__s1",
+ "seed": 1,
+ "status": "ok",
+ "task_id": "chem_react/CRK30",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*exp(-c1*t) + c2*A + c3*t*A",
+ "best_params": {
+  "c0": 0.07541972465328751,
+  "c1": 0.17491203479944803,
+  "c2": 0.01622281830008697,
+  "c3": -0.00017693140527506965
+ },
+ "best_train_r2": 0.9992345308542392,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7594,
+ "output_tokens": 574,
+ "cached_input_tokens": 4096,
+ "cost": 0.00058815,
+ "tokens_by_role": {
+  "agent": 8168
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9991891470310789,
+   "mse": 1.6788978794862663e-07,
+   "nmse": 0.0007662311305930147,
+   "valid": true
+  },
+  "ood": {
+   "r2": -17.780911400579516,
+   "mse": 1.511196084128519e-06,
+   "nmse": 0.006896938153521587,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2415,
+   "cost": 0.0002061,
+   "role": "agent",
+   "best_expression": "c0*exp(-c1*t) + c2*A",
+   "train_r2": 0.9733579284171793,
+   "train_mse": 5.837575073581423e-06,
+   "train_nmse": 0.026642071582820677,
+   "train_dist_r2": 0.9700912319005672,
+   "train_dist_mse": 6.192709315351388e-06,
+   "train_dist_nmse": 0.028262866479928768,
+   "ood_r2": -397.12482386200884,
+   "ood_mse": 3.203490299177171e-05,
+   "ood_nmse": 0.14620388909737483
+  },
+  {
+   "index": 2,
+   "tokens": 5115,
+   "cost": 0.0003783,
+   "role": "agent",
+   "best_expression": "c0*exp(-c1*t) + c2*A + c3*t*A",
+   "train_r2": 0.9992345308542392,
+   "train_mse": 1.6772282857202494e-07,
+   "train_nmse": 0.0007654691457608237,
+   "train_dist_r2": 0.9991891470310789,
+   "train_dist_mse": 1.6788978794862663e-07,
+   "train_dist_nmse": 0.0007662311305930147,
+   "ood_r2": -17.780911400579516,
+   "ood_mse": 1.511196084128519e-06,
+   "ood_nmse": 0.006896938153521587
+  }
+ ],
+ "target_var": 0.00021911115490529665,
+ "baseline_mse": {
+  "train": 0.00021911115490529665,
+  "train_dist": 0.00020726798541806412,
+  "ood": 0.00014755631620833046
+ }
+}

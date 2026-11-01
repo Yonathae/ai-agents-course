@@ -1,0 +1,95 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK30__s3",
+ "seed": 3,
+ "status": "ok",
+ "task_id": "chem_react/CRK30",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0 + c1*A + c2*t + c3*A*t + c4*t**2",
+ "best_params": {
+  "c0": 0.2699836882573577,
+  "c1": -0.1773399993204651,
+  "c2": 0.0016550756821949247,
+  "c3": 0.0019850224552109205,
+  "c4": -5.48851069455196e-05
+ },
+ "best_train_r2": 0.9987506139054956,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 10783,
+ "output_tokens": 924,
+ "cached_input_tokens": 4864,
+ "cost": 0.0009035250000000001,
+ "tokens_by_role": {
+  "agent": 11707
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9987749402168604,
+   "mse": 2.536526782276574e-07,
+   "nmse": 0.0011576438376096833,
+   "valid": true
+  },
+  "ood": {
+   "r2": -18.58745158085926,
+   "mse": 1.5760939123613624e-06,
+   "nmse": 0.007193124937169792,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2411,
+   "cost": 0.000176775,
+   "role": "agent",
+   "best_expression": "c0 + c1*A + c2*t",
+   "train_r2": 0.981850067493392,
+   "train_mse": 3.9768526729760634e-06,
+   "train_nmse": 0.018149932506607996,
+   "train_dist_r2": 0.9798652605896495,
+   "train_dist_mse": 4.168964361692151e-06,
+   "train_dist_nmse": 0.019026709815363096,
+   "ood_r2": -586.5866194662271,
+   "ood_mse": 4.72798459821432e-05,
+   "ood_nmse": 0.21578018701320023
+  },
+  {
+   "index": 2,
+   "tokens": 5097,
+   "cost": 0.00038879999999999996,
+   "role": "agent",
+   "best_expression": "c0 + c1*A + c2*t + c3*A*t",
+   "train_r2": 0.9978530705087572,
+   "train_mse": 4.704162003264499e-07,
+   "train_nmse": 0.0021469294912427957,
+   "train_dist_r2": 0.9978859858719095,
+   "train_dist_mse": 4.3771361429154705e-07,
+   "train_dist_nmse": 0.0019976783677706136,
+   "ood_r2": -58.457660970953924,
+   "ood_mse": 4.784229184318186e-06,
+   "ood_nmse": 0.021834713008500213
+  },
+  {
+   "index": 3,
+   "tokens": 8256,
+   "cost": 0.000653025,
+   "role": "agent",
+   "best_expression": "c0 + c1*A + c2*t + c3*A*t + c4*t**2",
+   "train_r2": 0.9987506139054956,
+   "train_mse": 2.7375443008947786e-07,
+   "train_nmse": 0.0012493860945044031,
+   "train_dist_r2": 0.9987749402168604,
+   "train_dist_mse": 2.536526782276574e-07,
+   "train_dist_nmse": 0.0011576438376096833,
+   "ood_r2": -18.58745158085926,
+   "ood_mse": 1.5760939123613624e-06,
+   "ood_nmse": 0.007193124937169792
+  }
+ ],
+ "target_var": 0.00021911115490529665,
+ "baseline_mse": {
+  "train": 0.00021911115490529665,
+  "train_dist": 0.00020726798541806412,
+  "ood": 0.00014755631620833046
+ }
+}

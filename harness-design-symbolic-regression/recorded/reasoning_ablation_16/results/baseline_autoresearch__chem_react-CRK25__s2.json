@@ -1,0 +1,77 @@
+{
+ "run_id": "baseline_autoresearch__chem_react-CRK25__s2",
+ "seed": 2,
+ "status": "ok",
+ "task_id": "chem_react/CRK25",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*(3.078 - A) + c1*exp(-c2*t)",
+ "best_params": {
+  "c0": 0.15259108509252164,
+  "c1": -0.16289637599925819,
+  "c2": 0.2002819417825429
+ },
+ "best_train_r2": 0.9999505229210336,
+ "evaluations": 2,
+ "model_calls": 6,
+ "input_tokens": 7723,
+ "output_tokens": 808,
+ "cached_input_tokens": 3840,
+ "cost": 0.000677625,
+ "tokens_by_role": {
+  "agent": 8531
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9999440553826674,
+   "mse": 1.4931338827859582e-07,
+   "nmse": 5.742178265472169e-05,
+   "valid": true
+  },
+  "ood": {
+   "r2": -61.61902672606658,
+   "mse": 1.3610920930727672e-07,
+   "nmse": 5.234382210633179e-05,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 2493,
+   "cost": 0.000222525,
+   "role": "agent",
+   "best_expression": "c0*(3.078 - A)",
+   "train_r2": 0.9608672318648748,
+   "train_mse": 0.0001017566145257203,
+   "train_nmse": 0.03913276813512517,
+   "train_dist_r2": 0.9599111705621781,
+   "train_dist_mse": 0.00010699508265274548,
+   "train_dist_nmse": 0.04114733750296027,
+   "ood_r2": -45.14793716765716,
+   "ood_mse": 1.0030751941465469e-07,
+   "ood_nmse": 3.85754863972118e-05
+  },
+  {
+   "index": 2,
+   "tokens": 5364,
+   "cost": 0.000446175,
+   "role": "agent",
+   "best_expression": "c0*(3.078 - A) + c1*exp(-c2*t)",
+   "train_r2": 0.9999505229210336,
+   "train_mse": 1.286548407427459e-07,
+   "train_nmse": 4.9477078966446596e-05,
+   "train_dist_r2": 0.9999440553826674,
+   "train_dist_mse": 1.4931338827859582e-07,
+   "train_dist_nmse": 5.742178265472169e-05,
+   "ood_r2": -61.61902672606658,
+   "ood_mse": 1.3610920930727672e-07,
+   "ood_nmse": 5.234382210633179e-05
+  }
+ ],
+ "target_var": 0.0026002917599479655,
+ "baseline_mse": {
+  "train": 0.0026002917599479655,
+  "train_dist": 0.0026689626460883703,
+  "ood": 0.0014617993365234581
+ }
+}

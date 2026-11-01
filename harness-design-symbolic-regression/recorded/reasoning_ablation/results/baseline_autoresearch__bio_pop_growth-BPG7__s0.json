@@ -1,0 +1,96 @@
+{
+ "run_id": "baseline_autoresearch__bio_pop_growth-BPG7__s0",
+ "seed": 0,
+ "status": "ok",
+ "task_id": "bio_pop_growth/BPG7",
+ "harness": "baseline_autoresearch",
+ "best_expression": "c0*P + c1*P**2 + c2*t + c3*P*t + c4*exp(c5*t)",
+ "best_params": {
+  "c0": 2.263590438481413,
+  "c1": -0.1554697761414446,
+  "c2": -2.0893153326717404,
+  "c3": 0.14342836478686508,
+  "c4": 1.3661077936585986,
+  "c5": -0.29640842439005655
+ },
+ "best_train_r2": 0.9931599022650629,
+ "evaluations": 3,
+ "model_calls": 8,
+ "input_tokens": 10051,
+ "output_tokens": 785,
+ "cached_input_tokens": 2560,
+ "cost": 0.000831225,
+ "tokens_by_role": {
+  "agent": 10836
+ },
+ "scores": {
+  "train_dist": {
+   "r2": 0.9939396021107466,
+   "mse": 0.0055987197410929815,
+   "nmse": 0.008458394975664436,
+   "valid": true
+  },
+  "ood": {
+   "r2": -20.08791953829704,
+   "mse": 0.0011031046930840608,
+   "nmse": 0.001666540856676741,
+   "valid": true
+  }
+ },
+ "curve": [
+  {
+   "index": 1,
+   "tokens": 1926,
+   "cost": 8.685e-05,
+   "role": "agent",
+   "best_expression": "c0*P + c1*P**2 + c2*t",
+   "train_r2": 0.9297060140381147,
+   "train_mse": 0.04652848773522837,
+   "train_nmse": 0.07029398596188527,
+   "train_dist_r2": 0.9442498608934613,
+   "train_dist_mse": 0.05150312076669773,
+   "train_dist_nmse": 0.07780952754728002,
+   "ood_r2": -67.67068909796829,
+   "ood_mse": 0.0035921494903144225,
+   "ood_nmse": 0.00542692269050416
+  },
+  {
+   "index": 2,
+   "tokens": 4481,
+   "cost": 0.000299175,
+   "role": "agent",
+   "best_expression": "c0*P + c1*P**2 + c2*t + c3*P*t",
+   "train_r2": 0.985372599345814,
+   "train_mse": 0.009682063445734827,
+   "train_nmse": 0.014627400654186037,
+   "train_dist_r2": 0.9870454862808755,
+   "train_dist_mse": 0.01196764519770787,
+   "train_dist_nmse": 0.018080395999794288,
+   "ood_r2": -16.1492400598794,
+   "ood_mse": 0.0008970731872588423,
+   "ood_nmse": 0.0013552740074165928
+  },
+  {
+   "index": 3,
+   "tokens": 7474,
+   "cost": 0.0005406,
+   "role": "agent",
+   "best_expression": "c0*P + c1*P**2 + c2*t + c3*P*t + c4*exp(c5*t)",
+   "train_r2": 0.9931599022650629,
+   "train_mse": 0.0045275481140071945,
+   "train_nmse": 0.006840097734937049,
+   "train_dist_r2": 0.9939396021107466,
+   "train_dist_mse": 0.0055987197410929815,
+   "train_dist_nmse": 0.008458394975664436,
+   "ood_r2": -20.08791953829704,
+   "ood_mse": 0.0011031046930840608,
+   "ood_nmse": 0.001666540856676741
+  }
+ ],
+ "target_var": 0.6619127809946216,
+ "baseline_mse": {
+  "train": 0.6619127809946216,
+  "train_dist": 0.9296244869531485,
+  "ood": 0.061071832409642327
+ }
+}
