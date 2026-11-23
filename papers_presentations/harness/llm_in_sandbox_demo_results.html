@@ -1,0 +1,250 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Task 1: Reverse every letter</title><style>
+.demo {font-size: 19px; line-height: 1.45}
+.demo pre {font-size: 16px; white-space: pre-wrap; word-break: break-word; color: inherit;
+           background: rgba(127,127,127,0.13); padding:8px; border-radius:6px}
+.demo .card {border:2px solid rgba(127,127,127,0.5); border-radius:10px; padding:12px 16px; margin:8px 0}
+.demo .pass {color:#2da44e; font-weight:bold} .demo .fail {color:#e5534b; font-weight:bold}
+.demo table {font-size:18px; border-collapse:collapse; color: inherit; background: transparent}
+.demo td, .demo th {padding:4px 12px; border-bottom:1px solid rgba(127,127,127,0.35); background: transparent}
+.demo .cols {display:flex; gap:16px} .demo .cols > div {flex:1; min-width:0}
+.demo pre.scroll {max-height: 420px; overflow-y: auto} .demo .meta {opacity: 0.7; font-size: 16px}
+
+body {font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 16px 24px;
+      color: #e6edf3; background: #0d1117}
+a {color: #58a6ff} code {color: #e6edf3}
+h1 {font-size: 30px; margin-bottom: 4px} h2 {font-size: 26px; border-bottom: 2px solid #30363d; padding-bottom: 4px; margin-top: 36px}
+nav a {margin-right: 18px; font-size: 18px} details {margin: 6px 0} summary {cursor: pointer; font-size: 18px; padding: 4px 0}
+.cmds td {vertical-align: top} .cmds pre {margin: 0} .note {opacity: .75; font-size: 16px}
+</style></head><body><div class='demo'><nav><a href='#compare'>plain vs. sandbox</a> <a href='#sandbox_1'>sandbox 1</a> <a href='#sandbox_2'>sandbox 2</a></nav><h1>Task 1: Reverse every letter</h1><p class='note'>Live run in class, 20261122_174040 · DeepSeek V3.2 · graded with the authors&#x27; official grader (IFBench)</p><div class='card'><b>The task</b><pre>What animal is the national symbol of the US? Respond to this query, but make your sentence in reverse order of what it should be, per letter.</pre><b>What the grader checks:</b> the answer, lowercased, contains “elgae dlab” (“bald eagle” backwards). Nothing else is checked.</div><table><tr><th>run</th><th>steps</th><th>time</th><th>official grade</th></tr><tr><td><b>sandbox_1</b></td><td>5</td><td>0:35</td><td><span class='pass'>PASS ✔</span></td></tr><tr><td><b>sandbox_2</b></td><td>6</td><td>0:37</td><td><span class='pass'>PASS ✔</span></td></tr><tr><td><b>plain</b></td><td>1 call</td><td>0:20</td><td><span class='pass'>PASS ✔</span></td></tr></table><h2 id='compare'>Plain LLM vs. sandbox agent</h2><div class='cols'><div><h3>🖥️ sandbox 1 <span class='pass'>PASS ✔</span></h3><span class='meta'>5 steps · 0:35</span><ul><li>the answer, lowercased, contains “elgae dlab” (“bald eagle” backwards). Nothing else is checked. <span class='pass'>PASS ✔</span></li></ul><b>Helper view</b><pre class='scroll'>Read backwards (a correct answer turns back into a normal sentence):
+The national symbol of the US is the bald eagle.</pre><b>Answer</b><pre class='scroll'>.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></div><div><h3>🖥️ sandbox 2 <span class='pass'>PASS ✔</span></h3><span class='meta'>6 steps · 0:37</span><ul><li>the answer, lowercased, contains “elgae dlab” (“bald eagle” backwards). Nothing else is checked. <span class='pass'>PASS ✔</span></li></ul><b>Helper view</b><pre class='scroll'>Read backwards (a correct answer turns back into a normal sentence):
+The national symbol of the US is the bald eagle.</pre><b>Answer</b><pre class='scroll'>.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></div><div><h3>🤖 plain LLM <span class='pass'>PASS ✔</span></h3><span class='meta'>1 call, no tools · 0:20</span><ul><li>the answer, lowercased, contains “elgae dlab” (“bald eagle” backwards). Nothing else is checked. <span class='pass'>PASS ✔</span></li></ul><b>Helper view</b><pre class='scroll'>Read backwards (a correct answer turns back into a normal sentence):
+```
+The bald eagle is the national symbol of the US.
+```
+:tuptuo laniF
+
+.gnirts desrever taht eb dluohs rewsna ym oS
+  &quot;.rettel rep ,eb dluohs ti tahw fo redro esrever ni ecnetnes ruoy ekam&quot; :syas noitcurtsni ehT
+  **.esnopser eht sa tneserP :3 petS**
+
+`The bald eagle is the national symbol of the US.`
+  :gnirts desrever lanif oS
+
+`T h e   b a l d   e a g l e   i s   t h e   n a t i o n a l   s y m b o l   o f   t h e   U S .`
+
+:ecneuqes taht esrever woN
+
+. S U   e h t   f o   l o b m y s   l a n o i t a n   e h t   s i   e l g a e   d l a b   e h T
+  :)doirep dna ecaps gnidulcni( redro ni sretcarahc lanigirO
+
+  :yltcaxe ti od s&#x27;teL
+
+.noitisop ni desrever osla era noitautcnup dna secaps ,*ecnetnes elohw* eht fo lasrever rettel-yb-rettel eurt a ni — oN
+  ?snoitisop lanigiro ni erew yeht sa doirep dna ecaps eht kcab ddA
+
+`ThebaldceleisthanonalsymbolsoftheUS`
+  :redro rettel eht esrever woN
+
+`SUehtfolobmyslanoitanehtsielgaedlabehT`
+  :tsrif ytiralc rof noitautcnup/secaps evomeR
+
+`.SU eht fo lobmys lanoitan eht si elgae dlab ehT`
+  :ecnetnes lanigirO
+
+.redro drow gnisrever ton ,)dedulcni noitautcnup dna secaps( srettel fo ecneuqes eht gnisrever dna ecnetnes eritne eht gnikat snaem tahT
+  **.rettel rep redro eht esreveR :2 petS**
+
+&quot;.SU eht fo lobmys lanoitan eht si elgae dlab ehT&quot; :ecnetnes lamron A
+  .elgae dlab eht si SU eht fo lobmys lanoitan ehT
+  **.yllamron yreuq eht rewsnA :1 petS**
+
+.nwod siht kaerb s&#x27;teL</pre><b>Answer</b><pre class='scroll'>Let&#x27;s break this down.
+
+**Step 1: Answer the query normally.**  
+The national symbol of the US is the bald eagle.  
+A normal sentence: &quot;The bald eagle is the national symbol of the US.&quot;
+
+**Step 2: Reverse the order per letter.**  
+That means taking the entire sentence and reversing the sequence of letters (spaces and punctuation included), not reversing word order.
+
+Original sentence:  
+`The bald eagle is the national symbol of the US.`
+
+Remove spaces/punctuation for clarity first:  
+`ThebaldeagleisthenationalsymboloftheUS`
+
+Now reverse the letter order:  
+`SUehtfoslobmyslanonahtsielecdlabehT`
+
+Add back the space and period as they were in original positions?  
+No — in a true letter-by-letter reversal of the *whole sentence*, spaces and punctuation are also reversed in position.
+
+Let&#x27;s do it exactly:  
+
+Original characters in order (including space and period):  
+T h e   b a l d   e a g l e   i s   t h e   n a t i o n a l   s y m b o l   o f   t h e   U S .
+
+Now reverse that sequence:
+
+`. S U   e h t   f o   l o b m y s   l a n o i t a n   e h t   s i   e l g a e   d l a b   e h T`
+
+So final reversed string:  
+`.SU eht fo lobmys lanoitan eht si elgae dlab ehT`
+
+**Step 3: Present as the response.**  
+The instruction says: &quot;make your sentence in reverse order of what it should be, per letter.&quot;  
+So my answer should be that reversed string.
+
+Final output:
+```
+.SU eht fo lobmys lanoitan eht si elgae dlab ehT
+```</pre></div></div><h2 id='sandbox_1'>🖥️ Sandbox run 1 <span class='pass'>PASS ✔</span></h2><h3>Commands it ran</h3><p class='note'>✔ = the command finished without error (exit code 0); ✘ = it failed (exit code shown).</p><table class='cmds'><tr><th>step</th><th>tool</th><th>command / file</th></tr><tr><td>1</td><td>editor</td><td><code>create /testbed/compute_answer.py</code></td></tr><tr><td>2</td><td>bash <span class='pass'>✔</span></td><td><pre>cd /testbed &amp;&amp; python compute_answer.py</pre></td></tr><tr><td>3</td><td>editor</td><td><code>view /testbed/answer.txt</code></td></tr><tr><td>4</td><td>bash <span class='pass'>✔</span></td><td><pre>cat /testbed/answer.txt</pre></td></tr><tr><td>5</td><td colspan=2><b>submit</b></td></tr></table><h3>Final files</h3><p class='note'>Copied out of the container after the run.</p><details open><summary><code>answer.txt</code> <span class='meta'>(1 lines)</span></summary><pre class='scroll'>.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></details><details><summary><code>compute_answer.py</code> <span class='meta'>(14 lines)</span></summary><pre class='scroll'>#!/usr/bin/env python3
+
+# The national symbol animal of the US is the bald eagle
+answer = &quot;The national symbol of the US is the bald eagle.&quot;
+
+# Reverse the order of letters in the sentence
+reversed_sentence = answer[::-1]
+
+print(f&quot;Original sentence: {answer}&quot;)
+print(f&quot;Reversed sentence: {reversed_sentence}&quot;)
+
+# Write to answer.txt
+with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    f.write(reversed_sentence)
+</pre></details><h3>All steps</h3><p class='note'>Click a step: what the model said, the tool call, the observation it got back.</p><details><summary>Step 1: <code>editor create /testbed/compute_answer.py</code></summary><div class='demo'><h3>Step 1 / 5 <span class='meta'>15.9 s</span></h3><b>💭 Model says</b><pre class='scroll'>I need to solve this problem step by step. First, I need to determine the national symbol animal of the US, then create a sentence with the answer in reverse letter order.
+
+Let me start by determining the answer. The bald eagle is famously the national symbol (national bird and national animal) of the United States.
+
+Now I need to:
+1. Form the sentence: &quot;The national symbol of the US is the bald eagle.&quot;
+2. Reverse the order of letters in the entire sentence.
+
+Let me write a Python script to compute this.</pre><b>⚡ Tool call:</b> <code>str_replace_editor  command=&#x27;create&#x27; path=&#x27;/testbed/compute_answer.py&#x27;</code><pre class='scroll'>#!/usr/bin/env python3
+
+# The national symbol animal of the US is the bald eagle
+answer = &quot;The national symbol of the US is the bald eagle.&quot;
+
+# Reverse the order of letters in the sentence
+reversed_sentence = answer[::-1]
+
+print(f&quot;Original sentence: {answer}&quot;)
+print(f&quot;Reversed sentence: {reversed_sentence}&quot;)
+
+# Write to answer.txt
+with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    f.write(reversed_sentence)</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Execution output of \[str_replace_editor]:
+File created at /testbed/compute_answer.py. Here&#x27;s the result of running `cat -n` on /testbed/compute_answer.py:
+     1	#!/usr/bin/env python3
+     2	
+     3	# The national symbol animal of the US is the bald eagle
+     4	answer = &quot;The national symbol of the US is the bald eagle.&quot;
+     5	
+     6	# Reverse the order of letters in the sentence
+     7	reversed_sentence = answer[::-1]
+     8	
+     9	print(f&quot;Original sentence: {answer}&quot;)
+    10	print(f&quot;Reversed sentence: {reversed_sentence}&quot;)
+    11	
+    12	# Write to answer.txt
+    13	with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    14	    f.write(reversed_sentence)
+Review the file and make sure that it is as expected. Edit the file if necessary.</pre></div></details><details><summary>Step 2: <code>bash: cd /testbed &amp;&amp; python compute_answer.py</code></summary><div class='demo'><h3>Step 2 / 5 <span class='meta'>5.7 s</span></h3><b>💭 Model says</b><pre class='scroll'>Now let me run the script to compute the answer:</pre><b>⚡ Tool call:</b> <code>execute_bash  </code><pre class='scroll'>cd /testbed &amp;&amp; python compute_answer.py</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Exit code: 0
+Execution output of \[execute_bash]:
+\[STDOUT]
+Original sentence: The national symbol of the US is the bald eagle.
+Reversed sentence: .elgae dlab eht si SU eht fo lobmys lanoitan ehT
+</pre></div></details><details><summary>Step 3: <code>editor view /testbed/answer.txt</code></summary><div class='demo'><h3>Step 3 / 5 <span class='meta'>6.1 s</span></h3><b>💭 Model says</b><pre class='scroll'>Now let me check the content of answer.txt to make sure it&#x27;s correct:</pre><b>⚡ Tool call:</b> <code>str_replace_editor  command=&#x27;view&#x27; path=&#x27;/testbed/answer.txt&#x27;</code><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Execution output of \[str_replace_editor]:
+ERROR: Viewing non-Python files is disallowed for saving context. File &#x27;/testbed/answer.txt&#x27; is not a .py or .rst file.</pre></div></details><details><summary>Step 4: <code>bash: cat /testbed/answer.txt</code></summary><div class='demo'><h3>Step 4 / 5 <span class='meta'>3.7 s</span></h3><b>💭 Model says</b><pre class='scroll'>Let me use execute_bash to check the file:</pre><b>⚡ Tool call:</b> <code>execute_bash  </code><pre class='scroll'>cat /testbed/answer.txt</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Exit code: 0
+Execution output of \[execute_bash]:
+\[STDOUT]
+.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></div></details><details><summary>Step 5: <code>submit</code></summary><div class='demo'><h3>Step 5 / 5 <span class='meta'>4.3 s</span></h3><b>💭 Model says</b><pre class='scroll'>Perfect! The answer is correctly written to answer.txt. The sentence &quot;The national symbol of the US is the bald eagle.&quot; reversed letter by letter becomes &quot;.elgae dlab eht si SU eht fo lobmys lanoitan ehT&quot;
+
+Let me submit the answer:</pre><b>⚡ Tool call:</b> <code>submit  </code><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>&lt;&lt;&lt; Finished &gt;&gt;&gt;</pre></div></details><h2 id='sandbox_2'>🖥️ Sandbox run 2 <span class='pass'>PASS ✔</span></h2><h3>Commands it ran</h3><p class='note'>✔ = the command finished without error (exit code 0); ✘ = it failed (exit code shown).</p><table class='cmds'><tr><th>step</th><th>tool</th><th>command / file</th></tr><tr><td>1</td><td>editor</td><td><code>create /testbed/solve.py</code></td></tr><tr><td>2</td><td>bash <span class='pass'>✔</span></td><td><pre>cd /testbed &amp;&amp; python solve.py</pre></td></tr><tr><td>3</td><td>editor</td><td><code>view /testbed/answer.txt</code></td></tr><tr><td>4</td><td>bash <span class='pass'>✔</span></td><td><pre>cat /testbed/answer.txt</pre></td></tr><tr><td>5</td><td>bash <span class='pass'>✔</span></td><td><pre>python3 -c &quot;
+sentence = &#x27;The national symbol of the US is the bald eagle.&#x27;
+reversed_sentence = sentence[::-1]
+print(&#x27;Original:&#x27;, sentence)
+print(&#x27;Reversed:&#x27;, reversed_sentence)
+print(&#x27;Reversed matches answer.txt:&#x27;, reversed_sentence == open(&#x27;/testbed/answer.txt&#x27;).read().strip())
+&quot;</pre></td></tr><tr><td>6</td><td colspan=2><b>submit</b></td></tr></table><h3>Final files</h3><p class='note'>Copied out of the container after the run.</p><details open><summary><code>answer.txt</code> <span class='meta'>(1 lines)</span></summary><pre class='scroll'>.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></details><details><summary><code>solve.py</code> <span class='meta'>(17 lines)</span></summary><pre class='scroll'>#!/usr/bin/env python3
+
+# The national symbol animal of the US
+answer_animal = &quot;bald eagle&quot;
+
+# Create a sentence answering the query
+sentence = f&quot;The national symbol of the US is the {answer_animal}.&quot;
+
+# Reverse the order of letters in the sentence
+reversed_sentence = sentence[::-1]
+
+print(f&quot;Original sentence: {sentence}&quot;)
+print(f&quot;Reversed by letter: {reversed_sentence}&quot;)
+
+# Write the reversed sentence to answer.txt
+with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    f.write(reversed_sentence)
+</pre></details><h3>All steps</h3><p class='note'>Click a step: what the model said, the tool call, the observation it got back.</p><details><summary>Step 1: <code>editor create /testbed/solve.py</code></summary><div class='demo'><h3>Step 1 / 6 <span class='meta'>15.2 s</span></h3><b>💭 Model says</b><pre class='scroll'>I&#x27;ll solve this problem step by step. First, let me understand what needs to be done:
+
+1. The animal that is the national symbol of the US is the Bald Eagle
+2. I need to create a sentence that answers the query
+3. Then reverse the order of letters in that sentence
+
+Let me write code to solve this.</pre><b>⚡ Tool call:</b> <code>str_replace_editor  command=&#x27;create&#x27; path=&#x27;/testbed/solve.py&#x27;</code><pre class='scroll'>#!/usr/bin/env python3
+
+# The national symbol animal of the US
+answer_animal = &quot;bald eagle&quot;
+
+# Create a sentence answering the query
+sentence = f&quot;The national symbol of the US is the {answer_animal}.&quot;
+
+# Reverse the order of letters in the sentence
+reversed_sentence = sentence[::-1]
+
+print(f&quot;Original sentence: {sentence}&quot;)
+print(f&quot;Reversed by letter: {reversed_sentence}&quot;)
+
+# Write the reversed sentence to answer.txt
+with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    f.write(reversed_sentence)</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Execution output of \[str_replace_editor]:
+File created at /testbed/solve.py. Here&#x27;s the result of running `cat -n` on /testbed/solve.py:
+     1	#!/usr/bin/env python3
+     2	
+     3	# The national symbol animal of the US
+     4	answer_animal = &quot;bald eagle&quot;
+     5	
+     6	# Create a sentence answering the query
+     7	sentence = f&quot;The national symbol of the US is the {answer_animal}.&quot;
+     8	
+     9	# Reverse the order of letters in the sentence
+    10	reversed_sentence = sentence[::-1]
+    11	
+    12	print(f&quot;Original sentence: {sentence}&quot;)
+    13	print(f&quot;Reversed by letter: {reversed_sentence}&quot;)
+    14	
+    15	# Write the reversed sentence to answer.txt
+    16	with open(&#x27;/testbed/answer.txt&#x27;, &#x27;w&#x27;) as f:
+    17	    f.write(reversed_sentence)
+Review the file and make sure that it is as expected. Edit the file if necessary.</pre></div></details><details><summary>Step 2: <code>bash: cd /testbed &amp;&amp; python solve.py</code></summary><div class='demo'><h3>Step 2 / 6 <span class='meta'>3.6 s</span></h3><b>💭 Model says</b><pre class='scroll'>Now let me run the script to generate the answer:</pre><b>⚡ Tool call:</b> <code>execute_bash  </code><pre class='scroll'>cd /testbed &amp;&amp; python solve.py</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Exit code: 0
+Execution output of \[execute_bash]:
+\[STDOUT]
+Original sentence: The national symbol of the US is the bald eagle.
+Reversed by letter: .elgae dlab eht si SU eht fo lobmys lanoitan ehT
+</pre></div></details><details><summary>Step 3: <code>editor view /testbed/answer.txt</code></summary><div class='demo'><h3>Step 3 / 6 <span class='meta'>4.7 s</span></h3><b>💭 Model says</b><pre class='scroll'>Let me check the answer.txt file to see if it was written correctly:</pre><b>⚡ Tool call:</b> <code>str_replace_editor  command=&#x27;view&#x27; path=&#x27;/testbed/answer.txt&#x27;</code><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Execution output of \[str_replace_editor]:
+ERROR: Viewing non-Python files is disallowed for saving context. File &#x27;/testbed/answer.txt&#x27; is not a .py or .rst file.</pre></div></details><details><summary>Step 4: <code>bash: cat /testbed/answer.txt</code></summary><div class='demo'><h3>Step 4 / 6 <span class='meta'>4.1 s</span></h3><b>💭 Model says</b><pre class='scroll'>Let me check the file using bash:</pre><b>⚡ Tool call:</b> <code>execute_bash  </code><pre class='scroll'>cat /testbed/answer.txt</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Exit code: 0
+Execution output of \[execute_bash]:
+\[STDOUT]
+.elgae dlab eht si SU eht fo lobmys lanoitan ehT</pre></div></details><details><summary>Step 5: <code>bash: python3 -c &quot;</code></summary><div class='demo'><h3>Step 5 / 6 <span class='meta'>7.2 s</span></h3><b>💭 Model says</b><pre class='scroll'>Perfect! The answer.txt file contains the reversed sentence &quot;.elgae dlab eht si SU eht fo lobmys lanoitan ehT&quot; which is the reverse of &quot;The national symbol of the US is the bald eagle.&quot;
+
+Now let me verify that this is correct by doing a quick check:</pre><b>⚡ Tool call:</b> <code>execute_bash  </code><pre class='scroll'>python3 -c &quot;
+sentence = &#x27;The national symbol of the US is the bald eagle.&#x27;
+reversed_sentence = sentence[::-1]
+print(&#x27;Original:&#x27;, sentence)
+print(&#x27;Reversed:&#x27;, reversed_sentence)
+print(&#x27;Reversed matches answer.txt:&#x27;, reversed_sentence == open(&#x27;/testbed/answer.txt&#x27;).read().strip())
+&quot;</pre><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>Exit code: 0
+Execution output of \[execute_bash]:
+\[STDOUT]
+Original: The national symbol of the US is the bald eagle.
+Reversed: .elgae dlab eht si SU eht fo lobmys lanoitan ehT
+Reversed matches answer.txt: True
+</pre></div></details><details><summary>Step 6: <code>submit</code></summary><div class='demo'><h3>Step 6 / 6 <span class='meta'>2.7 s</span></h3><b>💭 Model says</b><pre class='scroll'>Great! The answer is correct. The task is complete.</pre><b>⚡ Tool call:</b> <code>submit  </code><b>👁 Observation</b> <span class='meta'>(what the model sees next)</span><pre class='scroll'>&lt;&lt;&lt; Finished &gt;&gt;&gt;</pre></div></details></div></body></html>
